@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/data/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/syntax/suites/">
       
       
-        <link rel="prev" href="../install/">
+        <link rel="prev" href="../tasks/">
       
       
-        <link rel="next" href="syntax/">
+        <link rel="next" href="../libraries/">
       
       
         
       
       
-      <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Data - Robot Framework</title>
+        <title>Creating suites - Robot Framework</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/extra.css">
+      <link rel="stylesheet" href="../../assets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,17 +65,17 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Data - Robot Framework" />
+<meta property="og:title" content="Creating suites - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/data/index.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/syntax/suites.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/data/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/syntax/suites/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Data - Robot Framework" />
+<meta property="twitter:title" content="Creating suites - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/data/index.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/syntax/suites.png" />
 </head>
   
   
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data" class="md-skip">
+        <a href="#creating-suites" class="md-skip">
           Skip to content
         </a>
       
@@ -110,12 +110,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You are not viewing documentation of the latest release.
-  <a href="../..">
+  <a href="../../..">
     <strong>Click here to open it.</strong>
   </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -125,9 +125,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Robot Framework" class="md-header__button md-logo" aria-label="Robot Framework" data-md-component="logo">
+    <a href="../.." title="Robot Framework" class="md-header__button md-logo" aria-label="Robot Framework" data-md-component="logo">
       
-  <img src="../assets/logo-white.png" alt="logo">
+  <img src="../../assets/logo-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data
+              Creating suites
             
           </span>
         </div>
@@ -267,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -286,7 +286,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../install/" class="md-tabs__link">
+      <a href="../../install/" class="md-tabs__link">
         
   
   
@@ -307,13 +307,13 @@
   
   
     <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
     
   
-  Data
+  Syntax
 
       </a>
     </li>
@@ -326,7 +326,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../execution/" class="md-tabs__link">
+      <a href="../../execution/" class="md-tabs__link">
         
   
   
@@ -345,7 +345,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../libraries/" class="md-tabs__link">
+      <a href="../../libraries/" class="md-tabs__link">
         
   
   
@@ -364,7 +364,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../extend/" class="md-tabs__link">
+      <a href="../../extend/" class="md-tabs__link">
         
   
   
@@ -385,7 +385,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../api/" class="md-tabs__link">
+        <a href="../../api/" class="md-tabs__link">
           
   
   
@@ -405,7 +405,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../appendix/" class="md-tabs__link">
+      <a href="../../appendix/" class="md-tabs__link">
         
   
   
@@ -424,7 +424,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../glossary/" class="md-tabs__link">
+      <a href="../../glossary/" class="md-tabs__link">
         
   
   
@@ -461,9 +461,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Robot Framework" class="md-nav__button md-logo" aria-label="Robot Framework" data-md-component="logo">
+    <a href="../.." title="Robot Framework" class="md-nav__button md-logo" aria-label="Robot Framework" data-md-component="logo">
       
-  <img src="../assets/logo-white.png" alt="logo">
+  <img src="../../assets/logo-white.png" alt="logo">
 
     </a>
     Robot Framework
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../../install/" class="md-nav__link">
         
   
   
@@ -590,14 +590,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Data
+    Syntax
   
 
     
@@ -608,7 +608,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -619,7 +619,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Data
+    Syntax
   
 
           </label>
@@ -632,14 +632,14 @@
   
   
     <li class="md-nav__item">
-      <a href="syntax/" class="md-nav__link">
+      <a href="../data.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Syntax
+    Test Data
   
 
     
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tests/" class="md-nav__link">
+      <a href="../tests/" class="md-nav__link">
         
   
   
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tasks/" class="md-nav__link">
+      <a href="../tasks/" class="md-nav__link">
         
   
   
@@ -713,10 +713,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="suites/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -732,6 +741,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -744,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="libraries/" class="md-nav__link">
+      <a href="../libraries/" class="md-nav__link">
         
   
   
@@ -772,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="variables/" class="md-nav__link">
+      <a href="../variables/" class="md-nav__link">
         
   
   
@@ -800,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-keywords/" class="md-nav__link">
+      <a href="../user-keywords/" class="md-nav__link">
         
   
   
@@ -828,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="resource-files/" class="md-nav__link">
+      <a href="../resource-files/" class="md-nav__link">
         
   
   
@@ -856,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="variable-files/" class="md-nav__link">
+      <a href="../variable-files/" class="md-nav__link">
         
   
   
@@ -884,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="control/" class="md-nav__link">
+      <a href="../control/" class="md-nav__link">
         
   
   
@@ -912,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced/" class="md-nav__link">
+      <a href="../advanced/" class="md-nav__link">
         
   
   
@@ -976,7 +986,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../execution/" class="md-nav__link ">
+            <a href="../../execution/" class="md-nav__link ">
               
   
   
@@ -1018,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution/basics/" class="md-nav__link">
+      <a href="../../execution/basics/" class="md-nav__link">
         
   
   
@@ -1046,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution/tests/" class="md-nav__link">
+      <a href="../../execution/tests/" class="md-nav__link">
         
   
   
@@ -1074,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution/tasks/" class="md-nav__link">
+      <a href="../../execution/tasks/" class="md-nav__link">
         
   
   
@@ -1102,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution/configuration/" class="md-nav__link">
+      <a href="../../execution/configuration/" class="md-nav__link">
         
   
   
@@ -1130,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution/results/" class="md-nav__link">
+      <a href="../../execution/results/" class="md-nav__link">
         
   
   
@@ -1165,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../libraries/" class="md-nav__link">
+      <a href="../../libraries/" class="md-nav__link">
         
   
   
@@ -1229,7 +1239,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../extend/" class="md-nav__link ">
+            <a href="../../extend/" class="md-nav__link ">
               
   
   
@@ -1271,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/libraries/" class="md-nav__link">
+      <a href="../../extend/libraries/" class="md-nav__link">
         
   
   
@@ -1299,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/dynamic/" class="md-nav__link">
+      <a href="../../extend/dynamic/" class="md-nav__link">
         
   
   
@@ -1327,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/remote/" class="md-nav__link">
+      <a href="../../extend/remote/" class="md-nav__link">
         
   
   
@@ -1355,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/libdoc/" class="md-nav__link">
+      <a href="../../extend/libdoc/" class="md-nav__link">
         
   
   
@@ -1383,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/listeners/" class="md-nav__link">
+      <a href="../../extend/listeners/" class="md-nav__link">
         
   
   
@@ -1411,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/parsing/" class="md-nav__link">
+      <a href="../../extend/parsing/" class="md-nav__link">
         
   
   
@@ -1439,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/models/" class="md-nav__link">
+      <a href="../../extend/models/" class="md-nav__link">
         
   
   
@@ -1467,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/json/" class="md-nav__link">
+      <a href="../../extend/json/" class="md-nav__link">
         
   
   
@@ -1495,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extend/xml/" class="md-nav__link">
+      <a href="../../extend/xml/" class="md-nav__link">
         
   
   
@@ -1555,7 +1565,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/" class="md-nav__link ">
+            <a href="../../api/" class="md-nav__link ">
               
   
   
@@ -1658,7 +1668,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/" class="md-nav__link ">
+            <a href="../../api/robot/" class="md-nav__link ">
               
   
   
@@ -1729,7 +1739,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/api/" class="md-nav__link ">
+            <a href="../../api/robot/api/" class="md-nav__link ">
               
   
   
@@ -1771,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/api/deco/" class="md-nav__link">
+      <a href="../../api/robot/api/deco/" class="md-nav__link">
         
   
   
@@ -1799,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/api/exceptions/" class="md-nav__link">
+      <a href="../../api/robot/api/exceptions/" class="md-nav__link">
         
   
   
@@ -1827,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/api/interfaces/" class="md-nav__link">
+      <a href="../../api/robot/api/interfaces/" class="md-nav__link">
         
   
   
@@ -1855,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/api/logger/" class="md-nav__link">
+      <a href="../../api/robot/api/logger/" class="md-nav__link">
         
   
   
@@ -1883,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/api/parsing/" class="md-nav__link">
+      <a href="../../api/robot/api/parsing/" class="md-nav__link">
         
   
   
@@ -1944,7 +1954,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/conf/" class="md-nav__link ">
+            <a href="../../api/robot/conf/" class="md-nav__link ">
               
   
   
@@ -1986,7 +1996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/conf/gatherfailed/" class="md-nav__link">
+      <a href="../../api/robot/conf/gatherfailed/" class="md-nav__link">
         
   
   
@@ -2014,7 +2024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/conf/languages/" class="md-nav__link">
+      <a href="../../api/robot/conf/languages/" class="md-nav__link">
         
   
   
@@ -2042,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/conf/settings/" class="md-nav__link">
+      <a href="../../api/robot/conf/settings/" class="md-nav__link">
         
   
   
@@ -2078,7 +2088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/errors/" class="md-nav__link">
+      <a href="../../api/robot/errors/" class="md-nav__link">
         
   
   
@@ -2139,7 +2149,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/htmldata/" class="md-nav__link ">
+            <a href="../../api/robot/htmldata/" class="md-nav__link ">
               
   
   
@@ -2181,7 +2191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/common/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/common/" class="md-nav__link">
         
   
   
@@ -2209,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/htmlfilewriter/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/htmlfilewriter/" class="md-nav__link">
         
   
   
@@ -2237,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/jsonwriter/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/jsonwriter/" class="md-nav__link">
         
   
   
@@ -2265,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/libdoc/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/libdoc/" class="md-nav__link">
         
   
   
@@ -2293,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/rebot/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/rebot/" class="md-nav__link">
         
   
   
@@ -2321,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/template/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/template/" class="md-nav__link">
         
   
   
@@ -2349,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/htmldata/testdoc/" class="md-nav__link">
+      <a href="../../api/robot/htmldata/testdoc/" class="md-nav__link">
         
   
   
@@ -2385,7 +2395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdoc/" class="md-nav__link">
+      <a href="../../api/robot/libdoc/" class="md-nav__link">
         
   
   
@@ -2460,7 +2470,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/libdocpkg/" class="md-nav__link ">
+            <a href="../../api/robot/libdocpkg/" class="md-nav__link ">
               
   
   
@@ -2502,7 +2512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/builder/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/builder/" class="md-nav__link">
         
   
   
@@ -2530,7 +2540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/consoleviewer/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/consoleviewer/" class="md-nav__link">
         
   
   
@@ -2558,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/datatypes/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/datatypes/" class="md-nav__link">
         
   
   
@@ -2586,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/htmlutils/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/htmlutils/" class="md-nav__link">
         
   
   
@@ -2614,7 +2624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/htmlwriter/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/htmlwriter/" class="md-nav__link">
         
   
   
@@ -2642,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/jsonbuilder/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/jsonbuilder/" class="md-nav__link">
         
   
   
@@ -2670,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/jsonwriter/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/jsonwriter/" class="md-nav__link">
         
   
   
@@ -2698,7 +2708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/model/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/model/" class="md-nav__link">
         
   
   
@@ -2726,7 +2736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/output/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/output/" class="md-nav__link">
         
   
   
@@ -2754,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/robotbuilder/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/robotbuilder/" class="md-nav__link">
         
   
   
@@ -2782,7 +2792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/standardtypes/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/standardtypes/" class="md-nav__link">
         
   
   
@@ -2810,7 +2820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/writer/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/writer/" class="md-nav__link">
         
   
   
@@ -2838,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/xmlbuilder/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/xmlbuilder/" class="md-nav__link">
         
   
   
@@ -2866,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libdocpkg/xmlwriter/" class="md-nav__link">
+      <a href="../../api/robot/libdocpkg/xmlwriter/" class="md-nav__link">
         
   
   
@@ -2947,7 +2957,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/libraries/" class="md-nav__link ">
+            <a href="../../api/robot/libraries/" class="md-nav__link ">
               
   
   
@@ -2989,7 +2999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/BuiltIn/" class="md-nav__link">
+      <a href="../../api/robot/libraries/BuiltIn/" class="md-nav__link">
         
   
   
@@ -3017,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Collections/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Collections/" class="md-nav__link">
         
   
   
@@ -3045,7 +3055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/DateTime/" class="md-nav__link">
+      <a href="../../api/robot/libraries/DateTime/" class="md-nav__link">
         
   
   
@@ -3073,7 +3083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Dialogs/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Dialogs/" class="md-nav__link">
         
   
   
@@ -3101,7 +3111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Easter/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Easter/" class="md-nav__link">
         
   
   
@@ -3129,7 +3139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/OperatingSystem/" class="md-nav__link">
+      <a href="../../api/robot/libraries/OperatingSystem/" class="md-nav__link">
         
   
   
@@ -3157,7 +3167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Process/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Process/" class="md-nav__link">
         
   
   
@@ -3185,7 +3195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Remote/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Remote/" class="md-nav__link">
         
   
   
@@ -3213,7 +3223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Screenshot/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Screenshot/" class="md-nav__link">
         
   
   
@@ -3241,7 +3251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/String/" class="md-nav__link">
+      <a href="../../api/robot/libraries/String/" class="md-nav__link">
         
   
   
@@ -3269,7 +3279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/Telnet/" class="md-nav__link">
+      <a href="../../api/robot/libraries/Telnet/" class="md-nav__link">
         
   
   
@@ -3297,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/XML/" class="md-nav__link">
+      <a href="../../api/robot/libraries/XML/" class="md-nav__link">
         
   
   
@@ -3325,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/libraries/dialogs_py/" class="md-nav__link">
+      <a href="../../api/robot/libraries/dialogs_py/" class="md-nav__link">
         
   
   
@@ -3424,7 +3434,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/model/" class="md-nav__link ">
+            <a href="../../api/robot/model/" class="md-nav__link ">
               
   
   
@@ -3466,7 +3476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/body/" class="md-nav__link">
+      <a href="../../api/robot/model/body/" class="md-nav__link">
         
   
   
@@ -3494,7 +3504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/configurer/" class="md-nav__link">
+      <a href="../../api/robot/model/configurer/" class="md-nav__link">
         
   
   
@@ -3522,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/control/" class="md-nav__link">
+      <a href="../../api/robot/model/control/" class="md-nav__link">
         
   
   
@@ -3550,7 +3560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/filter/" class="md-nav__link">
+      <a href="../../api/robot/model/filter/" class="md-nav__link">
         
   
   
@@ -3578,7 +3588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/fixture/" class="md-nav__link">
+      <a href="../../api/robot/model/fixture/" class="md-nav__link">
         
   
   
@@ -3606,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/itemlist/" class="md-nav__link">
+      <a href="../../api/robot/model/itemlist/" class="md-nav__link">
         
   
   
@@ -3634,7 +3644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/keyword/" class="md-nav__link">
+      <a href="../../api/robot/model/keyword/" class="md-nav__link">
         
   
   
@@ -3662,7 +3672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/message/" class="md-nav__link">
+      <a href="../../api/robot/model/message/" class="md-nav__link">
         
   
   
@@ -3690,7 +3700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/metadata/" class="md-nav__link">
+      <a href="../../api/robot/model/metadata/" class="md-nav__link">
         
   
   
@@ -3718,7 +3728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/modelobject/" class="md-nav__link">
+      <a href="../../api/robot/model/modelobject/" class="md-nav__link">
         
   
   
@@ -3746,7 +3756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/modifier/" class="md-nav__link">
+      <a href="../../api/robot/model/modifier/" class="md-nav__link">
         
   
   
@@ -3774,7 +3784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/namepatterns/" class="md-nav__link">
+      <a href="../../api/robot/model/namepatterns/" class="md-nav__link">
         
   
   
@@ -3802,7 +3812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/statistics/" class="md-nav__link">
+      <a href="../../api/robot/model/statistics/" class="md-nav__link">
         
   
   
@@ -3830,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/stats/" class="md-nav__link">
+      <a href="../../api/robot/model/stats/" class="md-nav__link">
         
   
   
@@ -3858,7 +3868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/suitestatistics/" class="md-nav__link">
+      <a href="../../api/robot/model/suitestatistics/" class="md-nav__link">
         
   
   
@@ -3886,7 +3896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/tags/" class="md-nav__link">
+      <a href="../../api/robot/model/tags/" class="md-nav__link">
         
   
   
@@ -3914,7 +3924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/tagsetter/" class="md-nav__link">
+      <a href="../../api/robot/model/tagsetter/" class="md-nav__link">
         
   
   
@@ -3942,7 +3952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/tagstatistics/" class="md-nav__link">
+      <a href="../../api/robot/model/tagstatistics/" class="md-nav__link">
         
   
   
@@ -3970,7 +3980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/testcase/" class="md-nav__link">
+      <a href="../../api/robot/model/testcase/" class="md-nav__link">
         
   
   
@@ -3998,7 +4008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/testsuite/" class="md-nav__link">
+      <a href="../../api/robot/model/testsuite/" class="md-nav__link">
         
   
   
@@ -4026,7 +4036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/totalstatistics/" class="md-nav__link">
+      <a href="../../api/robot/model/totalstatistics/" class="md-nav__link">
         
   
   
@@ -4054,7 +4064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/model/visitor/" class="md-nav__link">
+      <a href="../../api/robot/model/visitor/" class="md-nav__link">
         
   
   
@@ -4133,7 +4143,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/output/" class="md-nav__link ">
+            <a href="../../api/robot/output/" class="md-nav__link ">
               
   
   
@@ -4202,7 +4212,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/output/console/" class="md-nav__link ">
+            <a href="../../api/robot/output/console/" class="md-nav__link ">
               
   
   
@@ -4244,7 +4254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/console/dotted/" class="md-nav__link">
+      <a href="../../api/robot/output/console/dotted/" class="md-nav__link">
         
   
   
@@ -4272,7 +4282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/console/highlighting/" class="md-nav__link">
+      <a href="../../api/robot/output/console/highlighting/" class="md-nav__link">
         
   
   
@@ -4300,7 +4310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/console/quiet/" class="md-nav__link">
+      <a href="../../api/robot/output/console/quiet/" class="md-nav__link">
         
   
   
@@ -4328,7 +4338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/console/verbose/" class="md-nav__link">
+      <a href="../../api/robot/output/console/verbose/" class="md-nav__link">
         
   
   
@@ -4364,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/debugfile/" class="md-nav__link">
+      <a href="../../api/robot/output/debugfile/" class="md-nav__link">
         
   
   
@@ -4392,7 +4402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/filelogger/" class="md-nav__link">
+      <a href="../../api/robot/output/filelogger/" class="md-nav__link">
         
   
   
@@ -4420,7 +4430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/librarylogger/" class="md-nav__link">
+      <a href="../../api/robot/output/librarylogger/" class="md-nav__link">
         
   
   
@@ -4448,7 +4458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/listeners/" class="md-nav__link">
+      <a href="../../api/robot/output/listeners/" class="md-nav__link">
         
   
   
@@ -4476,7 +4486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/logger/" class="md-nav__link">
+      <a href="../../api/robot/output/logger/" class="md-nav__link">
         
   
   
@@ -4504,7 +4514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/loggerapi/" class="md-nav__link">
+      <a href="../../api/robot/output/loggerapi/" class="md-nav__link">
         
   
   
@@ -4532,7 +4542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/loggerhelper/" class="md-nav__link">
+      <a href="../../api/robot/output/loggerhelper/" class="md-nav__link">
         
   
   
@@ -4560,7 +4570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/output/" class="md-nav__link">
+      <a href="../../api/robot/output/output/" class="md-nav__link">
         
   
   
@@ -4588,7 +4598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/pyloggingconf/" class="md-nav__link">
+      <a href="../../api/robot/output/pyloggingconf/" class="md-nav__link">
         
   
   
@@ -4616,7 +4626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/stdoutlogsplitter/" class="md-nav__link">
+      <a href="../../api/robot/output/stdoutlogsplitter/" class="md-nav__link">
         
   
   
@@ -4644,7 +4654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/output/xmllogger/" class="md-nav__link">
+      <a href="../../api/robot/output/xmllogger/" class="md-nav__link">
         
   
   
@@ -4707,7 +4717,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/parsing/" class="md-nav__link ">
+            <a href="../../api/robot/parsing/" class="md-nav__link ">
               
   
   
@@ -4782,7 +4792,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/parsing/lexer/" class="md-nav__link ">
+            <a href="../../api/robot/parsing/lexer/" class="md-nav__link ">
               
   
   
@@ -4824,7 +4834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/blocklexers/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/blocklexers/" class="md-nav__link">
         
   
   
@@ -4852,7 +4862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/context/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/context/" class="md-nav__link">
         
   
   
@@ -4880,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/lexer/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/lexer/" class="md-nav__link">
         
   
   
@@ -4908,7 +4918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/settings/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/settings/" class="md-nav__link">
         
   
   
@@ -4936,7 +4946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/statementlexers/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/statementlexers/" class="md-nav__link">
         
   
   
@@ -4964,7 +4974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/tokenizer/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/tokenizer/" class="md-nav__link">
         
   
   
@@ -4992,7 +5002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/lexer/tokens/" class="md-nav__link">
+      <a href="../../api/robot/parsing/lexer/tokens/" class="md-nav__link">
         
   
   
@@ -5053,7 +5063,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/parsing/model/" class="md-nav__link ">
+            <a href="../../api/robot/parsing/model/" class="md-nav__link ">
               
   
   
@@ -5095,7 +5105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/model/blocks/" class="md-nav__link">
+      <a href="../../api/robot/parsing/model/blocks/" class="md-nav__link">
         
   
   
@@ -5123,7 +5133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/model/statements/" class="md-nav__link">
+      <a href="../../api/robot/parsing/model/statements/" class="md-nav__link">
         
   
   
@@ -5151,7 +5161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/model/visitor/" class="md-nav__link">
+      <a href="../../api/robot/parsing/model/visitor/" class="md-nav__link">
         
   
   
@@ -5212,7 +5222,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/parsing/parser/" class="md-nav__link ">
+            <a href="../../api/robot/parsing/parser/" class="md-nav__link ">
               
   
   
@@ -5254,7 +5264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/parser/blockparsers/" class="md-nav__link">
+      <a href="../../api/robot/parsing/parser/blockparsers/" class="md-nav__link">
         
   
   
@@ -5282,7 +5292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/parser/fileparser/" class="md-nav__link">
+      <a href="../../api/robot/parsing/parser/fileparser/" class="md-nav__link">
         
   
   
@@ -5310,7 +5320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/parser/parser/" class="md-nav__link">
+      <a href="../../api/robot/parsing/parser/parser/" class="md-nav__link">
         
   
   
@@ -5346,7 +5356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/parsing/suitestructure/" class="md-nav__link">
+      <a href="../../api/robot/parsing/suitestructure/" class="md-nav__link">
         
   
   
@@ -5382,7 +5392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/pythonpathsetter/" class="md-nav__link">
+      <a href="../../api/robot/pythonpathsetter/" class="md-nav__link">
         
   
   
@@ -5410,7 +5420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/rebot/" class="md-nav__link">
+      <a href="../../api/robot/rebot/" class="md-nav__link">
         
   
   
@@ -5477,7 +5487,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/reporting/" class="md-nav__link ">
+            <a href="../../api/robot/reporting/" class="md-nav__link ">
               
   
   
@@ -5519,7 +5529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/expandkeywordmatcher/" class="md-nav__link">
+      <a href="../../api/robot/reporting/expandkeywordmatcher/" class="md-nav__link">
         
   
   
@@ -5547,7 +5557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/jsbuildingcontext/" class="md-nav__link">
+      <a href="../../api/robot/reporting/jsbuildingcontext/" class="md-nav__link">
         
   
   
@@ -5575,7 +5585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/jsexecutionresult/" class="md-nav__link">
+      <a href="../../api/robot/reporting/jsexecutionresult/" class="md-nav__link">
         
   
   
@@ -5603,7 +5613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/jsmodelbuilders/" class="md-nav__link">
+      <a href="../../api/robot/reporting/jsmodelbuilders/" class="md-nav__link">
         
   
   
@@ -5631,7 +5641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/jswriter/" class="md-nav__link">
+      <a href="../../api/robot/reporting/jswriter/" class="md-nav__link">
         
   
   
@@ -5659,7 +5669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/logreportwriters/" class="md-nav__link">
+      <a href="../../api/robot/reporting/logreportwriters/" class="md-nav__link">
         
   
   
@@ -5687,7 +5697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/outputwriter/" class="md-nav__link">
+      <a href="../../api/robot/reporting/outputwriter/" class="md-nav__link">
         
   
   
@@ -5715,7 +5725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/resultwriter/" class="md-nav__link">
+      <a href="../../api/robot/reporting/resultwriter/" class="md-nav__link">
         
   
   
@@ -5743,7 +5753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/stringcache/" class="md-nav__link">
+      <a href="../../api/robot/reporting/stringcache/" class="md-nav__link">
         
   
   
@@ -5771,7 +5781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/reporting/xunitwriter/" class="md-nav__link">
+      <a href="../../api/robot/reporting/xunitwriter/" class="md-nav__link">
         
   
   
@@ -5852,7 +5862,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/result/" class="md-nav__link ">
+            <a href="../../api/robot/result/" class="md-nav__link ">
               
   
   
@@ -5894,7 +5904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/configurer/" class="md-nav__link">
+      <a href="../../api/robot/result/configurer/" class="md-nav__link">
         
   
   
@@ -5922,7 +5932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/executionerrors/" class="md-nav__link">
+      <a href="../../api/robot/result/executionerrors/" class="md-nav__link">
         
   
   
@@ -5950,7 +5960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/executionresult/" class="md-nav__link">
+      <a href="../../api/robot/result/executionresult/" class="md-nav__link">
         
   
   
@@ -5978,7 +5988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/flattenkeywordmatcher/" class="md-nav__link">
+      <a href="../../api/robot/result/flattenkeywordmatcher/" class="md-nav__link">
         
   
   
@@ -6006,7 +6016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/keywordremover/" class="md-nav__link">
+      <a href="../../api/robot/result/keywordremover/" class="md-nav__link">
         
   
   
@@ -6034,7 +6044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/merger/" class="md-nav__link">
+      <a href="../../api/robot/result/merger/" class="md-nav__link">
         
   
   
@@ -6062,7 +6072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/messagefilter/" class="md-nav__link">
+      <a href="../../api/robot/result/messagefilter/" class="md-nav__link">
         
   
   
@@ -6090,7 +6100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/model/" class="md-nav__link">
+      <a href="../../api/robot/result/model/" class="md-nav__link">
         
   
   
@@ -6118,7 +6128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/modeldeprecation/" class="md-nav__link">
+      <a href="../../api/robot/result/modeldeprecation/" class="md-nav__link">
         
   
   
@@ -6146,7 +6156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/resultbuilder/" class="md-nav__link">
+      <a href="../../api/robot/result/resultbuilder/" class="md-nav__link">
         
   
   
@@ -6174,7 +6184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/suiteteardownfailed/" class="md-nav__link">
+      <a href="../../api/robot/result/suiteteardownfailed/" class="md-nav__link">
         
   
   
@@ -6202,7 +6212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/visitor/" class="md-nav__link">
+      <a href="../../api/robot/result/visitor/" class="md-nav__link">
         
   
   
@@ -6230,7 +6240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/result/xmlelementhandlers/" class="md-nav__link">
+      <a href="../../api/robot/result/xmlelementhandlers/" class="md-nav__link">
         
   
   
@@ -6266,7 +6276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/run/" class="md-nav__link">
+      <a href="../../api/robot/run/" class="md-nav__link">
         
   
   
@@ -6363,7 +6373,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/running/" class="md-nav__link ">
+            <a href="../../api/robot/running/" class="md-nav__link ">
               
   
   
@@ -6448,7 +6458,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/running/arguments/" class="md-nav__link ">
+            <a href="../../api/robot/running/arguments/" class="md-nav__link ">
               
   
   
@@ -6490,7 +6500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentconverter/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentconverter/" class="md-nav__link">
         
   
   
@@ -6518,7 +6528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentmapper/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentmapper/" class="md-nav__link">
         
   
   
@@ -6546,7 +6556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentparser/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentparser/" class="md-nav__link">
         
   
   
@@ -6574,7 +6584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentresolver/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentresolver/" class="md-nav__link">
         
   
   
@@ -6602,7 +6612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentspec/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentspec/" class="md-nav__link">
         
   
   
@@ -6630,7 +6640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/argumentvalidator/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/argumentvalidator/" class="md-nav__link">
         
   
   
@@ -6658,7 +6668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/customconverters/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/customconverters/" class="md-nav__link">
         
   
   
@@ -6686,7 +6696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/embedded/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/embedded/" class="md-nav__link">
         
   
   
@@ -6714,7 +6724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/typeconverters/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/typeconverters/" class="md-nav__link">
         
   
   
@@ -6742,7 +6752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/typeinfo/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/typeinfo/" class="md-nav__link">
         
   
   
@@ -6770,7 +6780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/typeinfoparser/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/typeinfoparser/" class="md-nav__link">
         
   
   
@@ -6798,7 +6808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/arguments/typevalidator/" class="md-nav__link">
+      <a href="../../api/robot/running/arguments/typevalidator/" class="md-nav__link">
         
   
   
@@ -6834,7 +6844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/bodyrunner/" class="md-nav__link">
+      <a href="../../api/robot/running/bodyrunner/" class="md-nav__link">
         
   
   
@@ -6889,7 +6899,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/running/builder/" class="md-nav__link ">
+            <a href="../../api/robot/running/builder/" class="md-nav__link ">
               
   
   
@@ -6931,7 +6941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/builder/builders/" class="md-nav__link">
+      <a href="../../api/robot/running/builder/builders/" class="md-nav__link">
         
   
   
@@ -6959,7 +6969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/builder/parsers/" class="md-nav__link">
+      <a href="../../api/robot/running/builder/parsers/" class="md-nav__link">
         
   
   
@@ -6987,7 +6997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/builder/settings/" class="md-nav__link">
+      <a href="../../api/robot/running/builder/settings/" class="md-nav__link">
         
   
   
@@ -7015,7 +7025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/builder/transformers/" class="md-nav__link">
+      <a href="../../api/robot/running/builder/transformers/" class="md-nav__link">
         
   
   
@@ -7051,7 +7061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/context/" class="md-nav__link">
+      <a href="../../api/robot/running/context/" class="md-nav__link">
         
   
   
@@ -7079,7 +7089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/dynamicmethods/" class="md-nav__link">
+      <a href="../../api/robot/running/dynamicmethods/" class="md-nav__link">
         
   
   
@@ -7107,7 +7117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/importer/" class="md-nav__link">
+      <a href="../../api/robot/running/importer/" class="md-nav__link">
         
   
   
@@ -7135,7 +7145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/invalidkeyword/" class="md-nav__link">
+      <a href="../../api/robot/running/invalidkeyword/" class="md-nav__link">
         
   
   
@@ -7163,7 +7173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/keywordfinder/" class="md-nav__link">
+      <a href="../../api/robot/running/keywordfinder/" class="md-nav__link">
         
   
   
@@ -7191,7 +7201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/keywordimplementation/" class="md-nav__link">
+      <a href="../../api/robot/running/keywordimplementation/" class="md-nav__link">
         
   
   
@@ -7219,7 +7229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/librarykeyword/" class="md-nav__link">
+      <a href="../../api/robot/running/librarykeyword/" class="md-nav__link">
         
   
   
@@ -7247,7 +7257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/librarykeywordrunner/" class="md-nav__link">
+      <a href="../../api/robot/running/librarykeywordrunner/" class="md-nav__link">
         
   
   
@@ -7275,7 +7285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/libraryscopes/" class="md-nav__link">
+      <a href="../../api/robot/running/libraryscopes/" class="md-nav__link">
         
   
   
@@ -7303,7 +7313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/model/" class="md-nav__link">
+      <a href="../../api/robot/running/model/" class="md-nav__link">
         
   
   
@@ -7331,7 +7341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/namespace/" class="md-nav__link">
+      <a href="../../api/robot/running/namespace/" class="md-nav__link">
         
   
   
@@ -7359,7 +7369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/outputcapture/" class="md-nav__link">
+      <a href="../../api/robot/running/outputcapture/" class="md-nav__link">
         
   
   
@@ -7387,7 +7397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/randomizer/" class="md-nav__link">
+      <a href="../../api/robot/running/randomizer/" class="md-nav__link">
         
   
   
@@ -7415,7 +7425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/resourcemodel/" class="md-nav__link">
+      <a href="../../api/robot/running/resourcemodel/" class="md-nav__link">
         
   
   
@@ -7443,7 +7453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/runkwregister/" class="md-nav__link">
+      <a href="../../api/robot/running/runkwregister/" class="md-nav__link">
         
   
   
@@ -7471,7 +7481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/signalhandler/" class="md-nav__link">
+      <a href="../../api/robot/running/signalhandler/" class="md-nav__link">
         
   
   
@@ -7499,7 +7509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/status/" class="md-nav__link">
+      <a href="../../api/robot/running/status/" class="md-nav__link">
         
   
   
@@ -7527,7 +7537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/statusreporter/" class="md-nav__link">
+      <a href="../../api/robot/running/statusreporter/" class="md-nav__link">
         
   
   
@@ -7555,7 +7565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/suiterunner/" class="md-nav__link">
+      <a href="../../api/robot/running/suiterunner/" class="md-nav__link">
         
   
   
@@ -7583,7 +7593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/testlibraries/" class="md-nav__link">
+      <a href="../../api/robot/running/testlibraries/" class="md-nav__link">
         
   
   
@@ -7636,7 +7646,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/running/timeouts/" class="md-nav__link ">
+            <a href="../../api/robot/running/timeouts/" class="md-nav__link ">
               
   
   
@@ -7678,7 +7688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/timeouts/nosupport/" class="md-nav__link">
+      <a href="../../api/robot/running/timeouts/nosupport/" class="md-nav__link">
         
   
   
@@ -7706,7 +7716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/timeouts/posix/" class="md-nav__link">
+      <a href="../../api/robot/running/timeouts/posix/" class="md-nav__link">
         
   
   
@@ -7734,7 +7744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/timeouts/windows/" class="md-nav__link">
+      <a href="../../api/robot/running/timeouts/windows/" class="md-nav__link">
         
   
   
@@ -7770,7 +7780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/running/userkeywordrunner/" class="md-nav__link">
+      <a href="../../api/robot/running/userkeywordrunner/" class="md-nav__link">
         
   
   
@@ -7806,7 +7816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/testdoc/" class="md-nav__link">
+      <a href="../../api/robot/testdoc/" class="md-nav__link">
         
   
   
@@ -7925,7 +7935,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/utils/" class="md-nav__link ">
+            <a href="../../api/robot/utils/" class="md-nav__link ">
               
   
   
@@ -7967,7 +7977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/application/" class="md-nav__link">
+      <a href="../../api/robot/utils/application/" class="md-nav__link">
         
   
   
@@ -7995,7 +8005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/argumentparser/" class="md-nav__link">
+      <a href="../../api/robot/utils/argumentparser/" class="md-nav__link">
         
   
   
@@ -8023,7 +8033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/asserts/" class="md-nav__link">
+      <a href="../../api/robot/utils/asserts/" class="md-nav__link">
         
   
   
@@ -8051,7 +8061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/charwidth/" class="md-nav__link">
+      <a href="../../api/robot/utils/charwidth/" class="md-nav__link">
         
   
   
@@ -8079,7 +8089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/compress/" class="md-nav__link">
+      <a href="../../api/robot/utils/compress/" class="md-nav__link">
         
   
   
@@ -8107,7 +8117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/connectioncache/" class="md-nav__link">
+      <a href="../../api/robot/utils/connectioncache/" class="md-nav__link">
         
   
   
@@ -8135,7 +8145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/dotdict/" class="md-nav__link">
+      <a href="../../api/robot/utils/dotdict/" class="md-nav__link">
         
   
   
@@ -8163,7 +8173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/encoding/" class="md-nav__link">
+      <a href="../../api/robot/utils/encoding/" class="md-nav__link">
         
   
   
@@ -8191,7 +8201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/encodingsniffer/" class="md-nav__link">
+      <a href="../../api/robot/utils/encodingsniffer/" class="md-nav__link">
         
   
   
@@ -8219,7 +8229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/error/" class="md-nav__link">
+      <a href="../../api/robot/utils/error/" class="md-nav__link">
         
   
   
@@ -8247,7 +8257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/escaping/" class="md-nav__link">
+      <a href="../../api/robot/utils/escaping/" class="md-nav__link">
         
   
   
@@ -8275,7 +8285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/etreewrapper/" class="md-nav__link">
+      <a href="../../api/robot/utils/etreewrapper/" class="md-nav__link">
         
   
   
@@ -8303,7 +8313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/filereader/" class="md-nav__link">
+      <a href="../../api/robot/utils/filereader/" class="md-nav__link">
         
   
   
@@ -8331,7 +8341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/frange/" class="md-nav__link">
+      <a href="../../api/robot/utils/frange/" class="md-nav__link">
         
   
   
@@ -8359,7 +8369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/htmlformatters/" class="md-nav__link">
+      <a href="../../api/robot/utils/htmlformatters/" class="md-nav__link">
         
   
   
@@ -8387,7 +8397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/importer/" class="md-nav__link">
+      <a href="../../api/robot/utils/importer/" class="md-nav__link">
         
   
   
@@ -8415,7 +8425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/markuputils/" class="md-nav__link">
+      <a href="../../api/robot/utils/markuputils/" class="md-nav__link">
         
   
   
@@ -8443,7 +8453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/markupwriters/" class="md-nav__link">
+      <a href="../../api/robot/utils/markupwriters/" class="md-nav__link">
         
   
   
@@ -8471,7 +8481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/match/" class="md-nav__link">
+      <a href="../../api/robot/utils/match/" class="md-nav__link">
         
   
   
@@ -8499,7 +8509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/misc/" class="md-nav__link">
+      <a href="../../api/robot/utils/misc/" class="md-nav__link">
         
   
   
@@ -8527,7 +8537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/normalizing/" class="md-nav__link">
+      <a href="../../api/robot/utils/normalizing/" class="md-nav__link">
         
   
   
@@ -8555,7 +8565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/notset/" class="md-nav__link">
+      <a href="../../api/robot/utils/notset/" class="md-nav__link">
         
   
   
@@ -8583,7 +8593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/platform/" class="md-nav__link">
+      <a href="../../api/robot/utils/platform/" class="md-nav__link">
         
   
   
@@ -8611,7 +8621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/recommendations/" class="md-nav__link">
+      <a href="../../api/robot/utils/recommendations/" class="md-nav__link">
         
   
   
@@ -8639,7 +8649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/restreader/" class="md-nav__link">
+      <a href="../../api/robot/utils/restreader/" class="md-nav__link">
         
   
   
@@ -8667,7 +8677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robotenv/" class="md-nav__link">
+      <a href="../../api/robot/utils/robotenv/" class="md-nav__link">
         
   
   
@@ -8695,7 +8705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robotinspect/" class="md-nav__link">
+      <a href="../../api/robot/utils/robotinspect/" class="md-nav__link">
         
   
   
@@ -8723,7 +8733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robotio/" class="md-nav__link">
+      <a href="../../api/robot/utils/robotio/" class="md-nav__link">
         
   
   
@@ -8751,7 +8761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robotpath/" class="md-nav__link">
+      <a href="../../api/robot/utils/robotpath/" class="md-nav__link">
         
   
   
@@ -8779,7 +8789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robottime/" class="md-nav__link">
+      <a href="../../api/robot/utils/robottime/" class="md-nav__link">
         
   
   
@@ -8807,7 +8817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/robottypes/" class="md-nav__link">
+      <a href="../../api/robot/utils/robottypes/" class="md-nav__link">
         
   
   
@@ -8835,7 +8845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/setter/" class="md-nav__link">
+      <a href="../../api/robot/utils/setter/" class="md-nav__link">
         
   
   
@@ -8863,7 +8873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/sortable/" class="md-nav__link">
+      <a href="../../api/robot/utils/sortable/" class="md-nav__link">
         
   
   
@@ -8891,7 +8901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/text/" class="md-nav__link">
+      <a href="../../api/robot/utils/text/" class="md-nav__link">
         
   
   
@@ -8919,7 +8929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/typehints/" class="md-nav__link">
+      <a href="../../api/robot/utils/typehints/" class="md-nav__link">
         
   
   
@@ -8947,7 +8957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/utils/unic/" class="md-nav__link">
+      <a href="../../api/robot/utils/unic/" class="md-nav__link">
         
   
   
@@ -9026,7 +9036,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../api/robot/variables/" class="md-nav__link ">
+            <a href="../../api/robot/variables/" class="md-nav__link ">
               
   
   
@@ -9068,7 +9078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/assigner/" class="md-nav__link">
+      <a href="../../api/robot/variables/assigner/" class="md-nav__link">
         
   
   
@@ -9096,7 +9106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/evaluation/" class="md-nav__link">
+      <a href="../../api/robot/variables/evaluation/" class="md-nav__link">
         
   
   
@@ -9124,7 +9134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/filesetter/" class="md-nav__link">
+      <a href="../../api/robot/variables/filesetter/" class="md-nav__link">
         
   
   
@@ -9152,7 +9162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/finders/" class="md-nav__link">
+      <a href="../../api/robot/variables/finders/" class="md-nav__link">
         
   
   
@@ -9180,7 +9190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/notfound/" class="md-nav__link">
+      <a href="../../api/robot/variables/notfound/" class="md-nav__link">
         
   
   
@@ -9208,7 +9218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/replacer/" class="md-nav__link">
+      <a href="../../api/robot/variables/replacer/" class="md-nav__link">
         
   
   
@@ -9236,7 +9246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/resolvable/" class="md-nav__link">
+      <a href="../../api/robot/variables/resolvable/" class="md-nav__link">
         
   
   
@@ -9264,7 +9274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/scopes/" class="md-nav__link">
+      <a href="../../api/robot/variables/scopes/" class="md-nav__link">
         
   
   
@@ -9292,7 +9302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/search/" class="md-nav__link">
+      <a href="../../api/robot/variables/search/" class="md-nav__link">
         
   
   
@@ -9320,7 +9330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/store/" class="md-nav__link">
+      <a href="../../api/robot/variables/store/" class="md-nav__link">
         
   
   
@@ -9348,7 +9358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/tablesetter/" class="md-nav__link">
+      <a href="../../api/robot/variables/tablesetter/" class="md-nav__link">
         
   
   
@@ -9376,7 +9386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/variables/variables/" class="md-nav__link">
+      <a href="../../api/robot/variables/variables/" class="md-nav__link">
         
   
   
@@ -9412,7 +9422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/robot/version/" class="md-nav__link">
+      <a href="../../api/robot/version/" class="md-nav__link">
         
   
   
@@ -9488,7 +9498,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../appendix/" class="md-nav__link ">
+            <a href="../../appendix/" class="md-nav__link ">
               
   
   
@@ -9530,7 +9540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/settings/" class="md-nav__link">
+      <a href="../../appendix/settings/" class="md-nav__link">
         
   
   
@@ -9558,7 +9568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/cli/" class="md-nav__link">
+      <a href="../../appendix/cli/" class="md-nav__link">
         
   
   
@@ -9586,7 +9596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/translations/" class="md-nav__link">
+      <a href="../../appendix/translations/" class="md-nav__link">
         
   
   
@@ -9614,7 +9624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/expressions/" class="md-nav__link">
+      <a href="../../appendix/expressions/" class="md-nav__link">
         
   
   
@@ -9642,7 +9652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/doc-format/" class="md-nav__link">
+      <a href="../../appendix/doc-format/" class="md-nav__link">
         
   
   
@@ -9670,7 +9680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/time-format/" class="md-nav__link">
+      <a href="../../appendix/time-format/" class="md-nav__link">
         
   
   
@@ -9698,7 +9708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../appendix/registrations/" class="md-nav__link">
+      <a href="../../appendix/registrations/" class="md-nav__link">
         
   
   
@@ -9733,7 +9743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   
@@ -9770,7 +9780,7 @@
 
 
   
-    <a href="https://github.com/pekkaklarck/manual/blob/main/doc/manual/docs/data/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/doc/manual/docs/syntax/suites.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9778,10 +9788,7 @@
   
 
 
-<h1 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h1>
-<p>This section will cover data syntax, how to create tests and tasks, how to use
-keywords, etc.</p>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6a7.svg" title=":construction:" /></p>
+<h1 id="creating-suites">Creating suites<a class="headerlink" href="#creating-suites" title="Permanent link">&para;</a></h1>
 
 
 
@@ -9819,7 +9826,7 @@ keywords, etc.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install">
+          <a href="../tasks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating tasks">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9829,20 +9836,20 @@ keywords, etc.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Install
+                Creating tasks
               </div>
             </div>
           </a>
         
         
           
-          <a href="syntax/" class="md-footer__link md-footer__link--next" aria-label="Next: Syntax">
+          <a href="../libraries/" class="md-footer__link md-footer__link--next" aria-label="Next: Using libraries">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Syntax
+                Using libraries
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -9935,10 +9942,10 @@ keywords, etc.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

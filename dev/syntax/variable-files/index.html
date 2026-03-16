@@ -10,24 +10,24 @@
       
       
       
-        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/data/advanced/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/syntax/variable-files/">
       
       
-        <link rel="prev" href="../control/">
+        <link rel="prev" href="../resource-files/">
       
       
-        <link rel="next" href="../../execution/">
+        <link rel="next" href="../control/">
       
       
         
       
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Advanced features - Robot Framework</title>
+        <title>Variable files - Robot Framework</title>
       
     
     
@@ -65,17 +65,17 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Advanced features - Robot Framework" />
+<meta property="og:title" content="Variable files - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/data/advanced.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/syntax/variable-files.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/data/advanced/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/syntax/variable-files/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Advanced features - Robot Framework" />
+<meta property="twitter:title" content="Variable files - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/data/advanced.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/syntax/variable-files.png" />
 </head>
   
   
@@ -93,6 +93,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#variable-files" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -139,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced features
+              Variable files
             
           </span>
         </div>
@@ -308,7 +313,7 @@
   
     
   
-  Data
+  Syntax
 
       </a>
     </li>
@@ -592,7 +597,7 @@
   <span class="md-ellipsis">
     
   
-    Data
+    Syntax
   
 
     
@@ -614,7 +619,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Data
+    Syntax
   
 
           </label>
@@ -627,14 +632,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../syntax/" class="md-nav__link">
+      <a href="../data.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Syntax
+    Test Data
   
 
     
@@ -848,10 +853,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../variable-files/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -867,6 +881,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -904,17 +919,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
         
   
   
@@ -930,7 +938,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -9773,7 +9780,7 @@
 
 
   
-    <a href="https://github.com/pekkaklarck/manual/blob/main/doc/manual/docs/data/advanced.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/doc/manual/docs/syntax/variable-files.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9781,9 +9788,7 @@
   
 
 
-  <h1>Advanced features</h1>
-
-
+<h1 id="variable-files">Variable files<a class="headerlink" href="#variable-files" title="Permanent link">&para;</a></h1>
 
 
 
@@ -9821,7 +9826,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../control/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Control structures">
+          <a href="../resource-files/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Resource files">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9831,20 +9836,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Control structures
+                Resource files
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../execution/" class="md-footer__link md-footer__link--next" aria-label="Next: Execution">
+          <a href="../control/" class="md-footer__link md-footer__link--next" aria-label="Next: Control structures">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Execution
+                Control structures
               </div>
             </div>
             <div class="md-footer__button md-icon">
