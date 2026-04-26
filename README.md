@@ -34,7 +34,13 @@ Common practice for submitting contributions is via
 
 #### Activate the virtual environment
 
+Linux
+
     source .venv/bin/activate
+
+Windows (Command Prompt)
+
+    .venv\Scripts\activate
 
 #### Install dependencies
 
@@ -70,7 +76,13 @@ Open http://127.0.0.1:8000/manual/ in your browser. The changes will be reflecte
 
 To speed up builds, disable building API document generation:
 
+Linux
+
     DO_NOT_GENERATE_API_DOCS=True properdocs serve
+
+Windows (Command Prompt)
+
+    set "DO_NOT_GENERATE_API_DOCS=True" && properdocs serve
 
 ### Exiting development environment
 
