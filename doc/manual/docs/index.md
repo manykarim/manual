@@ -41,10 +41,17 @@ Example
 *** Keyword ***
 Greeting
     [Arguments]    ${name}
-    Log    Hello, ${name}!
+    IF    $name == "Robot"
+        Log    Hello, good sir!
+    ELSE
+        Log    Hello, ${name}!
+    END
 ```
 
 ```python
 def greeting(name):
-    print(f"Hello, {name}!")
+    if name == "Robot":
+        print("Hello, good sir!")
+    else:
+        print(f"Hello, {name}!")
 ```
