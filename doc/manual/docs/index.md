@@ -43,7 +43,7 @@ Greeting
     [Arguments]    ${name}
     IF    $name == "Robot"
         Log    Hello, good sir!
-    ELSE
+    ELSE  # Not Robot!
         Log    Hello, ${name}!
     END
 ```
@@ -52,6 +52,6 @@ Greeting
 def greeting(name):
     if name == "Robot":
         print("Hello, good sir!")
-    else:
+    else:  # Not Robot!
         print(f"Hello, {name}!")
 ```
