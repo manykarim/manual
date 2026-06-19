@@ -22,3 +22,36 @@ The manual concentrates only to Robot Framework core and is rather technical.
 If you are looking for more practical information related to getting started with
 Robot Framework or using it in a certain domain such as web automation, see
 the excellent [Robot Framework Guides](https://docs.robotframework.org/docs) project.
+
+## Examples
+
+These examples were added for testing syntax highlighting and can be removed.
+Having some examples on the front page could be a good idea, though.
+
+```robotframework
+*** Settings ***
+Documentation        Is this an interesting example?
+Library              Example.py
+
+*** Test Cases ***
+Example
+    [Documentation]    No, this this isn't.
+    Greeting    Robot
+
+*** Keyword ***
+Greeting
+    [Arguments]    ${name}
+    IF    $name == "Robot"
+        Log    Hello, good sir!
+    ELSE  # Not Robot!
+        Log    Hello, ${name}!
+    END
+```
+
+```python
+def greeting(name):
+    if name == "Robot":
+        print("Hello, good sir!")
+    else:  # Not Robot!
+        print(f"Hello, {name}!")
+```
