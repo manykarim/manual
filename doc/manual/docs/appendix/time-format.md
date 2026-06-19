@@ -1,9 +1,9 @@
 # Time format
 
 Robot Framework has its own time format that is both flexible to use and easy
-to understand. It is used by several keywords (for example, [BuiltIn](../creating-test-data/using-test-libraries.md#builtin) keywords
-*Sleep* and *Wait Until Keyword Succeeds*), [DateTime](../creating-test-data/using-test-libraries.md#datetime) library, and
-[timeouts](../creating-test-data/advanced-features.md#timeouts).
+to understand. It is used by several keywords (for example, [BuiltIn](../syntax/libraries.md#builtin) keywords
+*Sleep* and *Wait Until Keyword Succeeds*), [DateTime](../syntax/libraries.md#datetime) library, and
+[timeouts](../syntax/advanced.md#timeouts).
 
 ## Time as number
 
@@ -14,7 +14,7 @@ containing numerical values.
 
 !!! note
     In some contexts plain numbers can be interpreted otherwise as
-    times. For example, with [WHILE loop limit](../creating-test-data/control-structures.md#limiting-while-loop-iterations) integers denote
+    times. For example, with [WHILE loop limit](../syntax/control.md#limiting-while-loop-iterations) integers denote
     the maximum iteration count.
 
 ## Time as time string
@@ -40,16 +40,18 @@ times. The available time specifiers are:
 * microseconds, microsecond, us, μs
 * nanoseconds, nanosecond, ns
 
-Examples::
+Examples:
 
-   1 min 30 secs
-   1.5 minutes
-   90 s
-   1 day 2 hours 3 minutes 4 seconds 5 milliseconds 6 microseconds 7 nanoseconds
-   8 weeks 7 days 6 hours 5 minutes 4 seconds 3 milliseconds 2 microseconds 1 nanosecond
-   1d 2h 3m 4s 5ms 6μs 7 ns
-   8w 7d 6h 5m 4s 3ms 2μs 1ns
-   - 10 seconds
+```
+1 min 30 secs
+1.5 minutes
+90 s
+1 day 2 hours 3 minutes 4 seconds 5 milliseconds 6 microseconds 7 nanoseconds
+8 weeks 7 days 6 hours 5 minutes 4 seconds 3 milliseconds 2 microseconds 1 nanosecond
+1d 2h 3m 4s 5ms 6μs 7 ns
+8w 7d 6h 5m 4s 3ms 2μs 1ns
+- 10 seconds
+```
 
 !!! note
     Support for micro and nanoseconds is new in Robot Framework 6.0.
@@ -63,16 +65,14 @@ are optional, leading and trailing zeros can be left out when they are not
 meaningful, and negative times can be represented by adding the `-`
 prefix. For example, following timer and time string values are identical:
 
-   ============  ======================================
-      Timer                   Time string
-   ============  ======================================
-   00:00:01      1 second
-   01:02:03      1 hour 2 minutes 3 seconds
-   1:00:00       1 hour
-   100:00:00     100 hours
-   00:02         2 seconds
-   42:00         42 minutes
-   00:01:02.003  1 minute 2 seconds 3 milliseconds
-   00:01.5       1.5 seconds
-   -01:02.345    \- 1 minute 2 seconds 345 milliseconds
-   ============  ======================================
+   | Timer | Time string |
+   | --- | --- |
+   | 00:00:01 | 1 second |
+   | 01:02:03 | 1 hour 2 minutes 3 seconds |
+   | 1:00:00 | 1 hour |
+   | 100:00:00 | 100 hours |
+   | 00:02 | 2 seconds |
+   | 42:00 | 42 minutes |
+   | 00:01:02.003 | 1 minute 2 seconds 3 milliseconds |
+   | 00:01.5 | 1.5 seconds |
+   | -01:02.345 | \- 1 minute 2 seconds 345 milliseconds |

@@ -8,7 +8,7 @@ Variables are an integral feature of Robot Framework, and they can be
 used in most places in test data. Most commonly, they are used in
 arguments for keywords in Test Case and Keyword sections, but
 also all settings allow variables in their values. A normal keyword
-name *cannot* be specified with a variable, but the [BuiltIn](using-test-libraries.md#builtin) keyword
+name *cannot* be specified with a variable, but the [BuiltIn](libraries.md#builtin) keyword
 *Run Keyword* can be used to get the same effect.
 
 Robot Framework has its own variables that can be used as [scalars](https://docs.python.org/3/library/stdtypes.html#bytes-objects), [lists](https://docs.python.org/3/library/stdtypes.html#bytearray-objects)
@@ -106,7 +106,7 @@ a string and then concatenated with the other data.
 
 !!! note
     Variable values are used as-is without string conversion also when
-    passing arguments to keywords using the [named arguments](creating-test-cases.md#named-arguments)
+    passing arguments to keywords using the [named arguments](tests.md#named-arguments)
     syntax like `argname=${var}`.
 
 The example below demonstrates the difference between having a
@@ -118,7 +118,7 @@ object:
 ```python
 class MyObj:
 
-    def [__str](#str)(self):
+    def __str__(self):
         return "Hi, terra!"
 ```
 With these two variables set, we then have the following test data:
@@ -141,7 +141,7 @@ the arguments as explained below:
 
 #### Scalar variables containing bytes
 
-Variables containing [bytes](#bytes) or [bytearrays](#bytearrays) are handled slightly differently
+Variables containing [bytes](https://docs.python.org/3/library/stdtypes.html#bytes-objects) or [bytearrays](https://docs.python.org/3/library/stdtypes.html#bytearray-objects) are handled slightly differently
 than other variables containing non-string values:
 
 - If they are used alone, everything works exactly as with other objects and
@@ -158,8 +158,8 @@ than other variables containing non-string values:
   and the prefix are omitted, and each byte is mapped to a Unicode code point
   with the same ordinal. In practice this is same as converting bytes to strings
   using the Latin-1 encoding. This format has a big benefit that the resulting
-  string can be converted back to bytes, for example, by using the [BuiltIn](using-test-libraries.md#builtin)
-  keyword *Convert To Bytes* or by automatic [argument conversion](../extending/creating-test-libraries.md#argument-conversion).
+  string can be converted back to bytes, for example, by using the [BuiltIn](libraries.md#builtin)
+  keyword *Convert To Bytes* or by automatic [argument conversion](../extend/libraries.md#argument-conversion).
 
 The following examples demonstrates using bytes and bytearrays would work
 exactly the same way. Variable `${a}` is expected to contain bytes `\x00\x01`
@@ -219,7 +219,7 @@ The third test above illustrates that a variable containing a list can be used
 also as a scalar. In that test the keyword gets the whole list as a single argument.
 
 Starting from Robot Framework 4.0, list expansion can be used in combination with
-[list item access](test-data-syntax.md#escaping) making these usages possible:
+[list item access](https://docs.python.org/3/library/stdtypes.html#bytes-objects) making these usages possible:
 
 ```robotframework
 *** Test Cases ***
@@ -247,7 +247,7 @@ Example
 ```
 #### Using list variables with settings
 
-List variables can be used only with some of the [settings](../appendices/translations.md#settings). They can
+List variables can be used only with some of the [settings](../appendix/translations.md#settings). They can
 be used in arguments to imported libraries and variable files, but
 library and variable file names themselves cannot be list
 variables. Also with setups and teardowns list variable can not be used
@@ -275,7 +275,7 @@ variable](#list-variable) to pass list items to a keyword as individual argument
 Similarly, a variable containing a Python dictionary or a dictionary-like
 object can be used as a dictionary variable like `&{EXAMPLE}`. In practice
 this means that the dictionary is expanded and individual items are passed as
-[named arguments](creating-test-cases.md#named-arguments) to the keyword. Assuming that a variable `&{USER}` has a
+[named arguments](tests.md#named-arguments) to the keyword. Assuming that a variable `&{USER}` has a
 value `{'name': 'robot', 'password': 'secret'}`, the first two test cases
 below are equivalent:
 
@@ -294,12 +294,12 @@ The third test above illustrates that a variable containing a dictionary can be 
 also as a scalar. In that test the keyword gets the whole dictionary as a single argument.
 
 Starting from Robot Framework 4.0, dictionary expansion can be used in combination with
-[dictionary item access](#variable-type-conversion) making usages like `&{nested}[key]` possible.
+[dictionary item access](https://docs.python.org/3/library/stdtypes.html#bytes-objects) making usages like `&{nested}[key]` possible.
 
 #### Using dictionary variables with other data
 
 It is possible to use dictionary variables with other arguments, including
-other dictionary variables. Because [named argument syntax](creating-test-cases.md#named-argument-syntax) requires positional
+other dictionary variables. Because [named argument syntax](tests.md#named-argument-syntax) requires positional
 arguments to be before named argument, dictionaries can only be followed by
 named arguments or other dictionaries.
 
@@ -357,7 +357,7 @@ Negative index
 Index defined as variable
     Keyword    ${SEQUENCE}[${INDEX}]
 ```
-Sequence item access supports also the [same "slice" functionality as Python](https://docs.python.org/3/library/stdtypes.html#bytearray-objects)
+Sequence item access supports also the [same "slice" functionality as Python](https://docs.python.org/3/library/stdtypes.html#bytes-objects)
 with syntax like `${var}[1:]`. With this syntax, you do not get a single
 item, but a *slice* of the original sequence. Same way as with Python, you can
 specify the start index, the end index, and the step:
@@ -438,7 +438,7 @@ Environment variables set in the operating system before the test execution are
 available during it, and it is possible to create new ones with the keyword
 *Set Environment Variable* or delete existing ones with the
 keyword *Delete Environment Variable*, both available in the
-[OperatingSystem](using-test-libraries.md#operatingsystem) library. Because environment variables are global,
+[OperatingSystem](libraries.md#operatingsystem) library. Because environment variables are global,
 environment variables set in one test case can be used in other test
 cases executed after it. However, changes to environment variables are
 not effective after the test execution.
@@ -460,14 +460,14 @@ Environment variable with default
 Variables can be created using different approaches discussed in this section:
 
 - In the [Variable section](#variable-section)
-- Using [variable files](resource-and-variable-files.md#variable-files)
-- On the [command line](resource-and-variable-files.md#command-line)
+- Using [variable files](variable-files.md#variable-files)
+- On the [command line](https://docs.python.org/3/library/stdtypes.html#bytes-objects)
 - Based on [return values from keywords](#return-values-from-keywords)
 - Using the [VAR syntax](#var-syntax)
 - Using [Set Test/Suite/Global Variable keywords](#set-testsuiteglobal-variable-keywords)
 
 In addition to this, there are various automatically available [built-in variables](#built-in-variables)
-and also [user keyword arguments](creating-user-keywords.md#user-keyword-arguments) and [FOR loops](control-structures.md#for-loops) create variables. In most
+and also [user keyword arguments](user-keywords.md#user-keyword-arguments) and [FOR loops](control.md#for-loops) create variables. In most
 places where variables are created, it is possible to use [variable type conversion](#variable-type-conversion)
 to easily create variables with non-string values. An important application for
 conversions is creating [secret variables](#secret-variables).
@@ -479,11 +479,11 @@ conversions is creating [secret variables](#secret-variables).
 <a id="Variable table"></a>
 ### Variable section
 
-The most common source for variables are Variable sections in [suite files](creating-test-suites.md#suite-files)
-and [resource files](resource-and-variable-files.md#resource-files). Variable sections are convenient, because they
+The most common source for variables are Variable sections in [suite files](suites.md#suite-files)
+and [resource files](resource-files.md#resource-files). Variable sections are convenient, because they
 allow creating variables in the same place as the rest of the test
 data, and the needed syntax is very simple. Their main disadvantage is that
-variables cannot be created dynamically. If that is a problem, [variable files](resource-and-variable-files.md#variable-files)
+variables cannot be created dynamically. If that is a problem, [variable files](variable-files.md#variable-files)
 can be used instead.
 
 #### Creating scalar values
@@ -509,7 +509,7 @@ variables slightly more explicit.
 ${NAME} =       Robot Framework
 ${VERSION} =    2.0
 ```
-If a scalar variable has a long value, it can be [split into multiple rows](#accessing-individual-dictionary-items)
+If a scalar variable has a long value, it can be [split into multiple rows](https://docs.python.org/3/library/stdtypes.html#bytes-objects)
 by using the `...` syntax. By default rows are concatenated together using
 a space, but this can be changed by using a `separator` configuration
 option after the last value:
@@ -544,7 +544,7 @@ Creating lists is as easy as creating scalar values. Again, the
 variable name is in the first column of the Variable section and
 values in the subsequent columns, but this time the variable name must
 start with `@` instead of `$`. A list can have any number of items,
-including zero, and items can be [split into several rows](https://docs.python.org/3/glossary.html#term-sequence) if needed.
+including zero, and items can be [split into several rows](https://docs.python.org/3/library/stdtypes.html#bytes-objects) if needed.
 
 ```robotframework
 *** Variables ***
@@ -565,7 +565,7 @@ Dictionaries can be created in the Variable section similarly as lists.
 The differences are that the name must now start with `&` and that items need
 to be created using the `name=value` syntax or based on existing dictionary variables.
 If there are multiple items with same name, the last value has precedence.
-If a name contains a literal equal sign, it can be [escaped](#escaped) with a backslash like `\=`.
+If a name contains a literal equal sign, it can be [escaped](https://docs.python.org/3/library/stdtypes.html#bytes-objects) with a backslash like `\=`.
 
 ```robotframework
 *** Variables ***
@@ -592,7 +592,7 @@ also be accessed like `${USER.name}`, but using `${MANY.3}` is not possible.
 
 Dictionaries are also ordered. This means that if they are iterated,
 their items always come in the order they are defined. This can be useful, for example,
-if dictionaries are used as [list variables](#list-variables) with [FOR loops](control-structures.md#for-loops) or otherwise.
+if dictionaries are used as [list variables](#list-variables) with [FOR loops](control.md#for-loops) or otherwise.
 When a dictionary is used as a list variable, the actual value contains
 dictionary keys. For example, `@{MANY}` variable would have a value `['first',
 'second', 3]`.
@@ -617,9 +617,8 @@ Variable files are the most powerful mechanism for creating different
 kind of variables. It is possible to assign variables to any object
 using them, and they also enable creating variables dynamically. The
 variable file syntax and taking variable files into use is explained
-in section [Resource and variable files](resource-and-variable-files.md#resource-and-variable-files).
+in section [Resource and variable files](variable-files.md#variable-files).
 
-<a id="individual-variables"></a>
 ### Command line variables
 
 Variables can be set from the command line either individually with
@@ -642,13 +641,13 @@ In the examples above, variables are set so that:
 - `${EXAMPLE}` gets value `value`, and
 - `${HOST}` and `${USER}` get values `localhost:7272` and `robot`, respectively.
 
-The basic syntax for taking [variable files](resource-and-variable-files.md#variable-files) into use from the command line is
+The basic syntax for taking [variable files](variable-files.md#variable-files) into use from the command line is
 `--variablefile path/to/variables.py` and the [Taking variable files into
-use](resource-and-variable-files.md#taking-variable-files-into-use) section explains this more thoroughly. What variables actually are created
+use](variable-files.md#taking-variable-files-into-use) section explains this more thoroughly. What variables actually are created
 depends on what variables there are in the referenced variable file.
 
 If both variable files and individual variables are given from the command line,
-the latter have [higher priority](https://docs.python.org/glossary.html#term-slice).
+the latter have [higher priority](https://docs.python.org/3/library/stdtypes.html#bytes-objects).
 
 ### Return values from keywords
 
@@ -819,7 +818,7 @@ value is hidden.
 ```
 The reason the value is not logged fully is that it could be really
 big. If you always want to see a certain value fully, it is possible
-to use the [BuiltIn](using-test-libraries.md#builtin) *Log* keyword to log it after the assignment.
+to use the [BuiltIn](libraries.md#builtin) *Log* keyword to log it after the assignment.
 
 !!! note
     The `--maxassignlength` option is new in Robot Framework 5.0.
@@ -833,7 +832,7 @@ and it must be followed by a variable name and value. Other than the mandatory
 in the [Variable section](#variable-section).
 
 The new syntax aims to make creating variables simpler and more uniform. It is
-especially indented to replace the [BuiltIn](using-test-libraries.md#builtin) keywords *Set Variable*,
+especially indented to replace the [BuiltIn](libraries.md#builtin) keywords *Set Variable*,
 *Set Local Variable*, *Set Test Variable*, *Set Suite Variable*
 and *Set Global Variable*, but it can be used instead of *Catenate*,
 *Create List* and *Create Dictionary* as well.
@@ -898,27 +897,27 @@ or user keyword where they are created. That can, however, be altered by using
 the `scope` configuration option. Supported values are:
 
 `LOCAL`
-    Make the variable available in the current local scope. This is the default.
+: Make the variable available in the current local scope. This is the default.
 
 `TEST`
-    Make the variable available within the current test. This includes all keywords
+: Make the variable available within the current test. This includes all keywords
     called by the test. If used on the suite level, makes the variable available in
     suite setup and teardown, but not in tests or possible child suites.
     Prior to Robot Framework 7.2, using this scope on the suite level was an error.
 
 `TASK`
-    Alias for `TEST` that can be used when [creating tasks](creating-tasks.md#creating-tasks).
+: Alias for `TEST` that can be used when [creating tasks](tasks.md#creating-tasks).
 
 `SUITE`
-    Make the variable available within the current suite. This includes all subsequent
+: Make the variable available within the current suite. This includes all subsequent
     tests in that suite, but not tests in possible child suites.
 
 `SUITES`
-    Make the variable available within the current suite and in its child suites.
+: Make the variable available within the current suite and in its child suites.
     New in Robot Framework 7.1.
 
 `GLOBAL`
-    Make the variable available globally. This includes all subsequent keywords and tests.
+: Make the variable available globally. This includes all subsequent keywords and tests.
 
 Although Robot Framework variables are case-insensitive, it is recommended to
 use capital letters with non-local variable names.
@@ -967,8 +966,8 @@ Keyword
 ```
 #### Creating variables conditionally
 
-The `VAR` syntax works with [IF/ELSE structures](control-structures.md#ifelse-structures) which makes it easy to create
-variables conditionally. In simple cases using [inline IF](control-structures.md#inline-if) can be convenient.
+The `VAR` syntax works with [IF/ELSE structures](control.md#ifelse-structures) which makes it easy to create
+variables conditionally. In simple cases using [inline IF](control.md#inline-if) can be convenient.
 
 ```robotframework
 *** Test Cases ***
@@ -1002,7 +1001,7 @@ Dynamic name
     The `VAR` syntax is recommended over these keywords when using
     Robot Framework 7.0 or newer.
 
-The [BuiltIn](using-test-libraries.md#builtin) library has keywords *Set Test Variable*,
+The [BuiltIn](libraries.md#builtin) library has keywords *Set Test Variable*,
 *Set Suite Variable* and *Set Global Variable* which can
 be used for setting variables dynamically during the test
 execution. If a variable already exists within the new scope, its
@@ -1020,22 +1019,22 @@ Variables set with *Set Suite Variable* keyword are available
 everywhere within the scope of the currently executed test
 suite. Setting variables with this keyword thus has the same effect as
 creating them using the [Variable section](#variable-section) in the test data file or
-importing them from [variable files](resource-and-variable-files.md#variable-files). Other test suites, including
+importing them from [variable files](variable-files.md#variable-files). Other test suites, including
 possible child test suites, will not see variables set with this
 keyword.
 
 Variables set with *Set Global Variable* keyword are globally
 available in all test cases and suites executed after setting
 them. Setting variables with this keyword thus has the same effect as
-[creating variables on the command line](#command-line-variables) using the `--variable` and
+[creating variables on the command line](https://docs.python.org/3/library/stdtypes.html#bytes-objects) using the `--variable` and
 `--variablefile` options. Because this keyword can change variables
 everywhere, it should be used with care.
 
 !!! note
     *Set Test/Suite/Global Variable* keywords set named
-    variables directly into [test, suite or global variable scope](test-data-syntax.md#dividing-data-to-several-rows)
-    and return nothing. On the other hand, another [BuiltIn](using-test-libraries.md#builtin) keyword
-    *Set Variable* sets local variables using [return values](test-data-syntax.md#dividing-data-to-several-rows).
+    variables directly into [test, suite or global variable scope](https://docs.python.org/3/library/stdtypes.html#bytearray-objects)
+    and return nothing. On the other hand, another [BuiltIn](libraries.md#builtin) keyword
+    *Set Variable* sets local variables using [return values](https://docs.python.org/3/glossary.html#term-sequence).
 
 ### Variable type conversion
 
@@ -1043,7 +1042,7 @@ Variable values are typically strings, but non-string values are often needed
 as well. Various ways how to create variables with non-string values has
 already been discussed:
 
-- [Variable files](resource-and-variable-files.md#variable-files) allow creating any kind of objects.
+- [Variable files](variable-files.md#variable-files) allow creating any kind of objects.
 - [Return values from keywords](#return-values-from-keywords) can contain any objects.
 - Variables can be created based on existing variables that contain non-string values.
 - `@{list}` and `&{dict}` syntax allows creating lists and dictionaries natively.
@@ -1058,22 +1057,22 @@ and how it works in practice is discussed in this section.
 
 #### Variable type syntax
 
-The general variable types syntax is `${name: type}` [in the data](test-data-syntax.md#escaping) and
-`name: type:value` [on the command line](#variable-priorities-and-scopes). The space after the colon is mandatory
+The general variable types syntax is `${name: type}` [in the data](https://docs.python.org/glossary.html#term-slice) and
+`name: type:value` [on the command line](https://groups.google.com/group/robotframework-users/browse_thread/thread/ccc9e1cd77870437/4577836fe946e7d5?lnk=gst&q=templates#4577836fe946e7d5). The space after the colon is mandatory
 in both cases. Although variable name can in some contexts be created dynamically
 based on another variable, the type and the type separator must be always specified
 as literal values.
 
-Variable type conversion supports the same base types that the [argument conversion](../extending/creating-test-libraries.md#argument-conversion)
+Variable type conversion supports the same base types that the [argument conversion](http://jkorpela.fi/chars/spaces.html)
 supports with library keywords. For example, `${number: int}` means that the value
 of the variable `${number}` is converted to an integer.
 
-Variable type conversion supports also [specifying multiple possible types](../extending/creating-test-libraries.md#specifying-multiple-possible-types)
+Variable type conversion supports also [specifying multiple possible types](../extend/libraries.md#specifying-multiple-possible-types)
 using the union syntax. For example, `${number: int | float}` means that the
 value is first converted to an integer and, if that fails, then to a floating
 point number.
 
-Also [parameterized types](../extending/creating-test-libraries.md#parameterized-types) are supported. For example, `${numbers: list[int]}`
+Also [parameterized types](../extend/libraries.md#parameterized-types) are supported. For example, `${numbers: list[int]}`
 means that the value is converted to a list of integers.
 
 The biggest limitations compared to the argument conversion with library
@@ -1116,7 +1115,7 @@ Assignment
 ```
 !!! note
     In addition to the above, variable type conversion works also with
-    [user keyword arguments](creating-user-keywords.md#user-keyword-arguments) and with [FOR loops](control-structures.md#for-loops). See their documentation
+    [user keyword arguments](user-keywords.md#user-keyword-arguments) and with [FOR loops](control.md#for-loops). See their documentation
     for more details.
 
 !!! note
@@ -1125,7 +1124,7 @@ Assignment
 
 #### Conversion with `@{list}` and `&{dict}` variables
 
-Type conversion works also when creating [lists](../appendices/documentation-formatting.md#lists) and [dictionaries](#scalar-variables) using
+Type conversion works also when creating [lists](https://docs.python.org/3/library/stdtypes.html#bytes-objects) and [dictionaries](https://docs.python.org/3/library/stdtypes.html#bytearray-objects) using
 `@{list}` and `&{dict}` syntax. With lists the type is specified
 like `@{name: type}` and the type is the type of the list items. With dictionaries
 the type of the dictionary values can be specified like `&{name: type}`. If
@@ -1169,11 +1168,13 @@ Variable conversion works also with the [command line variables](#command-line-v
 created using the `--variable` option. The syntax is `name: type:value` and,
 due to the space being mandatory, the whole option value typically needs to
 be quoted. Following examples demonstrate some possible usages for this
-functionality::
+functionality:
 
-    --variable "ITERATIONS: int:99"
-    --variable "PAYLOAD: dict:{'id': 1, 'name': 'Robot', 'children': [2, 13, 15]}"
-    --variable "START_TIME: datetime:now"
+```
+--variable "ITERATIONS: int:99"
+--variable "PAYLOAD: dict:{'id': 1, 'name': 'Robot', 'children': [2, 13, 15]}"
+--variable "START_TIME: datetime:now"
+```
 
 #### Failing conversion
 
@@ -1193,11 +1194,11 @@ Invalid type
 
 An important usage for [variable type conversion](#variable-type-conversion) is creating so called
 *secret variables*. These variables encapsulate their values so that the real
-values are [not logged even on the trace level](#variable-scopes) when variables are passed
+values are [not logged even on the trace level](https://docs.python.org/3/library/stdtypes.html#bytes-objects) when variables are passed
 between keywords as arguments and return values.
 
 The actual value is available via the `value` attribute of a secret variable.
-It is mainly meant to be used by [library keywords](../extending/creating-test-libraries.md#creating-keywords) that accept [secret values](#return-values-from-keywords),
+It is mainly meant to be used by [library keywords](../extend/libraries.md#creating-keywords) that accept [secret values](https://docs.python.org/3/library/stdtypes.html#bytearray-objects),
 but it can be accessed also in the data using the [extended variable syntax](#extended-variable-syntax)
 like `${secret.value}`. Accessing the value in the data makes it visible in the
 log file similarly as if it was a normal variable, so that should only be done for
@@ -1245,24 +1246,28 @@ Also list and dictionary variables support secret values:
 
 #### Creating secrets on command line
 
-[Command line variable conversion](#variable-conversion-in-data) supports secret values directly::
+[Command line variable conversion](https://docs.python.org/3/library/stdtypes.html#bytes-objects) supports secret values directly:
 
-    --variable "PASSWORD: Secret:robot123"
+```
+--variable "PASSWORD: Secret:robot123"
+```
 
 Having the secret value directly visible on the command line history or in continuous
 integration system logs can be a security risk. One way to mitigate that is using
-environment variables::
+environment variables:
 
-    --variable "PASSWORD: Secret:$PASSWORD"
+```
+--variable "PASSWORD: Secret:$PASSWORD"
+```
 
 Many systems running tests or tasks also support hiding secret values used on
 the command line.
 
 #### Creating secrets programmatically
 
-Secrets can be created programmatically by using the [robot.api.types.Secret](../extending/creating-test-libraries.md#secret-type)
-class. This is most commonly done by [libraries](using-test-libraries.md#test-libraries) and [variable files](resource-and-variable-files.md#variable-files), but also
-[pre-run modifiers](#variable-conversion-on-command-line) and [listeners](../extending/listener-interface.md#listeners) can utilize secrets if needed.
+Secrets can be created programmatically by using the [robot.api.types.Secret](../extend/libraries.md#secret-type)
+class. This is most commonly done by [libraries](../extend/index.md#libraries) and [variable files](variable-files.md#variable-files), but also
+[pre-run modifiers](https://docs.python.org/3/library/stdtypes.html#bytes-objects) and [listeners](../extend/listeners.md#listeners) can utilize secrets if needed.
 
 The simplest possible example of the programmatic usage is a variable file:
 
@@ -1369,7 +1374,7 @@ expected. In such cases using the variable syntax is not required.
 It is possible to create spaces and empty strings using variables
 `${SPACE}` and `${EMPTY}`, respectively. These variables are
 useful, for example, when there would otherwise be a need to [escape
-spaces or empty cells](../extending/creating-test-libraries.md#supported-conversions) with a backslash. If more than one space is
+spaces or empty cells](https://docs.python.org/3/library/stdtypes.html#bytes-objects) with a backslash. If more than one space is
 needed, it is possible to use the [extended variable syntax](#extended-variable-syntax) like
 `${SPACE * 5}`.  In the following example, *Should Be
 Equal* keyword gets identical arguments, but those using variables are
@@ -1398,8 +1403,8 @@ Empty
 There is also an empty [list variable](#list-variable) `@{EMPTY}` and an empty [dictionary
 variable](#dictionary-variable) `&{EMPTY}`. Because they have no content, they basically
 vanish when used somewhere in the test data. They are useful, for example,
-with [test templates](creating-test-cases.md#test-templates) when the [template keyword is used without
-arguments](#creating-lists) or when overriding list or dictionary variables in different
+with [test templates](tests.md#test-templates) when the [template keyword is used without
+arguments](https://docs.python.org/3/library/stdtypes.html#bytes-objects) or when overriding list or dictionary variables in different
 scopes. Modifying the value of `@{EMPTY}` or `&{EMPTY}` is not possible.
 
 ```robotframework
@@ -1413,8 +1418,8 @@ Override
     Set Suite Variable     &{DICT}    &{EMPTY}
 ```
 !!! note
-    `${SPACE}` represents the ASCII space (`\x20`) and [other spaces](#creating-dictionaries)
-    should be specified using the [escape sequences](../executing-tests/output-files.md#log-levels) like `\xA0`
+    `${SPACE}` represents the ASCII space (`\x20`) and [other spaces](https://docs.python.org/3/library/stdtypes.html#bytes-objects)
+    should be specified using the [escape sequences](https://docs.python.org/3/library/stdtypes.html#bytearray-objects) like `\xA0`
     (NO-BREAK SPACE) and `\u3000` (IDEOGRAPHIC SPACE).
 
 <a id="automatic-variable"></a>
@@ -1427,15 +1432,15 @@ Some automatic variables can also be used in the test data. These
 variables can have different values during the test execution and some
 of them are not even available all the time. Altering the value of
 these variables does not affect the original values, but some values
-can be changed dynamically using keywords from the [BuiltIn](using-test-libraries.md#builtin) library.
+can be changed dynamically using keywords from the [BuiltIn](libraries.md#builtin) library.
 
 | Variable | Explanation | Available |
 | --- | --- | --- |
 | ${TEST NAME} | The name of the current test case. | Test case |
 | @{TEST TAGS} | Contains the tags of the current test case in alphabetical order. Can be modified dynamically using *Set Tags* and *Remove Tags* keywords. | Test case |
 | ${TEST DOCUMENTATION} | The documentation of the current test case. Can be set dynamically using using *Set Test Documentation* keyword. | Test case |
-| ${TEST STATUS} | The status of the current test case, either PASS or FAIL. | [Test teardown](../executing-tests/test-execution.md#test-teardown) |
-| ${TEST MESSAGE} | The message of the current test case. | [Test teardown](../executing-tests/test-execution.md#test-teardown) |
+| ${TEST STATUS} | The status of the current test case, either PASS or FAIL. | [Test teardown](../execution/tests.md#test-teardown) |
+| ${TEST MESSAGE} | The message of the current test case. | [Test teardown](../execution/tests.md#test-teardown) |
 | ${PREV TEST NAME} | The name of the previous test case, or an empty string if no tests have been executed yet. | Everywhere |
 | ${PREV TEST STATUS} | The status of the previous test case: either PASS, FAIL, or an empty string when no tests have been executed. | Everywhere |
 | ${PREV TEST MESSAGE} | The possible error message of the previous test case. | Everywhere |
@@ -1443,17 +1448,17 @@ can be changed dynamically using keywords from the [BuiltIn](using-test-librarie
 | ${SUITE SOURCE} | An absolute path to the suite file or directory. | Everywhere |
 | ${SUITE DOCUMENTATION} | The documentation of the current test suite. Can be set dynamically using using *Set Suite Documentation* keyword. | Everywhere |
 | &{SUITE METADATA} | The free metadata of the current test suite. Can be set using *Set Suite Metadata* keyword. | Everywhere |
-| ${SUITE STATUS} | The status of the current test suite, either PASS or FAIL. | [Suite teardown](../executing-tests/test-execution.md#suite-teardown) |
-| ${SUITE MESSAGE} | The full message of the current test suite, including statistics. | [Suite teardown](../executing-tests/test-execution.md#suite-teardown) |
-| ${KEYWORD STATUS} | The status of the current keyword, either PASS or FAIL. | [User keyword teardown](../executing-tests/test-execution.md#user-keyword-teardown) |
-| ${KEYWORD MESSAGE} | The possible error message of the current keyword. | [User keyword teardown](../executing-tests/test-execution.md#user-keyword-teardown) |
-| ${LOG LEVEL} | Current [log level](../executing-tests/output-files.md#log-level). | Everywhere |
-| ${OUTPUT DIR} | An absolute path to the [output directory](../executing-tests/output-files.md#output-directory) as a string. | Everywhere |
-| ${OUTPUT FILE} | An absolute path to the [output file](../executing-tests/output-files.md#output-file) as a string or a string `NONE` if the output file is not created. | Everywhere |
-| ${LOG FILE} | An absolute path to the [log file](../executing-tests/output-files.md#log-file) as a string or a string `NONE` if the log file is not created. | Everywhere |
-| ${REPORT FILE} | An absolute path to the [report file](../executing-tests/output-files.md#report-file) as a string or a string `NONE` if the report file is not created. | Everywhere |
-| ${DEBUG FILE} | An absolute path to the [debug file](../executing-tests/output-files.md#debug-file) as a string or a string `NONE` if the debug file is not created. | Everywhere |
-| &{OPTIONS} | A dictionary exposing command line options. The dictionary keys match the command line options and can be accessed both like `${OPTIONS}[key]` and `${OPTIONS.key}`. Available options:  - `${OPTIONS.exclude}` (`--exclude`) - `${OPTIONS.include}` (`--include`) - `${OPTIONS.skip}` (`--skip`) - `${OPTIONS.skip_on_failure}` (`--skip-on-failure`) - `${OPTIONS.console_width}` (integer, `--console-width`) - `${OPTIONS.rpa}` (boolean, `--rpa`)  `${OPTIONS}` itself was added in RF 5.0, `${OPTIONS.console_width}` in RF 7.1 and `${OPTIONS.rpa}` in RF 7.3. More options can be exposed later. | Everywhere |
+| ${SUITE STATUS} | The status of the current test suite, either PASS or FAIL. | [Suite teardown](../execution/tests.md#suite-teardown) |
+| ${SUITE MESSAGE} | The full message of the current test suite, including statistics. | [Suite teardown](../execution/tests.md#suite-teardown) |
+| ${KEYWORD STATUS} | The status of the current keyword, either PASS or FAIL. | [User keyword teardown](../execution/tests.md#user-keyword-teardown) |
+| ${KEYWORD MESSAGE} | The possible error message of the current keyword. | [User keyword teardown](../execution/tests.md#user-keyword-teardown) |
+| ${LOG LEVEL} | Current [log level](../execution/results.md#log-level). | Everywhere |
+| ${OUTPUT DIR} | An absolute path to the [output directory](../execution/results.md#output-directory) as a string. | Everywhere |
+| ${OUTPUT FILE} | An absolute path to the [output file](../execution/results.md#output-file) as a string or a string `NONE` if the output file is not created. | Everywhere |
+| ${LOG FILE} | An absolute path to the [log file](../execution/results.md#log-file) as a string or a string `NONE` if the log file is not created. | Everywhere |
+| ${REPORT FILE} | An absolute path to the [report file](../execution/results.md#report-file) as a string or a string `NONE` if the report file is not created. | Everywhere |
+| ${DEBUG FILE} | An absolute path to the [debug file](../execution/results.md#debug-file) as a string or a string `NONE` if the debug file is not created. | Everywhere |
+| &{OPTIONS} | A dictionary exposing command line options. The dictionary keys match the command line options and can be accessed both like `${OPTIONS}[key]` and `${OPTIONS.key}`. Available options:<br>- `${OPTIONS.exclude}` (`--exclude`) - `${OPTIONS.include}` (`--include`) - `${OPTIONS.skip}` (`--skip`) - `${OPTIONS.skip_on_failure}` (`--skip-on-failure`) - `${OPTIONS.console_width}` (integer, `--console-width`) - `${OPTIONS.rpa}` (boolean, `--rpa`)<br>`${OPTIONS}` itself was added in RF 5.0, `${OPTIONS.console_width}` in RF 7.1 and `${OPTIONS.rpa}` in RF 7.3. More options can be exposed later. | Everywhere |
 
 Suite related variables `${SUITE SOURCE}`, `${SUITE NAME}`, `${SUITE DOCUMENTATION}`
 and `&{SUITE METADATA}` as well as options related to command line options like
@@ -1470,17 +1475,17 @@ are available in different scopes.
 
 *Variables from the command line*
 
-   Variables [set on the command line](../extending/creating-test-libraries.md#secret-type) have the highest priority of all
+   Variables [set on the command line](https://docs.python.org/3/glossary.html#term-sequence) have the highest priority of all
    variables that can be set before the actual test execution starts. They
    override possible variables created in Variable sections in test case
    files, as well as in resource and variable files imported in the
    test data.
 
    Individually set variables (`--variable` option) override the
-   variables set using [variable files](resource-and-variable-files.md#variable-files) (`--variablefile` option).
+   variables set using [variable files](variable-files.md#variable-files) (`--variablefile` option).
    If you specify same individual variable multiple times, the one specified
    last will override earlier ones. This allows setting default values for
-   variables in a [start-up script](../executing-tests/basic-usage.md#start-up-script) and overriding them from the command line.
+   variables in a [start-up script](../execution/basics.md#start-up-script) and overriding them from the command line.
    Notice, though, that if multiple variable files have same variables, the
    ones in the file specified first have the highest priority.
 
@@ -1498,7 +1503,7 @@ are available in different scopes.
 
 *Imported resource and variable files*
 
-   Variables imported from the [resource and variable files](resource-and-variable-files.md#resource-and-variable-files) have the
+   Variables imported from the [resource and variable files](variable-files.md#variable-files) have the
    lowest priority of all variables created in the test data.
    Variables from resource files and variable files have the same
    priority. If several resource and/or variable file have same
@@ -1541,7 +1546,7 @@ global, test suite, test case or local scope.
 #### Global scope
 
 Global variables are available everywhere in the test data. These
-variables are normally [set from the command line](#list-variables) with the
+variables are normally [set from the command line](https://docs.python.org/glossary.html#term-slice) with the
 `--variable` and `--variablefile` options, but it is also
 possible to create new global variables or change the existing ones
 by using the [VAR syntax](#var-syntax) or the *Set Global Variable* keyword anywhere in
@@ -1553,13 +1558,13 @@ It is recommended to use capital letters with all global variables.
 
 Variables with the test suite scope are available anywhere in the
 test suite where they are defined or imported. They can be created
-in Variable sections, imported from [resource and variable files](resource-and-variable-files.md#resource-and-variable-files),
+in Variable sections, imported from [resource and variable files](variable-files.md#variable-files),
 or set during the test execution using the [VAR syntax](#var-syntax) or the
 *Set Suite Variable* keyword.
 
 The test suite scope *is not recursive*, which means that variables
 available in a higher-level test suite *are not available* in
-lower-level suites. If necessary, [resource and variable files](resource-and-variable-files.md#resource-and-variable-files) can
+lower-level suites. If necessary, [resource and variable files](variable-files.md#variable-files) can
 be used for sharing variables.
 
 Since these variables can be considered global in the test suite where
@@ -1589,8 +1594,8 @@ thus generally recommended to use capital letters with them too.
 
 Test cases and user keywords have a local variable scope that is not
 seen by other tests or keywords. Local variables can be created using
-[return values](../executing-tests/configuring-execution.md#programmatic-modification-of-test-data) from executed keywords and with the [VAR syntax](#var-syntax),
-and user keywords also get them as [arguments](creating-test-cases.md#using-arguments).
+[return values](https://groups.google.com/group/robotframework-users/browse_thread/thread/ccc9e1cd77870437/4577836fe946e7d5?lnk=gst&q=templates#4577836fe946e7d5) from executed keywords and with the [VAR syntax](#var-syntax),
+and user keywords also get them as [arguments](http://jkorpela.fi/chars/spaces.html).
 
 It is recommended to use lower-case letters with local variables.
 
@@ -1613,18 +1618,18 @@ arguments, can make the test data pretty complicated to understand.
 If that happens, it is recommended to move the code into a library.
 
 The most common usages of extended variable syntax are illustrated
-in the example below. First assume that we have the following [variable file](resource-and-variable-files.md#variable-files)_ and test case:
+in the example below. First assume that we have the following [variable file](variable-files.md#variable-files)_ and test case:
 
 ```python
 class MyObject:
 
-    def [__init](#init)(self, name):
+    def __init__(self, name):
         self.name = name
 
     def eat(self, what):
         return f'{self.name} eats {what}'
 
-    def [__str](#str)(self):
+    def __str__(self):
         return self.name
 
 OBJECT = MyObject('Robot')
@@ -1684,12 +1689,12 @@ String
 Number
     VAR    ${number}    ${-2}
     Log    ${number * 10}         # Logs -20
-    Log    ${number.[__abs](#abs)()}    # Logs 2
+    Log    ${number.__abs__()}    # Logs 2
 ```
 Note that even though `abs(number)` is recommended over
-`number.[__abs](#abs)()` in normal Python code, using
+`number.[__abs](https://docs.python.org/3/library/stdtypes.html#bytes-objects)()` in normal Python code, using
 `${abs(number)}[ does not work. This is because the variable name
-must be in the beginning of the extended syntax. Using ](https://groups.google.com/group/robotframework-users/browse_thread/thread/ccc9e1cd77870437/4577836fe946e7d5?lnk=gst&q=templates#4577836fe946e7d5)xxx__`
+must be in the beginning of the extended syntax. Using ](https://docs.python.org/3/library/stdtypes.html#bytearray-objects)xxx__`
 methods in the test data like this is already a bit questionable, and
 it is normally better to move this kind of logic into test libraries.
 
@@ -1701,7 +1706,7 @@ used as a list variable `@{EXTENDED.attribute}`.
 ### Extended variable assignment
 
 It is possible to set attributes of
-objects stored to scalar variables using [keyword return values](http://jkorpela.fi/chars/spaces.html) and
+objects stored to scalar variables using [keyword return values](https://docs.python.org/3/glossary.html#term-sequence) and
 a variation of the [extended variable syntax](#extended-variable-syntax). Assuming we have
 variable `${OBJECT}` from the previous examples, attributes could
 be set to it like in the example below.
@@ -1822,11 +1827,11 @@ powerful as it provides access to Python built-ins like `len()` and modules
 like `math`. In addition to being able to use variables like `${var}` in
 the expressions (they are replaced before evaluation), variables are also
 available using the special `$var` syntax during evaluation. The whole expression
-syntax is explained in the [Evaluating expressions](../appendices/evaluating-expressions.md#evaluating-expressions) appendix.
+syntax is explained in the [Evaluating expressions](../appendix/expressions.md#evaluating-expressions) appendix.
 
 !!! tip
     Instead of creating complicated expressions, it is often better
-    to move the logic into a [custom library](test-data-syntax.md#escaping). That eases
+    to move the logic into a [custom library](https://docs.python.org/3/library/stdtypes.html#bytes-objects). That eases
     maintenance, makes test data easier to understand and can also
     enhance execution speed.
 

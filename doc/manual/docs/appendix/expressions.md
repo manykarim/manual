@@ -5,8 +5,8 @@ contexts and how variables in expressions are handled.
 
 ## Introduction
 
-Constructs such as [IF/ELSE structures](../creating-test-data/control-structures.md#ifelse-structures), [WHILE loops](../creating-test-data/control-structures.md#while-loops) and [inline Python evaluation](../creating-test-data/variables.md#inline-python-evaluation)
-as well as several [BuiltIn](../creating-test-data/using-test-libraries.md#builtin) keywords accept an expression that is evaluated in Python:
+Constructs such as [IF/ELSE structures](../syntax/control.md#ifelse-structures), [WHILE loops](../syntax/control.md#while-loops) and [inline Python evaluation](../syntax/variables.md#inline-python-evaluation)
+as well as several [BuiltIn](../syntax/libraries.md#builtin) keywords accept an expression that is evaluated in Python:
 
 ```robotframework
 *** Test Cases ***
@@ -28,7 +28,7 @@ Should Be True keyword
     Should Be True    ${x} > 0
 ```
 Notice that instead of creating complicated
-expressions, it is often better to move the logic into a [test library](../extending/creating-test-libraries.md#creating-test-library-class-or-module).
+expressions, it is often better to move the logic into a [test library](../extend/libraries.md#creating-test-library-class-or-module).
 That typically eases maintenance and also enhances execution speed.
 
 ## Evaluation namespace
@@ -43,8 +43,8 @@ Python modules, including the standard modules and the installed third party
 modules.
 
 The following examples demonstrate using Python builtins as well as modules
-using the [inline Python evaluation](../creating-test-data/variables.md#inline-python-evaluation) syntax, but same expressions would also
-work with [IF/ELSE structures](../creating-test-data/control-structures.md#ifelse-structures) and [BuiltIn](../creating-test-data/using-test-libraries.md#builtin) keywords without the need to use
+using the [inline Python evaluation](../syntax/variables.md#inline-python-evaluation) syntax, but same expressions would also
+work with [IF/ELSE structures](../syntax/control.md#ifelse-structures) and [BuiltIn](../syntax/libraries.md#builtin) keywords without the need to use
 the `${{}}` decoration around the expression:
 
 ```robotframework
@@ -63,7 +63,7 @@ Python builtins
 Access modules
     Should Be Equal      ${{os.sep}}               ${/}
     Should Be Equal      ${{round(math.pi, 2)}}    ${3.14}
-    Should Start With    ${{robot.[__version](#version)}}    4.
+    Should Start With    ${{robot.__version__}}    4.
 ```
 A limitation of using modules is that nested modules like `rootmod.submod`
 can only be used if the root module automatically imports the submodule. That is
@@ -73,7 +73,7 @@ implemented, at least at the time of this writing, so that just importing
 `selenium` does not import the `selenium.webdriver` submodule.
 Another limitation is that modules cannot be used in the expression part of
 a list comprehension. A workaround to both of these problems
-is using the [BuiltIn](../creating-test-data/using-test-libraries.md#builtin) keyword *Evaluate* that accepts modules to be imported
+is using the [BuiltIn](../syntax/libraries.md#builtin) keyword *Evaluate* that accepts modules to be imported
 and added to the evaluation namespace as an argument:
 
 ```robotframework
@@ -93,7 +93,7 @@ Evaluate keyword with list comprehension
     Log    ${items}
 ```
 The *Evaluate* keyword also supports custom evaluation namespaces if further
-customization is needed. See its documentation in the [BuiltIn](../creating-test-data/using-test-libraries.md#builtin) library for more details.
+customization is needed. See its documentation in the [BuiltIn](../syntax/libraries.md#builtin) library for more details.
 
 ## Using variables
 

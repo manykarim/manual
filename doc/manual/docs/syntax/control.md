@@ -55,7 +55,7 @@ Second Example
 The `FOR` loop in *Example* above is executed twice, so that first
 the loop variable `${animal}` has the value `cat` and then
 `dog`. The loop consists of two *Log* keywords. In the
-second example, loop values are [split into two rows](http://docs.python.org/library/functions.html#enumerate) and the
+second example, loop values are [split into two rows](http://docs.python.org/library/functions.html#func-range) and the
 loop is run altogether ten times.
 
 It is often convenient to use `FOR` loops with [list variables](variables.md#list-variables). This is
@@ -153,7 +153,7 @@ All `FOR` loops in the previous section iterated over a sequence. That is the mo
 common use case, but sometimes it is convenient to have a loop that is executed
 a certain number of times. For this purpose Robot Framework has a special
 `FOR index IN RANGE limit` loop syntax that is derived from the similar Python
-idiom using the [built-in range() function](http://docs.python.org/library/functions.html#zip).
+idiom using the [built-in range() function](http://docs.python.org/library/functions.html#func-range).
 
 Similarly as other `FOR` loops, the `FOR-IN-RANGE` loop starts with
 `FOR` that is followed by a loop variable. In this format
@@ -217,7 +217,7 @@ Float parameters
 Sometimes it is useful to loop over a list and also keep track of your location
 inside the list. Robot Framework has a special
 `FOR index ... IN ENUMERATE ...` syntax for this situation.
-This syntax is derived from the [Python built-in enumerate() function](https://docs.python.org/library/functions.html#zip).
+This syntax is derived from the [Python built-in enumerate() function](http://docs.python.org/library/functions.html#func-range).
 
 `FOR-IN-ENUMERATE` loops syntax is just like the regular `FOR` loop syntax,
 except that the separator between variables and values is `IN ENUMERATE`
@@ -301,7 +301,7 @@ FOR-IN-ENUMERATE with one loop variable
 
 Some tests build up several related lists, then loop over them together.
 Robot Framework has a shortcut for this case: `FOR ... IN ZIP ...`, which
-is derived from the [Python built-in zip() function](https://docs.python.org/library/itertools.html#itertools.zip_longest).
+is derived from the [Python built-in zip() function](http://docs.python.org/library/functions.html#func-range).
 
 This may be easiest to show with an example:
 
@@ -371,14 +371,14 @@ many iterations there are and values at the end of longer ones are ignored.
 This can be changed by using the `mode` option that has three possible values:
 
 - `STRICT`: Items must have equal lengths. If not, execution fails. This is
-  the same as using `strict=True` with Python's [zip](https://docs.python.org/tutorial/errors.html#handling-exceptions) function.
+  the same as using `strict=True` with Python's [zip](http://docs.python.org/library/functions.html#func-range) function.
 - `SHORTEST`: Items in longer items are ignored. Infinite iterators are supported
   in this mode as long as one of the items is exhausted. This is the default
   behavior.
 - `LONGEST`: The longest item defines how many iterations there are. Missing
   values in shorter items are filled-in with value specified using the `fill`
   option or `None` if it is not used. This is the same as using Python's
-  [zip_longest](https://en.wikipedia.org/wiki/[Glob](variables.md#global-scope)(programming)) function except that it has `fillvalue` argument instead of
+  [zip_longest](http://docs.python.org/library/functions.html#enumerate) function except that it has `fillvalue` argument instead of
   `fill`.
 
 All these modes are illustrated by the following examples:
@@ -516,15 +516,15 @@ Variable conversion
 ### Removing unnecessary keywords from outputs
 
 `FOR` loops with multiple iterations often create lots of output and
-considerably increase the size of the generated [output](../executing-tests/output-files.md#output) and [log](../executing-tests/output-files.md#log) files.
-It is possible to [remove or flatten unnecessary keywords](https://en.wikipedia.org/wiki/Regular_expression) using
+considerably increase the size of the generated [output](../execution/results.md#output) and [log](../execution/results.md#log) files.
+It is possible to [remove or flatten unnecessary keywords](http://docs.python.org/library/functions.html#func-range) using
 `--removekeywords` and `--flattenkeywords` command line options.
 
 ### Repeating single keyword
 
 `FOR` loops can be excessive in situations where there is only a need to
 repeat a single keyword. In these cases it is often easier to use
-[BuiltIn](using-test-libraries.md#builtin) keyword *Repeat Keyword*. This keyword takes a
+[BuiltIn](libraries.md#builtin) keyword *Repeat Keyword*. This keyword takes a
 keyword and how many times to repeat it as arguments. The times to
 repeat the keyword can have an optional postfix `times` or `x`
 to make the syntax easier to read.
@@ -566,7 +566,7 @@ variables are also available in the evaluation namespace using the special `$rc`
 The latter approach is handy when the string representation of the variable cannot be
 used in the condition directly. For example, strings require quoting and multiline
 strings and string themselves containing quotes cause additional problems. See the
-[Evaluating expressions](../appendices/evaluating-expressions.md#evaluating-expressions) appendix for more information and examples related to
+[Evaluating expressions](../appendix/expressions.md#evaluating-expressions) appendix for more information and examples related to
 the evaluation syntax.
 
 Starting from Robot Framework 6.1, the condition in a `WHILE` statement can be omitted.
@@ -587,7 +587,7 @@ The limit can be set with the `limit` configuration parameter either as a maximu
 iteration count or as a maximum time for the whole loop. When the limit is an
 iteration count, it is possible to use just integers like `100` and to add `times`
 or `x` suffix after the value like `100 times`. When the limit is a timeout,
-it is possible to use [time strings](https://docs.python.org/library/itertools.html#itertools.zip_longest) like `10 s` or `1 hour 10 minutes`.
+it is possible to use [time strings](http://docs.python.org/library/functions.html#func-range) like `10 s` or `1 hour 10 minutes`.
 The limit can also be disabled altogether by using `NONE` (case-insensitive).
 All these options are illustrated by the examples below.
 
@@ -683,8 +683,8 @@ Nesting WHILE
 ### Removing unnecessary keywords from outputs
 
 `WHILE` loops with multiple iterations often create lots of output and
-considerably increase the size of the generated [output](../executing-tests/output-files.md#output) and [log](../executing-tests/output-files.md#log) files.
-It is possible to [remove or flatten unnecessary keywords](https://docs.python.org/library/functions.html#zip) using
+considerably increase the size of the generated [output](../execution/results.md#output) and [log](../execution/results.md#log) files.
+It is possible to [remove or flatten unnecessary keywords](http://docs.python.org/library/functions.html#func-range) using
 `--removekeywords` and `--flattenkeywords` command line options.
 
 <a id="break"></a>
@@ -698,7 +698,7 @@ they have the same semantics as `break` and `continue` statements in Python, Jav
 and many other programming languages.
 
 Both `BREAK` and `CONTINUE` are typically used conditionally with [IF/ELSE](#ifelse)
-or [TRY/EXCEPT](../executing-tests/test-execution.md#tryexcept) structures, and especially the [inline IF](#inline-if) syntax is often
+or [TRY/EXCEPT](../execution/tests.md#tryexcept) structures, and especially the [inline IF](#inline-if) syntax is often
 convenient with them. These statements must be used in the loop body,
 possibly inside the aforementioned control structures, and using them in
 keyword called in the loop body is invalid.
@@ -747,14 +747,14 @@ Invalid BREAK
 !!! note
     `BREAK` and `CONTINUE` statements are new in Robot Framework 5.0 similarly
     as `WHILE`. Earlier versions supported controlling `FOR` loops using
-    [BuiltIn](using-test-libraries.md#builtin) keywords *Exit For Loop*, *Exit For Loop If*,
+    [BuiltIn](libraries.md#builtin) keywords *Exit For Loop*, *Exit For Loop If*,
     *Continue For Loop* and *Continue For Loop If*. These
     keywords still continue to work, but they will be deprecated and removed
     in the future.
 
 !!! note
-    Also the [RETURN](creating-user-keywords.md#return) statement can be used to a exit loop. It only works
-    when loops are used inside a [user keyword](creating-user-keywords.md#user-keyword).
+    Also the [RETURN](user-keywords.md#return) statement can be used to a exit loop. It only works
+    when loops are used inside a [user keyword](user-keywords.md#user-keyword).
 
 <a id="if"></a>
 <a id="ifelse"></a>
@@ -764,7 +764,7 @@ Invalid BREAK
 Sometimes there is a need to execute some keywords conditionally. Starting
 from Robot Framework 4.0 there is a separate `IF/ELSE` syntax, but
 there are also [other ways to execute keywords conditionally](#other-ways-to-execute-keywords-conditionally). Notice that if
-the logic gets complicated, it is typically better to move it into a [test library](../extending/creating-test-libraries.md#creating-test-library-class-or-module).
+the logic gets complicated, it is typically better to move it into a [test library](../extend/libraries.md#creating-test-library-class-or-module).
 
 ### Basic `IF` syntax
 
@@ -793,7 +793,7 @@ variables are also available in the evaluation namespace using the special `$rc`
 The latter approach is handy when the string representation of the variable cannot be
 used in the condition directly. For example, strings require quoting and multiline
 strings and string themselves containing quotes cause additional problems. For more
-information and examples related the evaluation syntax see the [Evaluating expressions](../appendices/evaluating-expressions.md#evaluating-expressions)
+information and examples related the evaluation syntax see the [Evaluating expressions](../appendix/expressions.md#evaluating-expressions)
 appendix.
 
 ### `ELSE` branches
@@ -841,7 +841,7 @@ Example
 ```
 Notice that this example uses the `${rc}` variable in the special `$rc` format to
 avoid evaluation failures if it is not a number. See the aforementioned
-[Evaluating expressions](../appendices/evaluating-expressions.md#evaluating-expressions) appendix for more information about this syntax.
+[Evaluating expressions](../appendix/expressions.md#evaluating-expressions) appendix for more information about this syntax.
 
 <a id="inline-if"></a>
 ### Inline `IF`
@@ -878,15 +878,15 @@ Inline IF/ELSE IF/ELSE
 ```
 As the latter example above demonstrates, inline `IF` with several `ELSE IF`
 and `ELSE` branches starts to get hard to understand. Long inline `IF`
-structures can be [split into multiple lines](../appendices/time-format.md#time-format) using the common `...`
+structures can be [split into multiple lines](http://docs.python.org/library/functions.html#func-range) using the common `...`
 continuation syntax, but using a normal `IF/ELSE` structure or moving the logic
-into a [test library](../extending/creating-test-libraries.md#creating-test-library-class-or-module) is probably a better idea. Each inline `IF` branch can
+into a [test library](../extend/libraries.md#creating-test-library-class-or-module) is probably a better idea. Each inline `IF` branch can
 contain only one statement. If more statements are needed, normal `IF/ELSE`
 structure needs to be used instead.
 
 If there is a need for an assignment with inline `IF`, the variable or variables
 to assign must be before the starting `IF`. Otherwise the logic is exactly
-the same as when [assigning variables](../executing-tests/output-files.md#removing-and-flattening-keywords) based on keyword return values. If
+the same as when [assigning variables](http://docs.python.org/library/functions.html#enumerate) based on keyword return values. If
 assignment is used and no branch is run, the variable gets value `None`.
 
 ```robotframework
@@ -905,7 +905,7 @@ Inline IF/ELSE with assignment having multiple variables
 
 `IF` structures can be nested with each others and with [FOR loops](#for-loops).
 This is illustrated by the following example using advanced features such
-as [FOR-IN-ENUMERATE loop](#for-in-enumerate-loop), [named-only arguments with user keywords](creating-user-keywords.md#named-only-arguments-with-user-keywords) and
+as [FOR-IN-ENUMERATE loop](#for-in-enumerate-loop), [named-only arguments with user keywords](user-keywords.md#named-only-arguments-with-user-keywords) and
 [inline Python evaluation](variables.md#inline-python-evaluation) syntax (`${{len(${items})}}`):
 
 ```robotframework
@@ -943,34 +943,34 @@ Multiple items
 
 There are also other methods to execute keywords conditionally:
 
-- The name of the keyword used as a setup or a teardown with [suites](creating-test-suites.md#creating-test-suites), [tests](creating-test-cases.md#example-tests) and
-  [keywords](../executing-tests/test-execution.md#using-keywords) can be specified using a variable. This facilitates changing them,
+- The name of the keyword used as a setup or a teardown with [suites](http://docs.python.org/library/functions.html#func-range), [tests](http://docs.python.org/library/functions.html#enumerate) and
+  [keywords](http://docs.python.org/library/functions.html#zip) can be specified using a variable. This facilitates changing them,
   for example, from the command line.
 
-- The [BuiltIn](using-test-libraries.md#builtin) keyword *Run Keyword* takes a keyword to actually
+- The [BuiltIn](libraries.md#builtin) keyword *Run Keyword* takes a keyword to actually
   execute as an argument and it can thus be a variable. The value of
   the variable can, for example, be got dynamically from an earlier
   keyword or given from the command line.
 
-- The [BuiltIn](using-test-libraries.md#builtin) keywords *Run Keyword If* and *Run Keyword Unless*
+- The [BuiltIn](libraries.md#builtin) keywords *Run Keyword If* and *Run Keyword Unless*
   execute a named keyword only if a certain expression is true or false, respectively.
   The new `IF/ELSE` syntax explained above is generally recommended, though.
 
-- Another [BuiltIn](using-test-libraries.md#builtin) keyword, *Set Variable If*, can be used to set
+- Another [BuiltIn](libraries.md#builtin) keyword, *Set Variable If*, can be used to set
   variables dynamically based on a given expression.
 
-- There are several [BuiltIn](using-test-libraries.md#builtin) keywords that allow executing a named
+- There are several [BuiltIn](libraries.md#builtin) keywords that allow executing a named
   keyword only if a test case or test suite has failed or passed.
 
 <a id="tryexcept"></a>
 ## `TRY/EXCEPT` syntax
 
 When a keyword fails, Robot Framework's default behavior is to stop the current
-test and executes its possible [teardown](../executing-tests/test-execution.md#teardown). There can, however, be needs to handle
+test and executes its possible [teardown](../execution/tests.md#teardown). There can, however, be needs to handle
 these failures during execution as well. Robot Framework 5.0 introduces native
 `TRY/EXCEPT` syntax for this purpose, but there also [other ways to handle errors](#other-ways-to-handle-errors).
 
-Robot Framework's `TRY/EXCEPT` syntax is inspired by Python's [exception handling](test-data-syntax.md#dividing-data-to-several-rows)
+Robot Framework's `TRY/EXCEPT` syntax is inspired by Python's [exception handling](https://docs.python.org/library/functions.html#zip)
 syntax. It has same `TRY`, `EXCEPT`, `ELSE` and `FINALLY` branches as Python and
 they also mostly work the same way. A difference is that Python uses lower case
 `try`, `except`, etc. but with Robot Framework all this kind of syntax must use
@@ -979,7 +979,7 @@ and with Robot Framework you are dealing with error messages as strings.
 
 !!! note
     It is not possible to catch errors caused by invalid syntax or errors
-    that [stop the whole execution](variables.md#return-values-from-keywords).
+    that [stop the whole execution](https://docs.python.org/library/itertools.html#itertools.zip_longest).
 
 ### Catching exceptions with `EXCEPT`
 
@@ -1057,7 +1057,7 @@ Match any after testing more specific errors
 By default matching an error using `EXCEPT` requires an exact match. That can be
 changed using a configuration option `type=` as an argument to the except clause.
 Valid values for the option are `GLOB`, `REGEXP` or `START` (case-insensitive)
-to make the match a [glob pattern match](creating-test-suites.md#suite-setup-and-teardown), a [regular expression match](creating-test-cases.md#test-setup-and-teardown), or
+to make the match a [glob pattern match](http://docs.python.org/library/functions.html#func-range), a [regular expression match](http://docs.python.org/library/functions.html#enumerate), or
 to match only the beginning of the error, respectively. Using value
 `LITERAL` has the same effect as the default behavior. If an `EXCEPT` has multiple
 messages, this option applies to all of them. The value of the option
@@ -1104,7 +1104,7 @@ Explicit exact match
 ```
 !!! note
     Remember that the backslash character often used with regular expressions
-    is an [escape character](creating-user-keywords.md#user-keyword-setup-and-teardown) in Robot Framework data. It thus needs to be
+    is an [escape character](http://docs.python.org/library/functions.html#func-range) in Robot Framework data. It thus needs to be
     escaped with another backslash when using it in regular expressions.
 
 ### Capturing error message
@@ -1172,7 +1172,7 @@ Handle everything
 
 Optional `FINALLY` branches make it possible to execute keywords both when there
 is an error and when there is not. They are thus suitable for cleaning up
-after a keyword execution somewhat similarly as [teardowns](../executing-tests/test-execution.md#teardown). There can be only one
+after a keyword execution somewhat similarly as [teardowns](../execution/tests.md#teardown). There can be only one
 `FINALLY` branch and it must always be last. They can be used in combination with
 `EXCEPT` and `ELSE` branches and having also `TRY/FINALLY` structure is possible:
 
@@ -1201,7 +1201,7 @@ TRY/FINALLY
 
 There are also other methods to execute keywords conditionally:
 
-- The [BuiltIn](using-test-libraries.md#builtin) keyword *Run Keyword And Expect Error* executes a named
+- The [BuiltIn](libraries.md#builtin) keyword *Run Keyword And Expect Error* executes a named
   keyword and expects that it fails with a specified error message. It is basically
   the same as using `TRY/EXCEPT` with a specified message. The syntax to specify
   the error message is also identical except that this keyword uses glob pattern
@@ -1209,21 +1209,21 @@ There are also other methods to execute keywords conditionally:
   is generally recommended unless there is a need to support older Robot Framework
   versions that do not support it.
 
-- The [BuiltIn](using-test-libraries.md#builtin) keyword *Run Keyword And Ignore Error* executes a named keyword
+- The [BuiltIn](libraries.md#builtin) keyword *Run Keyword And Ignore Error* executes a named keyword
   and returns its status as string `PASS` or `FAIL` along with possible return value
   or error message. It is basically the same as using `TRY/EXCEPT/ELSE` so that
   `EXCEPT` catches all errors. Using the native syntax is recommended unless
   old Robot Framework versions need to be supported.
 
-- The [BuiltIn](using-test-libraries.md#builtin) keyword *Run Keyword And Return Status* executes a named keyword
+- The [BuiltIn](libraries.md#builtin) keyword *Run Keyword And Return Status* executes a named keyword
   and returns its status as a Boolean true or false. It is a wrapper for the
   aforementioned *Run Keyword And Ignore Error*. The native syntax is
   nowadays recommended instead.
 
-- [Test teardowns](https://docs.python.org/tutorial/errors.html#handling-exceptions) and [keyword teardowns](../executing-tests/test-execution.md#stopping-test-execution-gracefully) can be used for cleaning up activities
+- [Test teardowns](http://docs.python.org/library/functions.html#func-range) and [keyword teardowns](http://docs.python.org/library/functions.html#enumerate) can be used for cleaning up activities
   similarly as `FINALLY` branches.
 
-- When keywords are implemented in Python based [libraries](using-test-libraries.md#test-libraries), all Python's error
+- When keywords are implemented in Python based [libraries](../extend/index.md#libraries), all Python's error
   handling features are readily available. This is the recommended approach
   especially if needed logic gets more complicated.
 
@@ -1268,7 +1268,7 @@ As the above examples demonstrates, groups can have a name, but the name is
 optional. Groups can also be nested freely with each others and with other
 control structures.
 
-[User keywords](creating-user-keywords.md#user-keyword) are in general recommended over the `GROUP` syntax, because
+[User keywords](user-keywords.md#user-keyword) are in general recommended over the `GROUP` syntax, because
 they are reusable and because they simplify tests or keywords where they are
 used by hiding and encapsulating lower level details. In the log file user
 keywords and groups look the same, though, except that instead of a `KEYWORD`
@@ -1285,7 +1285,7 @@ cause a huge mess.
 
 ### `GROUP` with templates
 
-The `GROUP` syntax can be used for grouping iterations with [test templates](creating-test-cases.md#test-templates):
+The `GROUP` syntax can be used for grouping iterations with [test templates](tests.md#test-templates):
 
 ```robotframework
 *** Settings ***
@@ -1317,9 +1317,9 @@ Upper case should be
 
 One of the primary usages for groups is making it possible to create structured
 tests and user keywords programmatically. For example, the following
-[pre-run modifier](../executing-tests/configuring-execution.md#pre-run-modifier) adds a group with two keywords at the end of each modified
-test. Groups can be added also by [listeners](../extending/listener-interface.md#listeners) that use the
-[listener API version 3](https://en.wikipedia.org/wiki/Glob_(programming)).
+[pre-run modifier](../execution/configuration.md#pre-run-modifier) adds a group with two keywords at the end of each modified
+test. Groups can be added also by [listeners](../extend/listeners.md#listeners) that use the
+[listener API version 3](http://docs.python.org/library/functions.html#func-range).
 
 ```python
 from robot.api import SuiteVisitor

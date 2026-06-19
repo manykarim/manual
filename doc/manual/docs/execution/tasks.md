@@ -1,11 +1,9 @@
 <a id="executing-tasks"></a>
-
-<a id="generic-automation"></a>
 # Task execution
 
 Robot Framework can be used also for other automation purposes than test
 automation, and starting from Robot Framework 3.1 it is possible to
-explicitly [create](output-files.md#create-output-files) and execute tasks. For most parts task execution
+explicitly [create](#create) and execute tasks. For most parts task execution
 and test execution work the same way, and this section explains the
 differences.
 
@@ -25,9 +23,9 @@ mode even if executed files contain tasks. If neither of these options are
 used, it is an error to execute multiple files so that some have tests and
 others have tasks.
 
-The execution mode is stored in the generated [output file](output-files.md#output-file) and read by
+The execution mode is stored in the generated [output file](results.md#output-file) and read by
 [Rebot](post-processing.md#rebot) if outputs are post-processed. The mode can also [be set when
-using Rebot](../creating-test-data/creating-tasks.md#creating-tasks) if necessary.
+using Rebot](../syntax/tasks.md#creating-tasks) if necessary.
 
 ## Task related command line options
 

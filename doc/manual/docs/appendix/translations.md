@@ -1,12 +1,12 @@
 # Translations
 
 Robot Framework supports translating [section headers](#section-headers), [settings](#settings),
-[Given/When/Then prefixes](../creating-test-data/creating-test-cases.md#behavior-driven-style) used in Behavior Driven Development (BDD)
-as well as [true and false strings](../extending/creating-test-libraries.md#supported-conversions) used in automatic Boolean argument
+[Given/When/Then prefixes](../syntax/tests.md#behavior-driven-style) used in Behavior Driven Development (BDD)
+as well as [true and false strings](../extend/libraries.md#supported-conversions) used in automatic Boolean argument
 conversion. This appendix lists all translations for all languages,
 excluding English, that Robot Framework supports out-of-the-box.
 
-How to actually activate translations is explained in the [Localization](../creating-test-data/test-data-syntax.md#localization) section.
+How to actually activate translations is explained in the [Localization](../syntax/data.md#localization) section.
 That section also explains how to create custom language definitions and
 how to contribute new translations.
 

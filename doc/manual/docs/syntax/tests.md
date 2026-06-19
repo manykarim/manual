@@ -4,21 +4,21 @@
 # Creating test cases
 
 This section describes the overall test case syntax. Organizing test
-cases into [test suites](creating-test-suites.md#test-suite) using [suite files](creating-test-suites.md#suite-files) and [suite
-directories](creating-test-suites.md#suite-directories) is discussed in the next section.
+cases into [test suites](suites.md#test-suite) using [suite files](suites.md#suite-files) and [suite
+directories](suites.md#suite-directories) is discussed in the next section.
 
 When using Robot Framework for other automation purposes than test
 automation, it is recommended to create *tasks* instead of tests.
 The task syntax is for most parts identical to the test syntax,
-and the differences are explained in the [Creating tasks](creating-tasks.md#creating-tasks) section.
+and the differences are explained in the [Creating tasks](tasks.md#creating-tasks) section.
 
 ## Test case syntax
 
 ### Basic syntax
 
 Test cases are constructed in test case sections from the available
-keywords. Keywords can be imported from [test libraries](using-test-libraries.md#test-libraries) or [resource
-files](resource-and-variable-files.md#resource-files), or created in the [keyword section](../appendices/available-settings.md#keyword-section) of the test case file
+keywords. Keywords can be imported from [test libraries](libraries.md#test-libraries) or [resource
+files](resource-files.md#resource-files), or created in the [keyword section](../appendix/settings.md#keyword-section) of the test case file
 itself.
 
 
@@ -29,7 +29,7 @@ an error to have something between the section headers and the first
 test.
 
 The second column normally has keyword names. An exception to this rule
-is [setting variables from keyword return values](creating-user-keywords.md#setting-variables-from-keyword-return-values), when the second and
+is [setting variables from keyword return values](user-keywords.md#return), when the second and
 possibly also the subsequent columns contain variable names and a keyword
 name is located after them. In either case, columns after the keyword name
 contain possible arguments to the specified keyword.
@@ -53,7 +53,7 @@ Setting Variables
 !!! note
     Although test case names can contain any character, using `?` and
     especially `*` is not generally recommended because they are
-    considered to be [wildcards](../executing-tests/basic-usage.md#wildcards) when [selecting test cases](../executing-tests/configuring-execution.md#selecting-test-cases).
+    considered to be [wildcards](../execution/basics.md#wildcards) when [selecting test cases](../execution/configuration.md#selecting-test-cases).
     For example, trying to run only a test with name *Example **
     like `--test 'Example *'` will actually run any test starting with
     *Example*.
@@ -66,21 +66,21 @@ are in the subsequent columns. Setting names have square brackets around
 them to distinguish them from keywords. The available settings are listed
 below and explained later in this section.
 
-`[Documentation]`:setting:
-    Used for specifying a [test case documentation](#test-case-documentation).
+`[Documentation]`
+: Used for specifying a [test case documentation](#test-case-documentation).
 
-`[Setup]`:setting:, `[Teardown]`:setting:
-   Specify [test setup and teardown](#test-setup-and-teardown).
+`[Setup]`, `[Teardown]`
+: Specify [test setup and teardown](#test-setup-and-teardown).
 
-`[Tags]`:setting:
-    Used for [tagging test cases](#tagging-test-cases).
+`[Tags]`
+: Used for [tagging test cases](#tagging-test-cases).
 
-`[Template]`:setting:
-   Specifies the [template keyword](#template-keyword) to use. The test itself will contain only
+`[Template]`
+: Specifies the [template keyword](#template-keyword) to use. The test itself will contain only
    data to use as arguments to that keyword.
 
-`[Timeout]`:setting:
-   Used for setting a [test case timeout](advanced-features.md#test-case-timeout). [Timeouts](advanced-features.md#timeouts) are discussed in
+`[Timeout]`
+: Used for setting a [test case timeout](advanced.md#test-case-timeout). [Timeouts](advanced.md#timeouts) are discussed in
    their own section.
 
 !!! note
@@ -105,17 +105,17 @@ The Setting section can have the following test case related
 settings. These settings are mainly default values for the
 test case specific settings listed earlier.
 
-`Test Setup`:setting:, `Test Teardown`:setting:
-   The default values for [test setup and teardown](#test-setup-and-teardown).
+`Test Setup`, `Test Teardown`
+: The default values for [test setup and teardown](#test-setup-and-teardown).
 
-`Test Tags`:setting:
-   [Tags](../extending/creating-test-libraries.md#keyword-tags) all tests in the suite will get in addition to their possible own tags.
+`Test Tags`
+: [Tags](../extend/libraries.md#keyword-tags) all tests in the suite will get in addition to their possible own tags.
 
-`Test Template`:setting:
-   The default [template keyword](#template-keyword) to use.
+`Test Template`
+: The default [template keyword](#template-keyword) to use.
 
-`Test Timeout`:setting:
-   The default value for [test case timeout](advanced-features.md#test-case-timeout). [Timeouts](advanced-features.md#timeouts) are discussed in
+`Test Timeout`
+: The default value for [test case timeout](advanced.md#test-case-timeout). [Timeouts](advanced.md#timeouts) are discussed in
    their own section.
 
 ## Using arguments
@@ -131,7 +131,7 @@ have default values. What arguments a keyword accepts depends on its
 implementation, and typically the best place to search this
 information is keyword's documentation. In the examples in this
 section the documentation is expected to be generated using the
-[Libdoc](../supporting-tools/libdoc.md#libdoc) tool, but the same information is available on
+[Libdoc](../extend/libdoc.md#libdoc) tool, but the same information is available on
 documentation generated by generic documentation tools such as
 `pydoc`.
 
@@ -148,10 +148,10 @@ documentation. Using too few or too many arguments will result in an
 error.
 
 The test below uses keywords *Create Directory* and *Copy
-File* from the [OperatingSystem](using-test-libraries.md#operatingsystem) library. Their arguments are
+File* from the [OperatingSystem](libraries.md#operatingsystem) library. Their arguments are
 specified as `path` and `source, destination`, which means
 that they take one and two arguments, respectively. The last keyword,
-*No Operation* from [BuiltIn](using-test-libraries.md#builtin), takes no arguments.
+*No Operation* from [BuiltIn](libraries.md#builtin), takes no arguments.
 
 ```robotframework
 *** Test Cases ***
@@ -191,7 +191,7 @@ them. In the documentation they have an asterisk before the argument
 name like `*varargs`.
 
 For example, *Remove Files* and *Join Paths* keywords from
-the [OperatingSystem](using-test-libraries.md#operatingsystem) library have arguments `*paths` and `base, *parts`,
+the [OperatingSystem](libraries.md#operatingsystem) library have arguments `*paths` and `base, *parts`,
 respectively. The former can be used with any number of arguments, but
 the latter requires at least one argument.
 
@@ -207,7 +207,7 @@ Example
 
 The named argument syntax makes using arguments with [default values](#default-values) more
 flexible, and allows explicitly labeling what a certain argument value means.
-Technically named arguments work exactly like [keyword arguments](https://www.python.org/dev/peps/pep-3102) in Python.
+Technically named arguments work exactly like [keyword arguments](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) in Python.
 
 #### Basic syntax
 
@@ -227,7 +227,7 @@ means that if you have an argument `arg`, you must use it like
 works.  The latter means that spaces are not allowed before the `=`
 sign, and possible spaces after it are considered part of the given value.
 
-When the named argument syntax is used with [user keywords](../extending/creating-test-libraries.md#free-keyword-arguments-kwargs), the argument
+When the named argument syntax is used with [user keywords](../extend/libraries.md#free-keyword-arguments-kwargs), the argument
 names must be given without the `${}` decoration. For example, user
 keyword with arguments `${arg1}=first, ${arg2}=second` must be used
 like `arg2=override`.
@@ -282,7 +282,7 @@ and also an unrelated argument with name `foo`. In this case the argument
 there is a syntax error.
 
 In these rare cases where there are accidental matches, it is possible to
-use the backslash character to [escape](https://github.com/robotframework/robotframework/issues/5250) the syntax like `foo\=quux`.
+use the backslash character to [escape](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) the syntax like `foo\=quux`.
 Now the argument will get a literal value `foo=quux`. Note that escaping
 is not needed if there are no arguments with name `foo`, but because it
 makes the situation more explicit, it may nevertheless be a good idea.
@@ -290,15 +290,15 @@ makes the situation more explicit, it may nevertheless be a good idea.
 #### Where named arguments are supported
 
 As already explained, the named argument syntax works with keywords. In
-addition to that, it also works when [importing libraries](using-test-libraries.md#importing-libraries).
+addition to that, it also works when [importing libraries](libraries.md#importing-libraries).
 
-Naming arguments is supported by [user keywords](creating-user-keywords.md#embedding-arguments-into-keyword-name) and by most [test libraries](using-test-libraries.md#test-libraries).
-The only exceptions are Python keywords explicitly using [positional-only arguments](../extending/creating-test-libraries.md#positional-only-arguments).
+Naming arguments is supported by [user keywords](user-keywords.md#embedding-arguments-into-keyword-name) and by most [test libraries](libraries.md#test-libraries).
+The only exceptions are Python keywords explicitly using [positional-only arguments](../extend/libraries.md#positional-only-arguments).
 
 #### Named arguments example
 
 The following example demonstrates using the named arguments syntax with
-library keywords, user keywords, and when importing the [Telnet](using-test-libraries.md#telnet) test library.
+library keywords, user keywords, and when importing the [Telnet](libraries.md#telnet) test library.
 
 ```robotframework
 *** Settings ***
@@ -319,15 +319,15 @@ List files
 ### Free named arguments
 
 Robot Framework supports *free named arguments*, often also called *free
-keyword arguments* or *kwargs*, similarly as [Python supports **kwargs](https://github.com/robotframework/robotframework/issues/5252).
+keyword arguments* or *kwargs*, similarly as [Python supports **kwargs](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 What this means is that a keyword can receive all arguments that use
 the [named argument syntax](#named-argument-syntax) (`name=value`) and do not match any arguments
 specified in the signature of the keyword.
 
 Free named arguments are supported by same keyword types than [normal named
-arguments](https://robotidy.readthedocs.io). How keywords specify that they accept free named arguments
-depends on the keyword type. For example, [Python based keywords](https://en.wikipedia.org/wiki/Acceptance_test-driven_development) simply use
-`**kwargs` and [user keywords](http://en.wikipedia.org/wiki/Specification_by_example) use `&{kwargs}`.
+arguments](http://docs.python.org/tutorial/controlflow.html#keyword-arguments). How keywords specify that they accept free named arguments
+depends on the keyword type. For example, [Python based keywords](https://www.python.org/dev/peps/pep-3102) simply use
+`**kwargs` and [user keywords](https://github.com/robotframework/robotframework/issues/5250) use `&{kwargs}`.
 
 Free named arguments support variables similarly as [named arguments](#named-arguments-with-variables)_. In practice that means that variables
 can be used both in names and values, but the escape sign must always be
@@ -339,13 +339,13 @@ that free argument names must always be strings.
 #### Examples
 
 As the first example of using free named arguments, let's take a look at
-*Run Process* keyword in the [Process](using-test-libraries.md#process) library. It has a signature
+*Run Process* keyword in the [Process](libraries.md#process) library. It has a signature
 `command, *arguments, **configuration`, which means that it takes the command
 to execute (`command`), its arguments as [variable number of arguments](#variable-number-of-arguments)
 (`*arguments`) and finally optional configuration parameters as free named
 arguments (`**configuration`). The example below also shows that variables
 work with free keyword arguments exactly like when [using the named argument
-syntax](http://en.wikipedia.org/wiki/Behavior_Driven_Development).
+syntax](https://github.com/robotframework/robotframework/issues/5252).
 
 ```robotframework
 *** Test Cases ***
@@ -353,11 +353,11 @@ Free Named Arguments
     Run Process    program.py    arg1    arg2    cwd=/home/user
     Run Process    program.py    argument    shell=True    env=${ENVIRON}
 ```
-See [Free keyword arguments (**kwargs)](../extending/creating-test-libraries.md#free-keyword-arguments-kwargs) section under [Creating test
-libraries](../extending/creating-test-libraries.md#creating-test-libraries) for more information about using the free named arguments syntax
+See [Free keyword arguments (**kwargs)](../extend/libraries.md#free-keyword-arguments-kwargs) section under [Creating test
+libraries](../extend/libraries.md#creating-test-libraries) for more information about using the free named arguments syntax
 in your custom test libraries.
 
-As the second example, let's create a wrapper [user keyword](creating-user-keywords.md#user-keyword) for running the
+As the second example, let's create a wrapper [user keyword](user-keywords.md#user-keyword) for running the
 `program.py` in the above example. The wrapper keyword *Run Program*
 accepts all positional and named arguments and passes them forward to
 *Run Process* along with the name of the command to execute.
@@ -380,13 +380,13 @@ Keywords can accept arguments that must
 always be named using the [named argument syntax](#named-argument-syntax). If, for example,
 a keyword would accept a single named-only argument `example`, it would
 always need to be used like `example=value` and using just `value` would
-not work. This syntax is inspired by Python's [keyword-only arguments](../extending/creating-test-libraries.md#keyword-only-arguments) syntax.
+not work. This syntax is inspired by Python's [keyword-only arguments](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) syntax.
 
 For most parts named-only arguments work the same way as [named arguments](#named-arguments).
 The main difference is that libraries implemented with Python 2 using
-the [static library API](../extending/creating-test-libraries.md#static-library-api) [do not support this syntax](../extending/creating-test-libraries.md#keyword-only-arguments).
+the [static library API](../extend/libraries.md#static-library-api) [do not support this syntax](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
-As an example of using the [named-only arguments with user keywords](creating-user-keywords.md#named-only-arguments-with-user-keywords), here
+As an example of using the [named-only arguments with user keywords](user-keywords.md#named-only-arguments-with-user-keywords), here
 is a variation of the *Run Program* in the above [free named argument
 examples](#free-named-argument-examples) that only supports configuring `shell`:
 
@@ -405,17 +405,17 @@ Run Program
 ### Arguments embedded to keyword names
 
 A totally different approach to specify arguments is embedding them
-into keyword names. This syntax is supported by both [test library keywords](../extending/creating-test-libraries.md#embedding-arguments-into-keyword-names)
-and [user keywords](creating-user-keywords.md#user-keyword).
+into keyword names. This syntax is supported by both [test library keywords](http://docs.python.org/tutorial/controlflow.html#keyword-arguments)
+and [user keywords](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
 ## Failures
 
 ### When test case fails
 
 A test case fails if any of the keyword it uses fails. Normally this means that
-execution of that test case is stopped, possible [test teardown](../executing-tests/test-execution.md#test-teardown) is executed,
+execution of that test case is stopped, possible [test teardown](../execution/tests.md#test-teardown) is executed,
 and then execution continues from the next test case. It is also possible to
-use special [continuable failures](../extending/creating-test-libraries.md#continuable-failures) if stopping test execution is not desired.
+use special [continuable failures](https://www.python.org/dev/peps/pep-3102) if stopping test execution is not desired.
 
 ### Error messages
 
@@ -426,12 +426,12 @@ some keywords allow configuring them.
 In some circumstances, for example when continuable failures are used,
 a test case can fail multiple times. In that case the final error message
 is got by combining the individual errors. Very long error messages are
-[automatically cut from the middle](../executing-tests/output-files.md#limiting-error-message-length-in-reports) to keep [reports](../executing-tests/output-files.md#report) easier to read, but
-full error messages are always visible in [log files](../executing-tests/output-files.md#log) as messages of
+[automatically cut from the middle](https://github.com/robotframework/robotframework/issues/5250) to keep [reports](../execution/results.md#report) easier to read, but
+full error messages are always visible in [log files](../execution/results.md#log) as messages of
 the failed keywords.
 
 By default error messages are normal text, but
-they can [contain HTML formatting](../extending/creating-test-libraries.md#html-in-error-messages). This
+they can [contain HTML formatting](https://github.com/robotframework/robotframework/issues/5252). This
 is enabled by starting the error message with marker string `*HTML*`.
 This marker will be removed from the final error message shown in reports
 and logs. Using HTML in a custom message is shown in the second example below.
@@ -474,8 +474,8 @@ Amount cannot be larger than ${MAX AMOUNT}
 The `[Documentation]` setting allows setting free form
 documentation for a test case. That text is shown in the command line
 output and in the resulting logs and reports.
-If documentation gets long, it can be [split into multiple rows](test-data-syntax.md#dividing-data-to-several-rows).
-It is possible to use simple [HTML formatting](../appendices/documentation-formatting.md#html-formatting) and [variables](variables.md#variables) can
+If documentation gets long, it can be [split into multiple rows](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
+It is possible to use simple [HTML formatting](../appendix/doc-format.md#html-formatting) and [variables](variables.md#variables) can
 be used to make the documentation dynamic. Possible non-existing
 variables are left unchanged.
 
@@ -510,7 +510,7 @@ of the test case needs documenting, it is often a sign that keywords
 in the test case need better names and they are to be enhanced,
 instead of adding extra documentation. Finally, metadata, such as the
 environment and user information in the last example above, is often
-better specified using [tags](../extending/creating-test-libraries.md#keyword-tags).
+better specified using [tags](../extend/libraries.md#keyword-tags).
 
 <a id="test-case-tags"></a>
 
@@ -518,34 +518,34 @@ better specified using [tags](../extending/creating-test-libraries.md#keyword-ta
 ## Tagging test cases
 
 Using tags in Robot Framework is a simple, yet powerful mechanism for
-classifying test cases and also [user keywords](creating-user-keywords.md#user-keyword). Tags are free text and
+classifying test cases and also [user keywords](user-keywords.md#user-keyword). Tags are free text and
 Robot Framework itself has no special meaning for them except for the
 [reserved tags](#reserved-tags) discussed below. Tags can be used at least for the following
 purposes:
 
-- They are shown in test [reports](../executing-tests/output-files.md#report), [logs](../executing-tests/output-files.md#log) and, of course, in the test
+- They are shown in test [reports](../execution/results.md#report), [logs](../execution/results.md#log) and, of course, in the test
   data, so they provide metadata to test cases.
-- [Statistics](../executing-tests/output-files.md#configuring-statistics) about test cases (total, passed, failed and skipped) are
+- [Statistics](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) about test cases (total, passed, failed and skipped) are
   automatically collected based on them.
-- They can be used to [include and exclude](../executing-tests/output-files.md#configuring-statistics) as well as to [skip](../executing-tests/test-execution.md#skip) test cases.
+- They can be used to [include and exclude](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) as well as to [skip](../execution/tests.md#skip) test cases.
 
 There are multiple ways how to specify tags for test cases explained below:
 
-`Test Tags`:setting: setting in the Settings section
-   All tests in a test case file with this setting always get specified tags.
-   If this setting is used in a [suite initialization file](creating-test-suites.md#suite-initialization-file), all tests
+`Test Tags` setting in the Settings section
+: All tests in a test case file with this setting always get specified tags.
+   If this setting is used in a [suite initialization file](suites.md#suite-initialization-file), all tests
    in child suites get these tags.
 
-`[Tags]`:setting: setting with each test case
-   Tests get these tags in addition to tags specified using the `Test Tags`
+`[Tags]` setting with each test case
+: Tests get these tags in addition to tags specified using the `Test Tags`
    setting. The `[Tags]` setting also allows removing tags set with
    `Test Tags` by using the `-tag` syntax.
 
-`--settag`:option: command line option
-   All tests get tags set with this option in addition to tags they got elsewhere.
+`--settag` command line option
+: All tests get tags set with this option in addition to tags they got elsewhere.
 
-`Set Tags`:name:, `Remove Tags`:name:, `Fail`:name: and `Pass Execution`:name: keywords
-   These [BuiltIn](using-test-libraries.md#builtin) keywords can be used to manipulate tags dynamically
+`Set Tags`, `Remove Tags`, `Fail` and `Pass Execution` keywords
+: These [BuiltIn](libraries.md#builtin) keywords can be used to manipulate tags dynamically
    during the test execution.
 
 Example:
@@ -593,16 +593,16 @@ to collect statistics, to select test to be executed, or to remove duplicates,
 comparisons are case, space and underscore insensitive.
 
 As demonstrated by the above examples, removing tags using `-tag` syntax supports
-[simple patterns](../executing-tests/basic-usage.md#simple-patterns) like `-requirement: *`. Tags starting with a hyphen have no
+[simple patterns](../execution/basics.md#simple-patterns) like `-requirement: *`. Tags starting with a hyphen have no
 special meaning otherwise than with the `[Tags]` setting. If there is
 a need to set a tag starting with a hyphen with `[Tags]`, it is possible
-to use the [escaped](#escaped) format like `\-tag`.
+to use the [escaped](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) format like `\-tag`.
 
 At the moment the `-tag` syntax can be used for removing tags only with the
 `[Tags]` setting, but the plan is to support this functionality also
-with the `Test Tags` setting in Robot Framework 8.0 ([#5250](../executing-tests/configuring-execution.md#by-tag-names)).
+with the `Test Tags` setting in Robot Framework 8.0 ([#5250](http://docs.python.org/tutorial/controlflow.html#keyword-arguments)).
 Setting tags having a literal value that starts with a hyphen in `Test Tags`
-was deprecated in Robot Framework 7.2 ([#5252](test-data-syntax.md#escaping)). The escaped format like `\-tag`
+was deprecated in Robot Framework 7.2 ([#5252](https://www.python.org/dev/peps/pep-3102)). The escaped format like `\-tag`
 can be used if tags with such values are needed.
 
 !!! note
@@ -620,17 +620,17 @@ Prior to Robot Framework 6.0, tags could be specified to tests in the Setting se
 using two different settings:
 
 `Force Tags`
-    All tests unconditionally get these tags. This is exactly the same as
+: All tests unconditionally get these tags. This is exactly the same as
     `Test Tags` nowadays.
 
 `Default Tags`
-    All tests get these tags by default. If a test has `[Tags]`,
+: All tests get these tags by default. If a test has `[Tags]`,
     it will not get these tags.
 
 Both of these settings still work, but they are considered deprecated.
 A visible deprecation warning will be added in the future, most likely
 in Robot Framework 8.0, and eventually these settings will be removed.
-Tools like [Tidy](../supporting-tools/tidy.md#tidy) can be used to ease transition.
+Tools like [Tidy](https://github.com/robotframework/robotframework/issues/5250) can be used to ease transition.
 
 Updating `Force Tags` requires only renaming it to `Test Tags`.
 The `Default Tags` setting will be removed altogether, but the `-tag`
@@ -693,37 +693,37 @@ The current reserved tags are listed below, but more such tags are likely
 to be added in the future.
 
 `robot:continue-on-failure` and `robot:recursive-continue-on-failure`
-    Used for [enabling the continue-on-failure mode](https://github.com/robotframework/robotframework/issues/5250).
+: Used for [enabling the continue-on-failure mode](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
 `robot:stop-on-failure` and `robot:recursive-stop-on-failure`
-    Used for [disabling the continue-on-failure mode](https://github.com/robotframework/robotframework/issues/5252).
+: Used for [disabling the continue-on-failure mode](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
 `robot:exit-on-failure`
-    Stop the whole execution if a [test with this tag fails](https://robotidy.readthedocs.io).
+: Stop the whole execution if a [test with this tag fails](https://www.python.org/dev/peps/pep-3102).
 
 `robot:skip-on-failure`
-    Mark test to be [skipped if it fails](../executing-tests/test-execution.md#enabling-continue-on-failure-using-tags).
+: Mark test to be [skipped if it fails](https://github.com/robotframework/robotframework/issues/5250).
 
 `robot:skip`
-    Mark test to be [unconditionally skipped](../executing-tests/test-execution.md#disabling-continue-on-failure-using-tags).
+: Mark test to be [unconditionally skipped](https://github.com/robotframework/robotframework/issues/5252).
 
 `robot:exclude`
-    Mark test to be [unconditionally excluded](../executing-tests/test-execution.md#stopping-using-robotexit-on-failure-tag).
+: Mark test to be [unconditionally excluded](https://robotidy.readthedocs.io).
 
 `robot:private`
-    Mark keyword to be [private](creating-user-keywords.md#private-user-keywords).
+: Mark keyword to be [private](https://en.wikipedia.org/wiki/Acceptance_test-driven_development).
 
 `robot:no-dry-run`
-    Mark keyword not to be executed in the [dry run](../executing-tests/configuring-execution.md#dry-run) mode.
+: Mark keyword not to be executed in the [dry run](../execution/configuration.md#dry-run) mode.
 
 `robot:exit`
-    Added to tests automatically when [execution is stopped gracefully](../executing-tests/test-execution.md#automatically-skipping-failed-tests).
+: Added to tests automatically when [execution is stopped gracefully](http://en.wikipedia.org/wiki/Specification_by_example).
 
 `robot:flatten`
-    Enable [flattening keyword during execution time](../executing-tests/output-files.md#flattening-keyword-during-execution-time).
+: Enable [flattening keyword during execution time](../execution/results.md#flattening-keyword-during-execution-time).
 
 As of RobotFramework 4.1, reserved tags are suppressed by default in
-[tag statistics](../executing-tests/test-execution.md#skipping-before-execution). They will be shown when they are explicitly
+[tag statistics](http://en.wikipedia.org/wiki/Behavior_Driven_Development). They will be shown when they are explicitly
 included via the `--tagstatinclude robot:*` command line option.
 
 <a id="test-setup"></a>
@@ -739,13 +739,13 @@ normal keywords with possible arguments.
 
 A setup and a teardown are always a single keyword. If they need to take care
 of multiple separate tasks, it is possible to create higher-level [user
-keywords](creating-user-keywords.md#user-keyword-arguments) for that purpose. An alternative solution is executing multiple
-keywords using the [BuiltIn](using-test-libraries.md#builtin) keyword *Run Keywords*.
+keywords](user-keywords.md#user-keyword-arguments) for that purpose. An alternative solution is executing multiple
+keywords using the [BuiltIn](libraries.md#builtin) keyword *Run Keywords*.
 
 The test teardown is special in two ways. First of all, it is executed also
 when a test case fails, so it can be used for clean-up activities that must be
 done regardless of the test case status. In addition, all the keywords in the
-teardown are also executed even if one of them fails. This [continue on failure](../executing-tests/test-execution.md#continue-on-failure)
+teardown are also executed even if one of them fails. This [continue on failure](../execution/tests.md#continue-on-failure)
 functionality can be used also with normal keywords, but inside teardowns it is
 on by default.
 
@@ -798,7 +798,7 @@ the command line.
 
 !!! note
     [Test suites can have a setup and teardown of their
-    own](../executing-tests/configuring-execution.md#by-tag-names). A suite setup is executed before any test cases or sub test
+    own](http://docs.python.org/tutorial/controlflow.html#keyword-arguments). A suite setup is executed before any test cases or sub test
     suites in that test suite, and similarly a suite teardown is
     executed after them.
 
@@ -874,9 +874,9 @@ test with multiple iterations is:
 - SKIP if all iterations were skipped.
 
 !!! note
-    It is possible to use the [continue on failure](../executing-tests/test-execution.md#continue-on-failure) mode also with normal
+    It is possible to use the [continue on failure](../execution/tests.md#continue-on-failure) mode also with normal
     tests, but with the templated tests the mode is on automatically. If
-    needed, the mode can also be [disabled](#disabled) with templates by using the
+    needed, the mode can also be [disabled](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) with templates by using the
     `robot:stop-on-failure` tag.
 
 !!! note
@@ -888,7 +888,7 @@ test with multiple iterations is:
 ### Templates with embedded arguments
 
 Templates support a variation of
-the [embedded argument syntax](creating-user-keywords.md#embedded-argument-syntax). With templates this syntax works so
+the [embedded argument syntax](user-keywords.md#embedded-argument-syntax). With templates this syntax works so
 that if the template keyword has variables in its name, they are considered
 placeholders for arguments and replaced with the actual arguments
 used with the template. The resulting keyword is then used without positional
@@ -939,7 +939,7 @@ the next section.
 
 ### Templates with `FOR` loops
 
-If templates are used with [FOR loops](control-structures.md#for-loops), the template is applied for
+If templates are used with [FOR loops](control.md#for-loops), the template is applied for
 all the steps inside the loop. The continue on failure mode is in use
 also in this case, which means that all the steps are executed with
 all the looped elements even if there are failures.
@@ -957,8 +957,8 @@ Template with FOR loop
 ```
 ### Templates with `IF/ELSE` structures
 
-[IF/ELSE structures](control-structures.md#ifelse-structures) can be also used together with templates.
-This can be useful, for example, when used together with [FOR loops](control-structures.md#for-loops) to
+[IF/ELSE structures](control.md#ifelse-structures) can be also used together with templates.
+This can be useful, for example, when used together with [FOR loops](control.md#for-loops) to
 filter executed arguments.
 
 ```robotframework
@@ -998,7 +998,7 @@ finally it is verified that the system behaved as expected
 
 Another style to write test cases is the *data-driven* approach where
 test cases use only one higher-level keyword, often created as a
-[user keyword](creating-user-keywords.md#user-keyword), that hides the actual test workflow. These tests are
+[user keyword](user-keywords.md#user-keyword), that hides the actual test workflow. These tests are
 very useful when there is a need to test the same scenario with
 different input and/or output data. It would be possible to repeat the
 same keyword with every test, but the [test template](#test-template) functionality
@@ -1019,7 +1019,7 @@ Empty User Name and Password      ${EMPTY}         ${EMPTY}
 !!! tip
     Naming columns like in the example above makes tests easier to
     understand. This is possible because on the header row other
-    cells except the first one [are ignored](creating-user-keywords.md#private-user-keywords).
+    cells except the first one [are ignored](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
 The above example has six separate tests, one for each invalid
 user/password combination, and the example below illustrates how to
@@ -1047,11 +1047,11 @@ Invalid Password
 
 It is also possible to write test cases as requirements that also non-technical
 project stakeholders must understand. These *executable requirements* are a
-corner stone of a process commonly called [Acceptance Test Driven Development](../executing-tests/test-execution.md#stopping-test-execution-gracefully)
-(ATDD) or [Specification by Example](../executing-tests/output-files.md#configuring-statistics).
+corner stone of a process commonly called [Acceptance Test Driven Development](http://docs.python.org/tutorial/controlflow.html#keyword-arguments)
+(ATDD) or [Specification by Example](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 
 One way to write these requirements/tests is *Given-When-Then* style
-popularized by [Behavior Driven Development](creating-test-suites.md#suite-setup-and-teardown) (BDD). When writing test cases in
+popularized by [Behavior Driven Development](https://www.python.org/dev/peps/pep-3102) (BDD). When writing test cases in
 this style, the initial state is usually expressed with a keyword starting with
 word *Given*, the actions are described with keyword starting with
 *When* and the expectations with a keyword starting with *Then*.
@@ -1078,10 +1078,10 @@ should be open* could be used as *Then welcome page should be open* or
 *and welcome page should be open*.
 
 !!! note
-    These prefixes can be [localized](test-data-syntax.md#localized). See the [Translations](../appendices/translations.md#translations) appendix
+    These prefixes can be [localized](data.md#localized). See the [Translations](../appendix/translations.md#translations) appendix
     for supported translations.
 
 #### Embedding data to keywords
 
 When writing concrete examples it is useful to be able to pass actual data to
-keyword implementations. This can be done by [embedding arguments into keyword name](creating-user-keywords.md#embedding-arguments-into-keyword-name).
+keyword implementations. This can be done by [embedding arguments into keyword name](user-keywords.md#embedding-arguments-into-keyword-name).

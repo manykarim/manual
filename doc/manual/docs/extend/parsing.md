@@ -11,11 +11,13 @@ even override Robot Framework's own parser.
 Parsers are taken into use from the command line with the `--parser`
 option using exactly the same semantics as with [listeners](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_string). This includes
 specifying parsers as names or paths, giving arguments to parser classes, and
-so on::
+so on:
 
-    robot --parser MyParser tests.custom
-    robot --parser path/to/MyParser.py tests.custom
-    robot --parser Parser1:arg --parser Parser2:a1:a2 path/to/tests
+```
+robot --parser MyParser tests.custom
+robot --parser path/to/MyParser.py tests.custom
+robot --parser Parser1:arg --parser Parser2:a1:a2 path/to/tests
+```
 
 ## Parser API
 
@@ -40,7 +42,7 @@ Also extensions containing multiple parts like *.example.ext* or
 
 ### `parse` method
 
-The mandatory `parse` method is responsible for parsing [suite files](../creating-test-data/creating-test-suites.md#suite-files). It is
+The mandatory `parse` method is responsible for parsing [suite files](../syntax/suites.md#suite-files). It is
 called with each parsed file that has an extension that the parser supports.
 The method must return a [TestSuite](#runningtestsuite)_ object.
 
@@ -48,13 +50,13 @@ In simple cases `parse` can be implemented so that it accepts just a single
 argument that is a [pathlib.Path](#pathlib)_ object pointing to the file to
 parse. If the parser is interested in defaults for `Test Setup`,
 `Test Teardown`, `Test Tags` and `Test Timeout`
-set in higher level [suite initialization files](../creating-test-data/creating-test-suites.md#suite-initialization-files), the `parse` method must
+set in higher level [suite initialization files](../syntax/suites.md#suite-initialization-files), the `parse` method must
 accept two arguments. In that case the second argument is a [TestDefaults](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.builder.html#robot.running.builder.settings.TestDefaults) object.
 
 ### `parse_init` method
 
-The optional `parse_init[ method is responsible for parsing [suite initialization
-files](../creating-test-data/creating-test-suites.md#suite-initialization-files) i.e. files in format ](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_model)init__.ext` where `.ext` is an extension
+The optional `parse_init` method is responsible for parsing [suite initialization
+files](../syntax/suites.md#suite-initialization-files) i.e. files in format `__init__.ext` where `.ext` is an extension
 supported by the parser. The method must return a [TestSuite](#runningtestsuite)_
 object representing the whole directory. Suites created from child suite files
 and directories will be added to its child suites.
@@ -104,7 +106,7 @@ from robot.api import TestSuite
 
 class ExampleParser:
 
-    def [__init](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_file_system)(self, extension: str):
+    def __init__(self, extension: str):
         self.extension = extension
 
     def parse(self, source: Path) -> TestSuite:
@@ -153,8 +155,8 @@ class ExampleParser(Parser):
 The final example parser acts as a preprocessor for Robot Framework data files
 that supports headers in format `=== Test Cases ===` in addition to
 `*** Test Cases ***`. In this kind of usage it is convenient to use
-[TestSuite.from_string](../creating-test-data/using-test-libraries.md#string), [TestSuite.from_model](#testsuitefrom-model) and
-[TestSuite.from_file_system](#testsuitefrom-file-system) factory methods for constructing the returned suite.
+[TestSuite.from_string](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_string), [TestSuite.from_model](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_model) and
+[TestSuite.from_file_system](https://robot-framework.readthedocs.io/en/master/autodoc/robot.running.html#robot.running.model.TestSuite.from_file_system) factory methods for constructing the returned suite.
 
 ```python
 from pathlib import Path

@@ -21,7 +21,7 @@ There are two main reasons for using the remote library API:
   for various languages like Python, Java, Ruby, .NET, and so on.
 
 The remote library interface is provided by the Remote library that is
-one of the [standard libraries](../creating-test-data/using-test-libraries.md#standard-libraries).
+one of the [standard libraries](../syntax/libraries.md#standard-libraries).
 This library does not have any keywords of its own, but it works
 as a proxy between the core framework and keywords implemented
 elsewhere. The Remote library interacts with actual library
@@ -61,14 +61,14 @@ that the Remote library uses if no address is given.
 The last example above shows how to give a custom timeout to the Remote library
 as an optional second argument. The timeout is used when initially connecting
 to the server and if a connection accidentally closes. Timeout can be
-given in Robot Framework [time format](../appendices/time-format.md#time-format) like `60s` or `2 minutes 10 seconds`.
+given in Robot Framework [time format](../appendix/time-format.md#time-format) like `60s` or `2 minutes 10 seconds`.
 The default timeout is typically several minutes, but it depends on the
 operating system and its configuration. Notice that setting a timeout that
 is shorter than keyword execution time will interrupt the keyword.
 
 !!! note
     Port `8270` is the default port that remote servers are expected
-    to use and it has been [registered by IANA](https://github.com/robotframework/SSHLibrary) for this purpose.
+    to use and it has been [registered by IANA](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270) for this purpose.
     This port number was selected because 82 and 70 are the ASCII codes
     of letters `R` and `F`, respectively.
 
@@ -76,11 +76,11 @@ is shorter than keyword execution time will interrupt the keyword.
     When connecting to the local machine, it is recommended to use
     IP address `127.0.0.1` instead of machine name `localhost`. This
     avoids address resolution that can be extremely slow [at least on
-    Windows](http://docs.python.org/library/xmlrpc.client.html#binary-objects).
+    Windows](http://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call).
 
 !!! note
     If the URI contains no path after the server address, the [XML-RPC
-    module](../creating-test-data/using-test-libraries.md#xml) used by the Remote library will use `/RPC2` path by
+    module](../syntax/libraries.md#xml) used by the Remote library will use `/RPC2` path by
     default. In practice using `http://127.0.0.1:8270` is thus identical
     to using `http://127.0.0.1:8270/RPC2`. Depending on the remote server
     this may or may not be a problem. No extra path is appended if the
@@ -94,8 +94,8 @@ Before the Remote library can be imported, the remote server providing
 the actual keywords must be started.  If the server is started before
 launching the test execution, it is possible to use the normal
 `Library` setting like in the above example. Alternatively other
-keywords, for example from [Process](../creating-test-data/using-test-libraries.md#process) or [SSH](https://github.com/robotframework/PythonRemoteServer) libraries, can start
-the server up, but then you may need to use [Import Library keyword](https://github.com/robotframework/SSHLibrary)
+keywords, for example from [Process](../syntax/libraries.md#process) or [SSH](https://github.com/robotframework/SSHLibrary) libraries, can start
+the server up, but then you may need to use [Import Library keyword](http://docs.python.org/library/xmlrpc.client.html#binary-objects)
 because the library is not available when the test execution starts.
 
 How a remote server can be stopped depends on how it is
@@ -138,12 +138,12 @@ according to the following rules. Other remote servers should behave similarly.
   converted to strings and values converted to supported types recursively.
 
 * Returned dictionaries are converted to so called *dot-accessible dicts*
-  that allow accessing keys as attributes using the [extended variable syntax](../creating-test-data/variables.md#extended-variable-syntax)
+  that allow accessing keys as attributes using the [extended variable syntax](../syntax/variables.md#extended-variable-syntax)
   like `${result.key}`. This works also with nested dictionaries like
   `${root.child.leaf}`.
 
 * Strings containing bytes in the ASCII range that cannot be represented in
-  XML (e.g. the null byte) are sent as [Binary objects](../creating-test-data/using-test-libraries.md#using-import-library-keyword) that internally use
+  XML (e.g. the null byte) are sent as [Binary objects](https://github.com/robotframework/PythonRemoteServer) that internally use
   XML-RPC base64 data type. Received Binary objects are automatically converted
   to byte strings.
 
@@ -168,7 +168,7 @@ There are two possibilities how remote servers can provide information about
 the keywords they contain. They are briefly explained below and documented
 more thoroughly in the subsequent sections.
 
-1. Remote servers can implement the same methods as the [dynamic library API](dynamic-library-api.md#dynamic-library-api)
+1. Remote servers can implement the same methods as the [dynamic library API](dynamic.md#dynamic-library-api)
    has. This means `get_keyword_names` method and optional `get_keyword_arguments`,
    `get_keyword_types`, `get_keyword_tags` and `get_keyword_documentation` methods.
    Notice that using "camel-case names" like `getKeywordNames` is not
@@ -212,19 +212,17 @@ contains as a list of strings. Remote servers can, and should, also implement
 the keywords. All these methods take the name of the keyword as an argument
 and what they must return is explained in the table below.
 
-   ===========================  ======================================
-             Method                         Return value
-   ===========================  ======================================
-   `get_keyword_arguments`      Arguments as a list of strings in the [same format as with dynamic libraries](https://github.com/robotframework/PythonRemoteServer).
-   `get_keyword_types`          Type information as a list or dictionary of strings. See below for details.
-   `get_keyword_documentation`  Documentation as a string.
-   `get_keyword_tags`           Tags as a list of strings.
-   ===========================  ======================================
+   | Method | Return value |
+   | --- | --- |
+   | `get_keyword_arguments` | Arguments as a list of strings in the [same format as with dynamic libraries](https://github.com/robotframework/PythonRemoteServer). |
+   | `get_keyword_types` | Type information as a list or dictionary of strings. See below for details. |
+   | `get_keyword_documentation` | Documentation as a string. |
+   | `get_keyword_tags` | Tags as a list of strings. |
 
-Type information used for [argument conversion](creating-test-libraries.md#argument-conversion) can be returned either as
+Type information used for [argument conversion](libraries.md#argument-conversion) can be returned either as
 a list mapping type names to arguments based on position or as a dictionary
 mapping argument names to type names directly. In practice this works the same
-way as when [specifying types using the @keyword decorator](dynamic-library-api.md#getting-keyword-arguments) with normal
+way as when [specifying types using the @keyword decorator](dynamic.md#getting-keyword-arguments) with normal
 libraries. The difference is that because the XML-RPC protocol does not support
 arbitrary values, type information needs to be specified using type names
 or aliases like `'int'` or `'integer'`, not using actual types like `int`.
@@ -233,16 +231,16 @@ but an empty string can be used to indicate that certain argument does not
 have type information instead.
 
 Argument conversion is supported also based on default values using the
-[same logic as with normal libraries](creating-test-libraries.md#specifying-argument-types-using-keyword-decorator). For this to work, arguments with
+[same logic as with normal libraries](libraries.md#specifying-argument-types-using-keyword-decorator). For this to work, arguments with
 default values must be returned as tuples, not as strings, the [same way
-as with dynamic libraries](creating-test-libraries.md#implicit-argument-types-based-on-default-values). For example, argument conversion works if
+as with dynamic libraries](libraries.md#implicit-argument-types-based-on-default-values). For example, argument conversion works if
 argument information is returned like `[('count', 1), ('caseless', True)]`
 but not if it is `['count=1', 'caseless=True']`.
 
-Remote servers can also provide [general library documentation](dynamic-library-api.md#getting-keyword-arguments) to
-be used when generating documentation with the [Libdoc](../supporting-tools/libdoc.md#libdoc) tool. This information
-is got by calling `get_keyword_documentation[ with special values ](dynamic-library-api.md#getting-general-library-documentation)intro__[
-and ](#different-argument-syntaxes)init__`.
+Remote servers can also provide [general library documentation](dynamic.md#getting-keyword-arguments) to
+be used when generating documentation with the [Libdoc](libdoc.md#libdoc) tool. This information
+is got by calling `get_keyword_documentation[ with special values ](#-with-special-values-)intro__`
+and `__init__`.
 
 !!! note
     `get_keyword_types` is new in Robot Framework 3.1 and support for
@@ -262,8 +260,8 @@ Information must be provided using same semantics as when `get_keyword_arguments
 in the previous section. If some information is not available, it can be omitted
 from the info dictionary altogether.
 
-`get_library_information[ supports also returning general library documentation
-to be used with [Libdoc](../supporting-tools/libdoc.md#libdoc). It is done by including special ](#supported-argument-and-return-value-types)intro__[ and ](creating-test-libraries.md#logging-information)init__`
+`get_library_information` supports also returning general library documentation
+to be used with [Libdoc](libdoc.md#libdoc). It is done by including special `__intro__[ and ](libraries.md#errors-and-warnings)init__`
 entries into the returned library information dictionary.
 
 For example, a Python library like
@@ -281,16 +279,18 @@ def example(a: int, b=True):
 def another():
     pass
 ```
-could be mapped into this kind of library information dictionary::
+could be mapped into this kind of library information dictionary:
 
-   {
-       '[__intro](../appendices/evaluating-expressions.md#introduction)': {'doc': 'Library documentation'}
-       'example': {'args': ['a', 'b=True'],
-                   'types': ['int'],
-                   'doc': 'Keyword documentation.',
-                   'tags': ['x', 'y']}
-       'another: {'args': []}
-   }
+```
+{
+    '__intro__': {'doc': 'Library documentation'}
+    'example': {'args': ['a', 'b=True'],
+                'types': ['int'],
+                'doc': 'Keyword documentation.',
+                'tags': ['x', 'y']}
+    'another: {'args': []}
+}
+```
 
 !!! note
     `get_library_information` is new in Robot Framework 4.0.
@@ -300,9 +300,9 @@ could be mapped into this kind of library information dictionary::
 When the Remote library wants the server to execute some keyword, it
 calls the remote server's `run_keyword` method and passes it the
 keyword name, a list of arguments, and possibly a dictionary of
-[free named arguments](../creating-test-data/creating-test-cases.md#free-named-arguments). Base types can be used as
+[free named arguments](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270). Base types can be used as
 arguments directly, but more complex types are [converted to supported
-types](creating-test-libraries.md#reporting-keyword-status).
+types](http://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call).
 
 The server must return results of the execution in a result dictionary
 (or map, depending on terminology) containing items explained in the
@@ -312,23 +312,23 @@ others can be omitted if they are not applicable.
 | Name | Explanation |
 | --- | --- |
 | status | Mandatory execution status. Either PASS or FAIL. |
-| output | Possible output to write into the log file. Must be given as a single string but can contain multiple messages and different [log levels](../executing-tests/output-files.md#log-levels) in format `*INFO* First message\n*HTML* <b>2nd</b>\n*WARN* Another message`. It is also possible to embed [timestamps](creating-test-libraries.md#timestamps) to the log messages like `*INFO:1308435758660* Message with timestamp`. |
-| return | Possible return value. Must be one of the [supported types](../executing-tests/test-execution.md#stopping-test-execution-gracefully). |
+| output | Possible output to write into the log file. Must be given as a single string but can contain multiple messages and different [log levels](https://github.com/robotframework/SSHLibrary) in format `*INFO* First message\n*HTML* <b>2nd</b>\n*WARN* Another message`. It is also possible to embed [timestamps](libraries.md#timestamps) to the log messages like `*INFO:1308435758660* Message with timestamp`. |
+| return | Possible return value. Must be one of the [supported types](http://docs.python.org/library/xmlrpc.client.html#binary-objects). |
 | error | Possible error message. Used only when the execution fails. |
-| traceback | Possible stack trace to [write into the log file](dynamic-library-api.md#getting-keyword-arguments) using DEBUG level when the execution fails. |
-| continuable | When set to `True`, or any value considered `True` in Python, the occurred failure is considered [continuable](creating-test-libraries.md#continuable-failures). |
+| traceback | Possible stack trace to [write into the log file](https://github.com/robotframework/PythonRemoteServer) using DEBUG level when the execution fails. |
+| continuable | When set to `True`, or any value considered `True` in Python, the occurred failure is considered [continuable](libraries.md#continuable-failures). |
 | fatal | Like `continuable`, but denotes that the occurred failure is [fatal](#fatal). |
 
 ### Different argument syntaxes
 
-The Remote library is a [dynamic library](dynamic-library-api.md#dynamic-library), and in general it handles
-different argument syntaxes [according to the same rules](dynamic-library-api.md#named-argument-syntax-with-dynamic-libraries) as any other
+The Remote library is a [dynamic library](dynamic.md#dynamic-library), and in general it handles
+different argument syntaxes [according to the same rules](dynamic.md#named-argument-syntax-with-dynamic-libraries) as any other
 dynamic library.
 This includes mandatory arguments, default values, varargs, as well
-as [named argument syntax](dynamic-library-api.md#free-named-arguments-with-dynamic-libraries).
+as [named argument syntax](dynamic.md#free-named-arguments-with-dynamic-libraries).
 
 Also free named arguments (`**kwargs`) works mostly the [same way
-as with other dynamic libraries](../supporting-tools/libdoc.md#dynamic-libraries). First of all, the
+as with other dynamic libraries](index.md#libraries). First of all, the
 `get_keyword_arguments` must return an argument specification that
 contains `**kwargs` exactly like with any other dynamic library.
 The main difference is that
@@ -352,6 +352,199 @@ public Map run_keyword(String name, List args) {
 
 public Map run_keyword(String name, List args, Map kwargs) {
     // ...
-}
+
+<a id="keyword-section"></a>
+
+<a id="setting-variables-from-keyword-return-values"></a>
+
+<a id="earlier"></a>
+
+<a id="generic-automation"></a>
+
+<a id="parse-only-these-files"></a>
+
+<a id="parse-only-matching-files"></a>
+
+<a id="sets-the-name"></a>
+
+<a id="sets-the-documentation"></a>
+
+<a id="sets-free-metadata"></a>
+
+<a id="sets-the-tags"></a>
+
+<a id="selects-the-test-cases-by-name"></a>
+
+<a id="selects-the-test-suites"></a>
+
+<a id="selects-failed-test-suites"></a>
+
+<a id="selects-failed-tests"></a>
+
+<a id="selects-the-test-cases"></a>
+
+<a id="continueonfailure"></a>
+
+<a id="skips-teardowns"></a>
+
+<a id="skipteardownonexit"></a>
+
+<a id="dryrun"></a>
+
+<a id="randomizes"></a>
+
+<a id="individual-variables"></a>
+
+<a id="create-result-files"></a>
+
+<a id="robot-framework-6x-compatible-format"></a>
+
+<a id="adds-a-timestamp"></a>
+
+<a id="split-log-file"></a>
+
+<a id="sets-a-title"></a>
+
+<a id="sets-background-colors"></a>
+
+<a id="error-lines"></a>
+
+<a id="sets-the-threshold-level"></a>
+
+<a id="levels-to-show"></a>
+
+<a id="includes-only-these-tags"></a>
+
+<a id="excludes-these-tags"></a>
+
+<a id="combined-statistics-based-on-tags"></a>
+
+<a id="documentation-to-the-specified-tags"></a>
+
+<a id="external-links"></a>
+
+<a id="sets-a-listener"></a>
+
+<a id="test-suites-are-empty"></a>
+
+<a id="empty-test-suites"></a>
+
+<a id="sets-the-width"></a>
+
+<a id="specifies-are-colors"></a>
+
+<a id="markers-on-the-console"></a>
+
+<a id="read-more-arguments"></a>
+
+<a id="version-information"></a>
+
+<a id="expand-keywords"></a>
+
+<a id="removes-keyword-data"></a>
+
+<a id="flattens-keywords"></a>
+
+<a id="starting-time"></a>
+
+<a id="ending-time"></a>
+
+<a id="keyword-section"></a>
+
+<a id="setting-variables-from-keyword-return-values"></a>
+
+<a id="earlier"></a>
+
+<a id="generic-automation"></a>
+
+<a id="parse-only-these-files"></a>
+
+<a id="parse-only-matching-files"></a>
+
+<a id="sets-the-name"></a>
+
+<a id="sets-the-documentation"></a>
+
+<a id="sets-free-metadata"></a>
+
+<a id="sets-the-tags"></a>
+
+<a id="selects-the-test-cases-by-name"></a>
+
+<a id="selects-the-test-suites"></a>
+
+<a id="selects-failed-test-suites"></a>
+
+<a id="selects-failed-tests"></a>
+
+<a id="selects-the-test-cases"></a>
+
+<a id="continueonfailure"></a>
+
+<a id="skips-teardowns"></a>
+
+<a id="skipteardownonexit"></a>
+
+<a id="dryrun"></a>
+
+<a id="randomizes"></a>
+
+<a id="individual-variables"></a>
+
+<a id="create-result-files"></a>
+
+<a id="robot-framework-6x-compatible-format"></a>
+
+<a id="adds-a-timestamp"></a>
+
+<a id="split-log-file"></a>
+
+<a id="sets-a-title"></a>
+
+<a id="sets-background-colors"></a>
+
+<a id="error-lines"></a>
+
+<a id="sets-the-threshold-level"></a>
+
+<a id="levels-to-show"></a>
+
+<a id="includes-only-these-tags"></a>
+
+<a id="excludes-these-tags"></a>
+
+<a id="combined-statistics-based-on-tags"></a>
+
+<a id="documentation-to-the-specified-tags"></a>
+
+<a id="external-links"></a>
+
+<a id="sets-a-listener"></a>
+
+<a id="test-suites-are-empty"></a>
+
+<a id="empty-test-suites"></a>
+
+<a id="sets-the-width"></a>
+
+<a id="specifies-are-colors"></a>
+
+<a id="markers-on-the-console"></a>
+
+<a id="read-more-arguments"></a>
+
+<a id="version-information"></a>
+
+<a id="expand-keywords"></a>
+
+<a id="removes-keyword-data"></a>
+
+<a id="flattens-keywords"></a>
+
+<a id="starting-time"></a>
+
+<a id="ending-time"></a>
 ```
+
+#### }
 

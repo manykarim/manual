@@ -5,9 +5,9 @@
 Test libraries contain those lowest-level keywords, often called
 *library keywords*, which actually interact with the system under
 test. All test cases always use keywords from some library, often
-through higher-level [user keywords](creating-user-keywords.md#user-keyword). This section explains how to
+through higher-level [user keywords](user-keywords.md#user-keyword). This section explains how to
 take test libraries into use and how to use the keywords they
-provide. [Creating test libraries](../extending/creating-test-libraries.md#creating-test-libraries) is described in a separate
+provide. [Creating test libraries](../extend/libraries.md#creating-test-libraries) is described in a separate
 section.
 
 ## Importing libraries
@@ -26,7 +26,7 @@ the full name including the package name must be used.
 In those cases where the library needs arguments, they are listed in
 the columns after the library name. It is possible to use default
 values, variable number of arguments, and named arguments in test
-library imports similarly as with [arguments to keywords](creating-test-cases.md#using-arguments).  Both the
+library imports similarly as with [arguments to keywords](tests.md#using-arguments).  Both the
 library name and arguments can be set using variables.
 
 ```robotframework
@@ -37,8 +37,8 @@ Library    my.package.TestLibrary
 Library    LibraryAcceptingArguments    arg1    arg2
 Library    ${LIBRARY}
 ```
-It is possible to import test libraries in [suite files](creating-test-suites.md#suite-files),
-[resource files](resource-and-variable-files.md#resource-files) and [suite initialization files](creating-test-suites.md#suite-initialization-files). In all these
+It is possible to import test libraries in [suite files](suites.md#suite-files),
+[resource files](resource-files.md#resource-files) and [suite initialization files](suites.md#suite-initialization-files). In all these
 cases, all the keywords in the imported library are available in that
 file. With resource files, those keywords are also available in other
 files using them.
@@ -72,7 +72,7 @@ if the library is imported using the `Library` setting or the
 
 The most common way to specify a test library to import is using its name.
 In these cases Robot Framework tries to find the class or module
-implementing the library from the [module search path](../executing-tests/configuring-execution.md#module-search-path). Libraries that
+implementing the library from the [module search path](../execution/configuration.md#module-search-path). Libraries that
 are installed somehow ought to be in the module search path automatically,
 but with other libraries the search path may need to be configured separately.
 
@@ -83,7 +83,7 @@ Library    CustomLibrary    possible    arguments
 Library    librarymodule.LibraryClass
 ```
 The biggest benefit of this approach is that when the module search
-path has been configured, often using a custom [start-up script](../executing-tests/basic-usage.md#start-up-script),
+path has been configured, often using a custom [start-up script](../execution/basics.md#start-up-script),
 normal users do not need to think where libraries actually are
 installed. The drawback is that getting your own, possible
 very simple, libraries into the search path may require some
@@ -94,7 +94,7 @@ additional configuration.
 Another mechanism for specifying the library to import is using a
 path to it in the file system. This path is considered relative to the
 directory where current test data file is situated similarly as paths
-to [resource and variable files](resource-and-variable-files.md#resource-and-variable-files). The main benefit of this approach
+to [resource and variable files](variables.md#variable). The main benefit of this approach
 is that there is no need to configure the module search path.
 
 If the library is a file, the path to it must contain extension,
@@ -113,7 +113,7 @@ Library    ${RESOURCES}/Example.py
 
 The library name is shown in test logs before keyword names, and if
 multiple keywords have the same name, they must be used so that the
-[keyword name is prefixed with the library name](advanced-features.md#handling-keywords-with-same-names). The library name
+[keyword name is prefixed with the library name](advanced.md#handling-keywords-with-same-names). The library name
 is got normally from the module or class name implementing it, but
 there are some situations where changing it is desirable:
 
@@ -208,7 +208,7 @@ These libraries can be running on other machines than the core
 framework and can even be implemented using languages not supported by
 Robot Framework natively.
 
-See separate [Remote library interface](../extending/remote-library.md#remote-library-interface) section for more information
+See separate [Remote library interface](../extend/remote.md#remote-library-interface) section for more information
 about this concept.
 
 ## External libraries
@@ -220,7 +220,7 @@ has implemented several generic libraries, such as [SeleniumLibrary](https://git
 publicly available libraries can be found from http://robotframework.org.
 
 Generic and custom libraries can obviously also be implemented by teams using
-Robot Framework. See [Creating test libraries](../extending/creating-test-libraries.md#creating-test-libraries) section for more information
+Robot Framework. See [Creating test libraries](../extend/libraries.md#creating-test-libraries) section for more information
 about that topic.
 
 Different external libraries can have a totally different mechanism
