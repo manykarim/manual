@@ -33,42 +33,35 @@ libdoc [options] library_or_resource list|show|version [names]
 
 ### Options
 
-  -f, --format <html|xml|json|libspec>
-                           Specifies whether to generate an HTML output for humans or
-                           a machine readable spec file in XML or JSON format. The
-                           `libspec` format means XML spec with documentations converted
-                           to HTML. The default format is got from the output file
-                           extension.
-  -s, --specdocformat <raw|html>
-                           Specifies the documentation format used with XML and JSON
-                           spec files. `raw` means preserving the original documentation
-                           format and `html` means converting documentation to HTML. The
-                           default is `raw` with XML spec files and `html` with JSON
-                           specs and when using the special `libspec` format.
-  -F, --docformat <robot|html|text|rest>
-                           Specifies the source documentation format. Possible
-                           values are Robot Framework's documentation format,
-                           HTML, plain text, and reStructuredText. Default value
-                           can be specified in test library source code and
-                           the initial default value is `robot`.
-  --theme <dark|light|none>
-                           Use dark or light HTML theme. If this option is not used,
-                           or the value is `none`, the theme is selected based on
-                           the browser color scheme. Only applicable with HTML outputs.
-                           New in Robot Framework 6.0.
-  --language <lang>
-                          Set the default language in documentation. `lang`
-                          must be a code of a built-in language, which are
-                          `en` and `fi`. New in Robot Framework 7.2.
-  -N, --name <newname>     Sets the name of the documented library or resource.
-  -V, --version <newversion>  Sets the version of the documented library or
-                           resource. The default value for test libraries is
-                           [defined in the source code](https://en.wikipedia.org/wiki/XML_Schema_(W3C)).
-  -P, --pythonpath <path>  Additional locations where to search for libraries
-                           and resources similarly as when [running tests](https://json-schema.org/).
-  --quiet                  Do not print the path of the generated output file
-                           to the console.
-  -h, --help               Prints this help.
+`-f, --format <html|xml|json|libspec>`
+:   Specifies whether to generate an HTML output for humans or a machine readable spec file in XML or JSON format. The `libspec` format means XML spec with documentations converted to HTML. The default format is got from the output file extension.
+
+`-s, --specdocformat <raw|html>`
+:   Specifies the documentation format used with XML and JSON spec files. `raw` means preserving the original documentation format and `html` means converting documentation to HTML. The default is `raw` with XML spec files and `html` with JSON specs and when using the special `libspec` format.
+
+`-F, --docformat <robot|html|text|rest>`
+:   Specifies the source documentation format. Possible values are Robot Framework's documentation format, HTML, plain text, and reStructuredText. Default value can be specified in test library source code and the initial default value is `robot`.
+
+`--theme <dark|light|none>`
+:   Use dark or light HTML theme. If this option is not used, or the value is `none`, the theme is selected based on the browser color scheme. Only applicable with HTML outputs. New in Robot Framework 6.0.
+
+`--language <lang>`
+:   Set the default language in documentation. `lang` must be a code of a built-in language, which are `en` and `fi`. New in Robot Framework 7.2.
+
+`-N, --name <newname>`
+:   Sets the name of the documented library or resource.
+
+`-V, --version <newversion>`
+:   Sets the version of the documented library or resource. The default value for test libraries is [defined in the source code](https://en.wikipedia.org/wiki/XML_Schema_(W3C)).
+
+`-P, --pythonpath <path>`
+:   Additional locations where to search for libraries and resources similarly as when [running tests](https://json-schema.org/).
+
+`--quiet`
+:   Do not print the path of the generated output file to the console.
+
+`-h, --help`
+:   Prints this help.
 
 ### Executing Libdoc
 
