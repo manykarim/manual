@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/api/exceptions/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/api/exceptions/">
       
       
         <link rel="prev" href="../deco/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.api.exceptions - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/api/exceptions.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/api/exceptions.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/api/exceptions/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/api/exceptions/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.api.exceptions - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/api/exceptions.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/api/exceptions.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9883,7 +9883,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/api/exceptions.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/api/exceptions.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9966,11 +9966,11 @@ the name of this exception is consistent with other exceptions in this module.</
 <span class="normal"><a href="#example-0-37">37</a></span>
 <span class="normal"><a href="#example-0-38">38</a></span>
 <span class="normal"><a href="#example-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a><span class="w">    </span><span class="sd">"""</span>
 </span><span id="line-0-36"><a id="example-0-36" name="example-0-36"></a><span class="sd">    :param message: Exception message.</span>
 </span><span id="line-0-37"><a id="example-0-37" name="example-0-37"></a><span class="sd">    :param html: When ``True``, message is considered to be HTML and not escaped.</span>
-</span><span id="line-0-38"><a id="example-0-38" name="example-0-38"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">&#39;*HTML* &#39;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+</span><span id="line-0-38"><a id="example-0-38" name="example-0-38"></a><span class="sd">    """</span>
+</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">'*HTML* '</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10033,11 +10033,11 @@ the name of this exception is consistent with other exceptions in this module.</
 <span class="normal"><a href="#example-0-37">37</a></span>
 <span class="normal"><a href="#example-0-38">38</a></span>
 <span class="normal"><a href="#example-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a><span class="w">    </span><span class="sd">"""</span>
 </span><span id="line-0-36"><a id="example-0-36" name="example-0-36"></a><span class="sd">    :param message: Exception message.</span>
 </span><span id="line-0-37"><a id="example-0-37" name="example-0-37"></a><span class="sd">    :param html: When ``True``, message is considered to be HTML and not escaped.</span>
-</span><span id="line-0-38"><a id="example-0-38" name="example-0-38"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">&#39;*HTML* &#39;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+</span><span id="line-0-38"><a id="example-0-38" name="example-0-38"></a><span class="sd">    """</span>
+</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">'*HTML* '</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10106,11 +10106,11 @@ the name of this exception is consistent with other exceptions in this module.</
 <span class="normal"><a href="#example-0-63">63</a></span>
 <span class="normal"><a href="#example-0-64">64</a></span>
 <span class="normal"><a href="#example-0-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-60"><a id="example-0-60" name="example-0-60"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a><span class="w">    </span><span class="sd">"""</span>
 </span><span id="line-0-62"><a id="example-0-62" name="example-0-62"></a><span class="sd">    :param message: Exception message.</span>
 </span><span id="line-0-63"><a id="example-0-63" name="example-0-63"></a><span class="sd">    :param html: When ``True``, message is considered to be HTML and not escaped.</span>
-</span><span id="line-0-64"><a id="example-0-64" name="example-0-64"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="line-0-65"><a id="example-0-65" name="example-0-65"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">&#39;*HTML* &#39;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+</span><span id="line-0-64"><a id="example-0-64" name="example-0-64"></a><span class="sd">    """</span>
+</span><span id="line-0-65"><a id="example-0-65" name="example-0-65"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">'*HTML* '</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10173,11 +10173,11 @@ the name of this exception is consistent with other exceptions in this module.</
 <span class="normal"><a href="#example-0-63">63</a></span>
 <span class="normal"><a href="#example-0-64">64</a></span>
 <span class="normal"><a href="#example-0-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-60"><a id="example-0-60" name="example-0-60"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a><span class="w">    </span><span class="sd">"""</span>
 </span><span id="line-0-62"><a id="example-0-62" name="example-0-62"></a><span class="sd">    :param message: Exception message.</span>
 </span><span id="line-0-63"><a id="example-0-63" name="example-0-63"></a><span class="sd">    :param html: When ``True``, message is considered to be HTML and not escaped.</span>
-</span><span id="line-0-64"><a id="example-0-64" name="example-0-64"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="line-0-65"><a id="example-0-65" name="example-0-65"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">&#39;*HTML* &#39;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+</span><span id="line-0-64"><a id="example-0-64" name="example-0-64"></a><span class="sd">    """</span>
+</span><span id="line-0-65"><a id="example-0-65" name="example-0-65"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">'*HTML* '</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10240,11 +10240,11 @@ the name of this exception is consistent with other exceptions in this module.</
 <span class="normal"><a href="#example-0-82">82</a></span>
 <span class="normal"><a href="#example-0-83">83</a></span>
 <span class="normal"><a href="#example-0-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-79"><a id="example-0-79" name="example-0-79"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-80"><a id="example-0-80" name="example-0-80"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="line-0-80"><a id="example-0-80" name="example-0-80"></a><span class="w">    </span><span class="sd">"""</span>
 </span><span id="line-0-81"><a id="example-0-81" name="example-0-81"></a><span class="sd">    :param message: Exception message.</span>
 </span><span id="line-0-82"><a id="example-0-82" name="example-0-82"></a><span class="sd">    :param html: When ``True``, message is considered to be HTML and not escaped.</span>
-</span><span id="line-0-83"><a id="example-0-83" name="example-0-83"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="line-0-84"><a id="example-0-84" name="example-0-84"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">&#39;*HTML* &#39;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+</span><span id="line-0-83"><a id="example-0-83" name="example-0-83"></a><span class="sd">    """</span>
+</span><span id="line-0-84"><a id="example-0-84" name="example-0-84"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">html</span> <span class="k">else</span> <span class="s1">'*HTML* '</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10431,7 +10431,7 @@ the name of this exception is consistent with other exceptions in this module.</
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

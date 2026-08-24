@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/running/keywordfinder/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/running/keywordfinder/">
       
       
         <link rel="prev" href="../invalidkeyword/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.running.keywordfinder - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/running/keywordfinder.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/running/keywordfinder.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/running/keywordfinder/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/running/keywordfinder/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.running.keywordfinder - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/running/keywordfinder.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/running/keywordfinder.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9856,7 +9856,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/running/keywordfinder.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/running/keywordfinder.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9942,7 +9942,7 @@
                     <summary>Source code in <code>src/robot/running/keywordfinder.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-32">32</a></span>
 <span class="normal"><a href="#example-0-33">33</a></span>
-<span class="normal"><a href="#example-0-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">:</span> <span class="s1">&#39;TestLibrary|ResourceFile&#39;</span><span class="p">):</span>
+<span class="normal"><a href="#example-0-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">:</span> <span class="s1">'TestLibrary|ResourceFile'</span><span class="p">):</span>
 </span><span id="line-0-33"><a id="example-0-33" name="example-0-33"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
 </span><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">:</span> <span class="n">KeywordCache</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 </span></code></pre></div></td></tr></table></div>
@@ -9970,7 +9970,9 @@
 <div class="doc-signature highlight"><pre><span></span><code><span id="line-0-1"><a id="example-0-1" name="example-0-1" href="#example-0-1"></a><span class="nf">find</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a></span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n"><span title="robot.running.keywordfinder.K">K</span></span>
 </span></code></pre></div><div class="doc-signature highlight"><pre><span></span><code><span id="line-0-1"><a id="example-0-1" name="example-0-1" href="#example-0-1"></a><span class="nf">find</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></span><span class="p">[</span><span class="n"><span title="robot.running.keywordfinder.K">K</span></span><span class="p">]</span>
 </span></code></pre></div>          </div>
-<div class="doc-signature highlight"><pre><span></span><code><span id="line-0-1"><a id="example-0-1" name="example-0-1" href="#example-0-1"></a><span class="nf">find</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></span><span class="p">[</span><span class="n"><span title="robot.running.keywordfinder.K">K</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="robot.running.keywordfinder.K">K</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span id="line-0-1"><a id="example-0-1" name="example-0-1" href="#example-0-1"></a><span class="nf">find</span><span class="p">(</span>
+</span><span id="line-0-2"><a id="example-0-2" name="example-0-2" href="#example-0-2"></a>    <span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="line-0-3"><a id="example-0-3" name="example-0-3" href="#example-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></span><span class="p">[</span><span class="n"><span title="robot.running.keywordfinder.K">K</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="robot.running.keywordfinder.K">K</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -10005,8 +10007,8 @@ directly and not as a list.</p>
 <span class="normal"><a href="#example-0-57">57</a></span>
 <span class="normal"><a href="#example-0-58">58</a></span>
 <span class="normal"><a href="#example-0-59">59</a></span>
-<span class="normal"><a href="#example-0-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-44"><a id="example-0-44" name="example-0-44"></a><span class="k">def</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="s1">&#39;int|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;list[K]|K&#39;</span><span class="p">:</span>
-</span><span id="line-0-45"><a id="example-0-45" name="example-0-45"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Find keywords based on the given ``name``.</span>
+<span class="normal"><a href="#example-0-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-44"><a id="example-0-44" name="example-0-44"></a><span class="k">def</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="s1">'int|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'list[K]|K'</span><span class="p">:</span>
+</span><span id="line-0-45"><a id="example-0-45" name="example-0-45"></a><span class="w">    </span><span class="sd">"""Find keywords based on the given ``name``.</span>
 </span><span id="line-0-46"><a id="example-0-46" name="example-0-46"></a>
 </span><span id="line-0-47"><a id="example-0-47" name="example-0-47"></a><span class="sd">    With normal keywords matching is a case, space and underscore insensitive</span>
 </span><span id="line-0-48"><a id="example-0-48" name="example-0-48"></a><span class="sd">    string comparison and there cannot be more than one match. With keywords</span>
@@ -10018,7 +10020,7 @@ directly and not as a list.</p>
 </span><span id="line-0-54"><a id="example-0-54" name="example-0-54"></a><span class="sd">    a ``ValueError`` if the number of found keywords does not match. If</span>
 </span><span id="line-0-55"><a id="example-0-55" name="example-0-55"></a><span class="sd">    ``count`` is ``1`` and exactly one keyword is found, returns that keyword</span>
 </span><span id="line-0-56"><a id="example-0-56" name="example-0-56"></a><span class="sd">    directly and not as a list.</span>
-</span><span id="line-0-57"><a id="example-0-57" name="example-0-57"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-57"><a id="example-0-57" name="example-0-57"></a><span class="sd">    """</span>
 </span><span id="line-0-58"><a id="example-0-58" name="example-0-58"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="line-0-59"><a id="example-0-59" name="example-0-59"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="n">KeywordCache</span><span class="p">[</span><span class="n">K</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">keywords</span><span class="p">)</span>
 </span><span id="line-0-60"><a id="example-0-60" name="example-0-60"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
@@ -10204,7 +10206,7 @@ directly and not as a list.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

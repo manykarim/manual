@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/utils/error/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/utils/error/">
       
       
         <link rel="prev" href="../encodingsniffer/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.utils.error - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/utils/error.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/utils/error.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/utils/error/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/utils/error/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.utils.error - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/utils/error.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/utils/error.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9861,7 +9861,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/utils/error.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/utils/error.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9931,12 +9931,12 @@ framework.</p>
 <span class="normal"><a href="#example-0-33">33</a></span>
 <span class="normal"><a href="#example-0-34">34</a></span>
 <span class="normal"><a href="#example-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-28"><a id="example-0-28" name="example-0-28"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_error_message</span><span class="p">():</span>
-</span><span id="line-0-29"><a id="example-0-29" name="example-0-29"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns error message of the last occurred exception.</span>
+</span><span id="line-0-29"><a id="example-0-29" name="example-0-29"></a><span class="w">    </span><span class="sd">"""Returns error message of the last occurred exception.</span>
 </span><span id="line-0-30"><a id="example-0-30" name="example-0-30"></a>
 </span><span id="line-0-31"><a id="example-0-31" name="example-0-31"></a><span class="sd">    This method handles also exceptions containing unicode messages. Thus it</span>
 </span><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="sd">    MUST be used to get messages from all exceptions originating outside the</span>
 </span><span id="line-0-33"><a id="example-0-33" name="example-0-33"></a><span class="sd">    framework.</span>
-</span><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a><span class="sd">    """</span>
 </span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a>    <span class="k">return</span> <span class="n">ErrorDetails</span><span class="p">()</span><span class="o">.</span><span class="n">message</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -9975,7 +9975,7 @@ framework.</p>
 <span class="normal"><a href="#example-0-40">40</a></span>
 <span class="normal"><a href="#example-0-41">41</a></span>
 <span class="normal"><a href="#example-0-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-38"><a id="example-0-38" name="example-0-38"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_error_details</span><span class="p">(</span><span class="n">full_traceback</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude_robot_traces</span><span class="o">=</span><span class="n">EXCLUDE_ROBOT_TRACES</span><span class="p">):</span>
-</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns error message and details of the last occurred exception.&quot;&quot;&quot;</span>
+</span><span id="line-0-39"><a id="example-0-39" name="example-0-39"></a><span class="w">    </span><span class="sd">"""Returns error message and details of the last occurred exception."""</span>
 </span><span id="line-0-40"><a id="example-0-40" name="example-0-40"></a>    <span class="n">details</span> <span class="o">=</span> <span class="n">ErrorDetails</span><span class="p">(</span><span class="n">full_traceback</span><span class="o">=</span><span class="n">full_traceback</span><span class="p">,</span>
 </span><span id="line-0-41"><a id="example-0-41" name="example-0-41"></a>                           <span class="n">exclude_robot_traces</span><span class="o">=</span><span class="n">exclude_robot_traces</span><span class="p">)</span>
 </span><span id="line-0-42"><a id="example-0-42" name="example-0-42"></a>    <span class="k">return</span> <span class="n">details</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="n">details</span><span class="o">.</span><span class="n">traceback</span>
@@ -10229,7 +10229,7 @@ the traceback and <code>error</code> contains the original error instance.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

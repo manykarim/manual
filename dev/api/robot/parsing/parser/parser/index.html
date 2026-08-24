@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/parsing/parser/parser/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/parsing/parser/parser/">
       
       
         <link rel="prev" href="../fileparser/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.parsing.parser.parser - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/parsing/parser/parser.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/parsing/parser/parser.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/parsing/parser/parser/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/parsing/parser/parser/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.parsing.parser.parser - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/parsing/parser/parser.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/parsing/parser/parser.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9863,7 +9863,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/parsing/parser/parser.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/parsing/parser/parser.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -10002,9 +10002,9 @@ resource or suite initialization files, respectively.</p>
 <span class="normal"><a href="#example-0-54">54</a></span>
 <span class="normal"><a href="#example-0-55">55</a></span>
 <span class="normal"><a href="#example-0-56">56</a></span>
-<span class="normal"><a href="#example-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-28"><a id="example-0-28" name="example-0-28"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_model</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">curdir</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="normal"><a href="#example-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-28"><a id="example-0-28" name="example-0-28"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_model</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">curdir</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="line-0-29"><a id="example-0-29" name="example-0-29"></a>              <span class="n">lang</span><span class="p">:</span> <span class="n">LanguagesLike</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">File</span><span class="p">:</span>
-</span><span id="line-0-30"><a id="example-0-30" name="example-0-30"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Parses the given source into a model represented as an AST.</span>
+</span><span id="line-0-30"><a id="example-0-30" name="example-0-30"></a><span class="w">    </span><span class="sd">"""Parses the given source into a model represented as an AST.</span>
 </span><span id="line-0-31"><a id="example-0-31" name="example-0-31"></a>
 </span><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="sd">    How to use the model is explained more thoroughly in the general</span>
 </span><span id="line-0-33"><a id="example-0-33" name="example-0-33"></a><span class="sd">    documentation of the :mod:`robot.parsing` module.</span>
@@ -10030,7 +10030,7 @@ resource or suite initialization files, respectively.</p>
 </span><span id="line-0-53"><a id="example-0-53" name="example-0-53"></a>
 </span><span id="line-0-54"><a id="example-0-54" name="example-0-54"></a><span class="sd">    Use :func:`get_resource_model` or :func:`get_init_model` when parsing</span>
 </span><span id="line-0-55"><a id="example-0-55" name="example-0-55"></a><span class="sd">    resource or suite initialization files, respectively.</span>
-</span><span id="line-0-56"><a id="example-0-56" name="example-0-56"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-56"><a id="example-0-56" name="example-0-56"></a><span class="sd">    """</span>
 </span><span id="line-0-57"><a id="example-0-57" name="example-0-57"></a>    <span class="k">return</span> <span class="n">_get_model</span><span class="p">(</span><span class="n">get_tokens</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">,</span> <span class="n">curdir</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -10076,12 +10076,12 @@ a resource file. This affects, for example, what settings are valid.</p>
 <span class="normal"><a href="#example-0-65">65</a></span>
 <span class="normal"><a href="#example-0-66">66</a></span>
 <span class="normal"><a href="#example-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-60"><a id="example-0-60" name="example-0-60"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_resource_model</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a>                       <span class="n">curdir</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="p">:</span> <span class="n">LanguagesLike</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">File</span><span class="p">:</span>
-</span><span id="line-0-62"><a id="example-0-62" name="example-0-62"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Parses the given source into a resource file model.</span>
+</span><span id="line-0-61"><a id="example-0-61" name="example-0-61"></a>                       <span class="n">curdir</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lang</span><span class="p">:</span> <span class="n">LanguagesLike</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">File</span><span class="p">:</span>
+</span><span id="line-0-62"><a id="example-0-62" name="example-0-62"></a><span class="w">    </span><span class="sd">"""Parses the given source into a resource file model.</span>
 </span><span id="line-0-63"><a id="example-0-63" name="example-0-63"></a>
 </span><span id="line-0-64"><a id="example-0-64" name="example-0-64"></a><span class="sd">    Same as :func:`get_model` otherwise, but the source is considered to be</span>
 </span><span id="line-0-65"><a id="example-0-65" name="example-0-65"></a><span class="sd">    a resource file. This affects, for example, what settings are valid.</span>
-</span><span id="line-0-66"><a id="example-0-66" name="example-0-66"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-66"><a id="example-0-66" name="example-0-66"></a><span class="sd">    """</span>
 </span><span id="line-0-67"><a id="example-0-67" name="example-0-67"></a>    <span class="k">return</span> <span class="n">_get_model</span><span class="p">(</span><span class="n">get_resource_tokens</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">,</span> <span class="n">curdir</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -10128,14 +10128,14 @@ valid.</p>
 <span class="normal"><a href="#example-0-75">75</a></span>
 <span class="normal"><a href="#example-0-76">76</a></span>
 <span class="normal"><a href="#example-0-77">77</a></span>
-<span class="normal"><a href="#example-0-78">78</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-70"><a id="example-0-70" name="example-0-70"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_init_model</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">curdir</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="normal"><a href="#example-0-78">78</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-70"><a id="example-0-70" name="example-0-70"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_init_model</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">curdir</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="line-0-71"><a id="example-0-71" name="example-0-71"></a>                   <span class="n">lang</span><span class="p">:</span> <span class="n">LanguagesLike</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">File</span><span class="p">:</span>
-</span><span id="line-0-72"><a id="example-0-72" name="example-0-72"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Parses the given source into an init file model.</span>
+</span><span id="line-0-72"><a id="example-0-72" name="example-0-72"></a><span class="w">    </span><span class="sd">"""Parses the given source into an init file model.</span>
 </span><span id="line-0-73"><a id="example-0-73" name="example-0-73"></a>
 </span><span id="line-0-74"><a id="example-0-74" name="example-0-74"></a><span class="sd">    Same as :func:`get_model` otherwise, but the source is considered to be</span>
 </span><span id="line-0-75"><a id="example-0-75" name="example-0-75"></a><span class="sd">    a suite initialization file. This affects, for example, what settings are</span>
 </span><span id="line-0-76"><a id="example-0-76" name="example-0-76"></a><span class="sd">    valid.</span>
-</span><span id="line-0-77"><a id="example-0-77" name="example-0-77"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-77"><a id="example-0-77" name="example-0-77"></a><span class="sd">    """</span>
 </span><span id="line-0-78"><a id="example-0-78" name="example-0-78"></a>    <span class="k">return</span> <span class="n">_get_model</span><span class="p">(</span><span class="n">get_init_tokens</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">data_only</span><span class="p">,</span> <span class="n">curdir</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -10310,7 +10310,7 @@ valid.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/testdoc/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/testdoc/">
       
       
         <link rel="prev" href="../running/userkeywordrunner/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.testdoc - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/testdoc.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/testdoc.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/testdoc/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/testdoc/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.testdoc - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/testdoc.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/testdoc.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9848,7 +9848,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/testdoc.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/testdoc.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9947,7 +9947,7 @@ this function.</p>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">robot.testdoc</span><span class="w"> </span><span class="kn">import</span> <span class="n">testdoc_cli</span>
 
-<span class="n">testdoc_cli</span><span class="p">([</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="s1">&#39;Test Plan&#39;</span><span class="p">,</span> <span class="s1">&#39;mytests&#39;</span><span class="p">,</span> <span class="s1">&#39;plan.html&#39;</span><span class="p">])</span>
+<span class="n">testdoc_cli</span><span class="p">([</span><span class="s1">'--title'</span><span class="p">,</span> <span class="s1">'Test Plan'</span><span class="p">,</span> <span class="s1">'mytests'</span><span class="p">,</span> <span class="s1">'plan.html'</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -9969,7 +9969,7 @@ this function.</p>
 <span class="normal"><a href="#example-0-299">299</a></span>
 <span class="normal"><a href="#example-0-300">300</a></span>
 <span class="normal"><a href="#example-0-301">301</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-286"><a id="example-0-286" name="example-0-286"></a><span class="k">def</span><span class="w"> </span><span class="nf">testdoc_cli</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
-</span><span id="line-0-287"><a id="example-0-287" name="example-0-287"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes `Testdoc` similarly as from the command line.</span>
+</span><span id="line-0-287"><a id="example-0-287" name="example-0-287"></a><span class="w">    </span><span class="sd">"""Executes `Testdoc` similarly as from the command line.</span>
 </span><span id="line-0-288"><a id="example-0-288" name="example-0-288"></a>
 </span><span id="line-0-289"><a id="example-0-289" name="example-0-289"></a><span class="sd">    :param arguments: command line arguments as a list of strings.</span>
 </span><span id="line-0-290"><a id="example-0-290" name="example-0-290"></a>
@@ -9981,8 +9981,8 @@ this function.</p>
 </span><span id="line-0-296"><a id="example-0-296" name="example-0-296"></a>
 </span><span id="line-0-297"><a id="example-0-297" name="example-0-297"></a><span class="sd">        from robot.testdoc import testdoc_cli</span>
 </span><span id="line-0-298"><a id="example-0-298" name="example-0-298"></a>
-</span><span id="line-0-299"><a id="example-0-299" name="example-0-299"></a><span class="sd">        testdoc_cli([&#39;--title&#39;, &#39;Test Plan&#39;, &#39;mytests&#39;, &#39;plan.html&#39;])</span>
-</span><span id="line-0-300"><a id="example-0-300" name="example-0-300"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-299"><a id="example-0-299" name="example-0-299"></a><span class="sd">        testdoc_cli(['--title', 'Test Plan', 'mytests', 'plan.html'])</span>
+</span><span id="line-0-300"><a id="example-0-300" name="example-0-300"></a><span class="sd">    """</span>
 </span><span id="line-0-301"><a id="example-0-301" name="example-0-301"></a>    <span class="n">TestDoc</span><span class="p">()</span><span class="o">.</span><span class="n">execute_cli</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -10016,7 +10016,7 @@ as arguments and options to Testdoc.</p>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">robot.testdoc</span><span class="w"> </span><span class="kn">import</span> <span class="n">testdoc</span>
 
-<span class="n">testdoc</span><span class="p">(</span><span class="s1">&#39;mytests&#39;</span><span class="p">,</span> <span class="s1">&#39;plan.html&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Test Plan&#39;</span><span class="p">)</span>
+<span class="n">testdoc</span><span class="p">(</span><span class="s1">'mytests'</span><span class="p">,</span> <span class="s1">'plan.html'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Test Plan'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -10035,7 +10035,7 @@ as arguments and options to Testdoc.</p>
 <span class="normal"><a href="#example-0-314">314</a></span>
 <span class="normal"><a href="#example-0-315">315</a></span>
 <span class="normal"><a href="#example-0-316">316</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-304"><a id="example-0-304" name="example-0-304"></a><span class="k">def</span><span class="w"> </span><span class="nf">testdoc</span><span class="p">(</span><span class="o">*</span><span class="n">arguments</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
-</span><span id="line-0-305"><a id="example-0-305" name="example-0-305"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes `Testdoc` programmatically.</span>
+</span><span id="line-0-305"><a id="example-0-305" name="example-0-305"></a><span class="w">    </span><span class="sd">"""Executes `Testdoc` programmatically.</span>
 </span><span id="line-0-306"><a id="example-0-306" name="example-0-306"></a>
 </span><span id="line-0-307"><a id="example-0-307" name="example-0-307"></a><span class="sd">    Arguments and options have same semantics, and options have same names,</span>
 </span><span id="line-0-308"><a id="example-0-308" name="example-0-308"></a><span class="sd">    as arguments and options to Testdoc.</span>
@@ -10044,8 +10044,8 @@ as arguments and options to Testdoc.</p>
 </span><span id="line-0-311"><a id="example-0-311" name="example-0-311"></a>
 </span><span id="line-0-312"><a id="example-0-312" name="example-0-312"></a><span class="sd">        from robot.testdoc import testdoc</span>
 </span><span id="line-0-313"><a id="example-0-313" name="example-0-313"></a>
-</span><span id="line-0-314"><a id="example-0-314" name="example-0-314"></a><span class="sd">        testdoc(&#39;mytests&#39;, &#39;plan.html&#39;, title=&#39;Test Plan&#39;)</span>
-</span><span id="line-0-315"><a id="example-0-315" name="example-0-315"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-314"><a id="example-0-314" name="example-0-314"></a><span class="sd">        testdoc('mytests', 'plan.html', title='Test Plan')</span>
+</span><span id="line-0-315"><a id="example-0-315" name="example-0-315"></a><span class="sd">    """</span>
 </span><span id="line-0-316"><a id="example-0-316" name="example-0-316"></a>    <span class="n">TestDoc</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">arguments</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
             </details>
@@ -10220,7 +10220,7 @@ as arguments and options to Testdoc.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

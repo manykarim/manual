@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/parsing/lexer/tokens/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/parsing/lexer/tokens/">
       
       
         <link rel="prev" href="../tokenizer/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.parsing.lexer.tokens - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/parsing/lexer/tokens.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/parsing/lexer/tokens.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/parsing/lexer/tokens/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/parsing/lexer/tokens/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.parsing.lexer.tokens - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/parsing/lexer/tokens.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/parsing/lexer/tokens.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9914,7 +9914,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/parsing/lexer/tokens.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/parsing/lexer/tokens.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -10015,19 +10015,19 @@ use <code>Token(Token.EOL)</code> instead of <code>Token('EOL')</code> and
 <span class="normal"><a href="#example-0-180">180</a></span>
 <span class="normal"><a href="#example-0-181">181</a></span>
 <span class="normal"><a href="#example-0-182">182</a></span>
-<span class="normal"><a href="#example-0-183">183</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-164"><a id="example-0-164" name="example-0-164"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="line-0-165"><a id="example-0-165" name="example-0-165"></a>             <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="s1">&#39;str|None&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="normal"><a href="#example-0-183">183</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-164"><a id="example-0-164" name="example-0-164"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="line-0-165"><a id="example-0-165" name="example-0-165"></a>             <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="s1">'str|None'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 </span><span id="line-0-166"><a id="example-0-166" name="example-0-166"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
 </span><span id="line-0-167"><a id="example-0-167" name="example-0-167"></a>    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="line-0-168"><a id="example-0-168" name="example-0-168"></a>        <span class="n">value</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="line-0-169"><a id="example-0-169" name="example-0-169"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">IF</span><span class="p">:</span> <span class="s1">&#39;IF&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">INLINE_IF</span><span class="p">:</span> <span class="s1">&#39;IF&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">ELSE_IF</span><span class="p">:</span> <span class="s1">&#39;ELSE IF&#39;</span><span class="p">,</span>
-</span><span id="line-0-170"><a id="example-0-170" name="example-0-170"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">ELSE</span><span class="p">:</span> <span class="s1">&#39;ELSE&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">FOR</span><span class="p">:</span> <span class="s1">&#39;FOR&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">WHILE</span><span class="p">:</span> <span class="s1">&#39;WHILE&#39;</span><span class="p">,</span>
-</span><span id="line-0-171"><a id="example-0-171" name="example-0-171"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">TRY</span><span class="p">:</span> <span class="s1">&#39;TRY&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">EXCEPT</span><span class="p">:</span> <span class="s1">&#39;EXCEPT&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">FINALLY</span><span class="p">:</span> <span class="s1">&#39;FINALLY&#39;</span><span class="p">,</span>
-</span><span id="line-0-172"><a id="example-0-172" name="example-0-172"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">END</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">VAR</span><span class="p">:</span> <span class="s1">&#39;VAR&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">CONTINUE</span><span class="p">:</span> <span class="s1">&#39;CONTINUE&#39;</span><span class="p">,</span>
-</span><span id="line-0-173"><a id="example-0-173" name="example-0-173"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">BREAK</span><span class="p">:</span> <span class="s1">&#39;BREAK&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">RETURN_STATEMENT</span><span class="p">:</span> <span class="s1">&#39;RETURN&#39;</span><span class="p">,</span>
-</span><span id="line-0-174"><a id="example-0-174" name="example-0-174"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">CONTINUATION</span><span class="p">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">EOL</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">WITH_NAME</span><span class="p">:</span> <span class="s1">&#39;AS&#39;</span><span class="p">,</span>
-</span><span id="line-0-175"><a id="example-0-175" name="example-0-175"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">AS</span><span class="p">:</span> <span class="s1">&#39;AS&#39;</span>
-</span><span id="line-0-176"><a id="example-0-176" name="example-0-176"></a>        <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>    <span class="c1"># type: ignore</span>
+</span><span id="line-0-169"><a id="example-0-169" name="example-0-169"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">IF</span><span class="p">:</span> <span class="s1">'IF'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">INLINE_IF</span><span class="p">:</span> <span class="s1">'IF'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">ELSE_IF</span><span class="p">:</span> <span class="s1">'ELSE IF'</span><span class="p">,</span>
+</span><span id="line-0-170"><a id="example-0-170" name="example-0-170"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">ELSE</span><span class="p">:</span> <span class="s1">'ELSE'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">FOR</span><span class="p">:</span> <span class="s1">'FOR'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">WHILE</span><span class="p">:</span> <span class="s1">'WHILE'</span><span class="p">,</span>
+</span><span id="line-0-171"><a id="example-0-171" name="example-0-171"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">TRY</span><span class="p">:</span> <span class="s1">'TRY'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">EXCEPT</span><span class="p">:</span> <span class="s1">'EXCEPT'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">FINALLY</span><span class="p">:</span> <span class="s1">'FINALLY'</span><span class="p">,</span>
+</span><span id="line-0-172"><a id="example-0-172" name="example-0-172"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">END</span><span class="p">:</span> <span class="s1">'END'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">VAR</span><span class="p">:</span> <span class="s1">'VAR'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">CONTINUE</span><span class="p">:</span> <span class="s1">'CONTINUE'</span><span class="p">,</span>
+</span><span id="line-0-173"><a id="example-0-173" name="example-0-173"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">BREAK</span><span class="p">:</span> <span class="s1">'BREAK'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">RETURN_STATEMENT</span><span class="p">:</span> <span class="s1">'RETURN'</span><span class="p">,</span>
+</span><span id="line-0-174"><a id="example-0-174" name="example-0-174"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">CONTINUATION</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">EOL</span><span class="p">:</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">WITH_NAME</span><span class="p">:</span> <span class="s1">'AS'</span><span class="p">,</span>
+</span><span id="line-0-175"><a id="example-0-175" name="example-0-175"></a>            <span class="n">Token</span><span class="o">.</span><span class="n">AS</span><span class="p">:</span> <span class="s1">'AS'</span>
+</span><span id="line-0-176"><a id="example-0-176" name="example-0-176"></a>        <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>    <span class="c1"># type: ignore</span>
 </span><span id="line-0-177"><a id="example-0-177" name="example-0-177"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </span><span id="line-0-178"><a id="example-0-178" name="example-0-178"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="n">lineno</span>
 </span><span id="line-0-179"><a id="example-0-179" name="example-0-179"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">col_offset</span> <span class="o">=</span> <span class="n">col_offset</span>
@@ -10085,15 +10085,15 @@ type as the original token.</p>
 <span class="normal"><a href="#example-0-206">206</a></span>
 <span class="normal"><a href="#example-0-207">207</a></span>
 <span class="normal"><a href="#example-0-208">208</a></span>
-<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Iterator[Token]&#39;</span><span class="p">:</span>
-</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Tokenizes possible variables in token value.</span>
+<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Iterator[Token]'</span><span class="p">:</span>
+</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">"""Tokenizes possible variables in token value.</span>
 </span><span id="line-0-197"><a id="example-0-197" name="example-0-197"></a>
 </span><span id="line-0-198"><a id="example-0-198" name="example-0-198"></a><span class="sd">    Yields the token itself if the token does not allow variables (see</span>
 </span><span id="line-0-199"><a id="example-0-199" name="example-0-199"></a><span class="sd">    :attr:`Token.ALLOW_VARIABLES`) or its value does not contain</span>
 </span><span id="line-0-200"><a id="example-0-200" name="example-0-200"></a><span class="sd">    variables. Otherwise, yields variable tokens as well as tokens</span>
 </span><span id="line-0-201"><a id="example-0-201" name="example-0-201"></a><span class="sd">    before, after, or between variables so that they have the same</span>
 </span><span id="line-0-202"><a id="example-0-202" name="example-0-202"></a><span class="sd">    type as the original token.</span>
-</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    """</span>
 </span><span id="line-0-204"><a id="example-0-204" name="example-0-204"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Token</span><span class="o">.</span><span class="n">ALLOW_VARIABLES</span><span class="p">:</span>
 </span><span id="line-0-205"><a id="example-0-205" name="example-0-205"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tokenize_no_variables</span><span class="p">()</span>
 </span><span id="line-0-206"><a id="example-0-206" name="example-0-206"></a>    <span class="n">matches</span> <span class="o">=</span> <span class="n">VariableMatches</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
@@ -10151,7 +10151,7 @@ type as the original token.</p>
                     <summary>Source code in <code>src/robot/parsing/lexer/tokens.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-248">248</a></span>
 <span class="normal"><a href="#example-0-249">249</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-248"><a id="example-0-248" name="example-0-248"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="line-0-249"><a id="example-0-249" name="example-0-249"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">EOS</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">)</span>
+</span><span id="line-0-249"><a id="example-0-249" name="example-0-249"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">EOS</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
 
@@ -10202,15 +10202,15 @@ type as the original token.</p>
 <span class="normal"><a href="#example-0-206">206</a></span>
 <span class="normal"><a href="#example-0-207">207</a></span>
 <span class="normal"><a href="#example-0-208">208</a></span>
-<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Iterator[Token]&#39;</span><span class="p">:</span>
-</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Tokenizes possible variables in token value.</span>
+<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Iterator[Token]'</span><span class="p">:</span>
+</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">"""Tokenizes possible variables in token value.</span>
 </span><span id="line-0-197"><a id="example-0-197" name="example-0-197"></a>
 </span><span id="line-0-198"><a id="example-0-198" name="example-0-198"></a><span class="sd">    Yields the token itself if the token does not allow variables (see</span>
 </span><span id="line-0-199"><a id="example-0-199" name="example-0-199"></a><span class="sd">    :attr:`Token.ALLOW_VARIABLES`) or its value does not contain</span>
 </span><span id="line-0-200"><a id="example-0-200" name="example-0-200"></a><span class="sd">    variables. Otherwise, yields variable tokens as well as tokens</span>
 </span><span id="line-0-201"><a id="example-0-201" name="example-0-201"></a><span class="sd">    before, after, or between variables so that they have the same</span>
 </span><span id="line-0-202"><a id="example-0-202" name="example-0-202"></a><span class="sd">    type as the original token.</span>
-</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    """</span>
 </span><span id="line-0-204"><a id="example-0-204" name="example-0-204"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Token</span><span class="o">.</span><span class="n">ALLOW_VARIABLES</span><span class="p">:</span>
 </span><span id="line-0-205"><a id="example-0-205" name="example-0-205"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tokenize_no_variables</span><span class="p">()</span>
 </span><span id="line-0-206"><a id="example-0-206" name="example-0-206"></a>    <span class="n">matches</span> <span class="o">=</span> <span class="n">VariableMatches</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
@@ -10275,7 +10275,7 @@ value is 'END'.</p>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-265">265</a></span>
 <span class="normal"><a href="#example-0-266">266</a></span>
 <span class="normal"><a href="#example-0-267">267</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-265"><a id="example-0-265" name="example-0-265"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">virtual</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-</span><span id="line-0-266"><a id="example-0-266" name="example-0-266"></a>    <span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;END&#39;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">virtual</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+</span><span id="line-0-266"><a id="example-0-266" name="example-0-266"></a>    <span class="n">value</span> <span class="o">=</span> <span class="s1">'END'</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">virtual</span> <span class="k">else</span> <span class="s1">''</span>
 </span><span id="line-0-267"><a id="example-0-267" name="example-0-267"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">col_offset</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
                   </details>
@@ -10327,15 +10327,15 @@ type as the original token.</p>
 <span class="normal"><a href="#example-0-206">206</a></span>
 <span class="normal"><a href="#example-0-207">207</a></span>
 <span class="normal"><a href="#example-0-208">208</a></span>
-<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Iterator[Token]&#39;</span><span class="p">:</span>
-</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Tokenizes possible variables in token value.</span>
+<span class="normal"><a href="#example-0-209">209</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-195"><a id="example-0-195" name="example-0-195"></a><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Iterator[Token]'</span><span class="p">:</span>
+</span><span id="line-0-196"><a id="example-0-196" name="example-0-196"></a><span class="w">    </span><span class="sd">"""Tokenizes possible variables in token value.</span>
 </span><span id="line-0-197"><a id="example-0-197" name="example-0-197"></a>
 </span><span id="line-0-198"><a id="example-0-198" name="example-0-198"></a><span class="sd">    Yields the token itself if the token does not allow variables (see</span>
 </span><span id="line-0-199"><a id="example-0-199" name="example-0-199"></a><span class="sd">    :attr:`Token.ALLOW_VARIABLES`) or its value does not contain</span>
 </span><span id="line-0-200"><a id="example-0-200" name="example-0-200"></a><span class="sd">    variables. Otherwise, yields variable tokens as well as tokens</span>
 </span><span id="line-0-201"><a id="example-0-201" name="example-0-201"></a><span class="sd">    before, after, or between variables so that they have the same</span>
 </span><span id="line-0-202"><a id="example-0-202" name="example-0-202"></a><span class="sd">    type as the original token.</span>
-</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-203"><a id="example-0-203" name="example-0-203"></a><span class="sd">    """</span>
 </span><span id="line-0-204"><a id="example-0-204" name="example-0-204"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Token</span><span class="o">.</span><span class="n">ALLOW_VARIABLES</span><span class="p">:</span>
 </span><span id="line-0-205"><a id="example-0-205" name="example-0-205"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tokenize_no_variables</span><span class="p">()</span>
 </span><span id="line-0-206"><a id="example-0-206" name="example-0-206"></a>    <span class="n">matches</span> <span class="o">=</span> <span class="n">VariableMatches</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
@@ -10524,7 +10524,7 @@ type as the original token.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

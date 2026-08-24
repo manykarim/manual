@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://manykarim.github.io/manual/latest/api/robot/libdocpkg/builder/">
+        <link rel="canonical" href="https://pekkaklarck.github.io/manual/latest/api/robot/libdocpkg/builder/">
       
       
         <link rel="prev" href="../">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="robot.libdocpkg.builder - Robot Framework" />
 <meta property="og:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="og:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/libdocpkg/builder.png" />
+<meta property="og:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/libdocpkg/builder.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://manykarim.github.io/manual/latest/api/robot/libdocpkg/builder/" />
+<meta property="og:url" content="https://pekkaklarck.github.io/manual/latest/api/robot/libdocpkg/builder/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="robot.libdocpkg.builder - Robot Framework" />
 <meta property="twitter:description" content="Robot Framework is a generic open source automation framework. This reference manual covers all its features in detail." />
-<meta property="twitter:image" content="https://manykarim.github.io/manual/latest/assets/images/social/api/robot/libdocpkg/builder.png" />
+<meta property="twitter:image" content="https://pekkaklarck.github.io/manual/latest/assets/images/social/api/robot/libdocpkg/builder.png" />
 </head>
   
   
@@ -1136,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Results
+    Execution artifacts
   
 
     
@@ -9850,7 +9850,7 @@
 
 
   
-    <a href="https://github.com/manykarim/manual/blob/main/src/robot/libdocpkg/builder.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/pekkaklarck/manual/blob/main/src/robot/libdocpkg/builder.py" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -9934,7 +9934,7 @@ programmatically. It should be imported via the :mod:<code>robot.libdoc</code> m
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">robot.libdoc</span><span class="w"> </span><span class="kn">import</span> <span class="n">LibraryDocumentation</span>
 
-<span class="n">lib</span> <span class="o">=</span> <span class="n">LibraryDocumentation</span><span class="p">(</span><span class="s1">&#39;OperatingSystem&#39;</span><span class="p">)</span>
+<span class="n">lib</span> <span class="o">=</span> <span class="n">LibraryDocumentation</span><span class="p">(</span><span class="s1">'OperatingSystem'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">kw</span> <span class="ow">in</span> <span class="n">lib</span><span class="o">.</span><span class="n">keywords</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">kw</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -9977,7 +9977,7 @@ programmatically. It should be imported via the :mod:<code>robot.libdoc</code> m
 <span class="normal"><a href="#example-0-62">62</a></span>
 <span class="normal"><a href="#example-0-63">63</a></span>
 <span class="normal"><a href="#example-0-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-0-31"><a id="example-0-31" name="example-0-31"></a><span class="k">def</span><span class="w"> </span><span class="nf">LibraryDocumentation</span><span class="p">(</span><span class="n">library_or_resource</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">doc_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate keyword documentation for the given library, resource or suite file.</span>
+</span><span id="line-0-32"><a id="example-0-32" name="example-0-32"></a><span class="w">    </span><span class="sd">"""Generate keyword documentation for the given library, resource or suite file.</span>
 </span><span id="line-0-33"><a id="example-0-33" name="example-0-33"></a>
 </span><span id="line-0-34"><a id="example-0-34" name="example-0-34"></a><span class="sd">    :param library_or_resource:</span>
 </span><span id="line-0-35"><a id="example-0-35" name="example-0-35"></a><span class="sd">        Name or path of the library, or path of a resource or a suite file.</span>
@@ -9997,11 +9997,11 @@ programmatically. It should be imported via the :mod:<code>robot.libdoc</code> m
 </span><span id="line-0-49"><a id="example-0-49" name="example-0-49"></a>
 </span><span id="line-0-50"><a id="example-0-50" name="example-0-50"></a><span class="sd">        from robot.libdoc import LibraryDocumentation</span>
 </span><span id="line-0-51"><a id="example-0-51" name="example-0-51"></a>
-</span><span id="line-0-52"><a id="example-0-52" name="example-0-52"></a><span class="sd">        lib = LibraryDocumentation(&#39;OperatingSystem&#39;)</span>
+</span><span id="line-0-52"><a id="example-0-52" name="example-0-52"></a><span class="sd">        lib = LibraryDocumentation('OperatingSystem')</span>
 </span><span id="line-0-53"><a id="example-0-53" name="example-0-53"></a><span class="sd">        print(lib.name, lib.version)</span>
 </span><span id="line-0-54"><a id="example-0-54" name="example-0-54"></a><span class="sd">        for kw in lib.keywords:</span>
 </span><span id="line-0-55"><a id="example-0-55" name="example-0-55"></a><span class="sd">            print(kw.name)</span>
-</span><span id="line-0-56"><a id="example-0-56" name="example-0-56"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="line-0-56"><a id="example-0-56" name="example-0-56"></a><span class="sd">    """</span>
 </span><span id="line-0-57"><a id="example-0-57" name="example-0-57"></a>    <span class="n">libdoc</span> <span class="o">=</span> <span class="n">DocumentationBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">library_or_resource</span><span class="p">)</span>
 </span><span id="line-0-58"><a id="example-0-58" name="example-0-58"></a>    <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
 </span><span id="line-0-59"><a id="example-0-59" name="example-0-59"></a>        <span class="n">libdoc</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
@@ -10229,7 +10229,7 @@ instead.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
