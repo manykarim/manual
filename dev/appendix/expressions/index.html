@@ -9895,7 +9895,7 @@
 contexts and how variables in expressions are handled.</p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Constructs such as <a href="../../syntax/control/#ifelse-structures">IF/ELSE structures</a>, <a href="../../syntax/control/#while-loops">WHILE loops</a> and <a href="../../syntax/variables/#inline-python-evaluation">inline Python evaluation</a>
-as well as several <a href="../../syntax/libraries/#builtin">BuiltIn</a> keywords accept an expression that is evaluated in Python:</p>
+as well as several <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords accept an expression that is evaluated in Python:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-0-1"> 1</a></span>
 <span class="normal"><a href="#example-0-2"> 2</a></span>
 <span class="normal"><a href="#example-0-3"> 3</a></span>
@@ -9944,7 +9944,7 @@ Python modules, including the standard modules and the installed third party
 modules.</p>
 <p>The following examples demonstrate using Python builtins as well as modules
 using the <a href="../../syntax/variables/#inline-python-evaluation">inline Python evaluation</a> syntax, but same expressions would also
-work with <a href="../../syntax/control/#ifelse-structures">IF/ELSE structures</a> and <a href="../../syntax/libraries/#builtin">BuiltIn</a> keywords without the need to use
+work with <a href="../../syntax/control/#ifelse-structures">IF/ELSE structures</a> and <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords without the need to use
 the <code>${{}}</code> decoration around the expression:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-1-1"> 1</a></span>
 <span class="normal"><a href="#example-1-2"> 2</a></span>
@@ -9986,7 +9986,7 @@ implemented, at least at the time of this writing, so that just importing
 <code>selenium</code> does not import the <code>selenium.webdriver</code> submodule.
 Another limitation is that modules cannot be used in the expression part of
 a list comprehension. A workaround to both of these problems
-is using the <a href="../../syntax/libraries/#builtin">BuiltIn</a> keyword <em class="name">Evaluate</em> that accepts modules to be imported
+is using the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Evaluate</em> that accepts modules to be imported
 and added to the evaluation namespace as an argument:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1"> 1</a></span>
 <span class="normal"><a href="#example-2-2"> 2</a></span>
@@ -10017,7 +10017,7 @@ and added to the evaluation namespace as an argument:</p>
 </span><span id="line-2-14"><a id="example-2-14" name="example-2-14"></a><span class="p">    </span><span class="nf">Log</span><span class="p">    ${</span><span class="nv">items</span><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>The <em class="name">Evaluate</em> keyword also supports custom evaluation namespaces if further
-customization is needed. See its documentation in the <a href="../../syntax/libraries/#builtin">BuiltIn</a> library for more details.</p>
+customization is needed. See its documentation in the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> library for more details.</p>
 <h2 id="using-variables">Using variables<a class="headerlink" href="#using-variables" title="Permanent link">&para;</a></h2>
 <h3 id="normal-variable-syntax">Normal <code>${variable}</code> syntax<a class="headerlink" href="#normal-variable-syntax" title="Permanent link">&para;</a></h3>
 <p>When a variable is used in the expression using the normal <code>${variable}</code>

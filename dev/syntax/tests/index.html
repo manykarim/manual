@@ -10456,10 +10456,10 @@ that they should explain what the argument does, but it is important
 to have exactly the same number of arguments as specified in the
 documentation. Using too few or too many arguments will result in an
 error.</p>
-<p>The test below uses keywords <em class="name">Create Directory</em> and <em class="name">Copy File</em> from the <a href="../libraries/#operatingsystem">OperatingSystem</a> library. Their arguments are
+<p>The test below uses keywords <em class="name">Create Directory</em> and <em class="name">Copy File</em> from the <a href="https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html">OperatingSystem</a> library. Their arguments are
 specified as <code>path</code> and <code>source, destination</code>, which means
 that they take one and two arguments, respectively. The last keyword,
-<em class="name">No Operation</em> from <a href="../libraries/#builtin">BuiltIn</a>, takes no arguments.</p>
+<em class="name">No Operation</em> from <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a>, takes no arguments.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-2-1">1</a></span>
 <span class="normal"><a href="#example-2-2">2</a></span>
 <span class="normal"><a href="#example-2-3">3</a></span>
@@ -10499,7 +10499,7 @@ and arguments with default values, but they are always given after
 them. In the documentation they have an asterisk before the argument
 name like <code>*varargs</code>.</p>
 <p>For example, <em class="name">Remove Files</em> and <em class="name">Join Paths</em> keywords from
-the <a href="../libraries/#operatingsystem">OperatingSystem</a> library have arguments <code>*paths</code> and <code>base, *parts</code>,
+the <a href="https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html">OperatingSystem</a> library have arguments <code>*paths</code> and <code>base, *parts</code>,
 respectively. The former can be used with any number of arguments, but
 the latter requires at least one argument.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-4-1">1</a></span>
@@ -10594,7 +10594,7 @@ addition to that, it also works when <a href="../libraries/#importing-libraries"
 The only exceptions are Python keywords explicitly using <a href="../../extend/libraries/#positional-only-arguments">positional-only arguments</a>.</p>
 <h4 id="named-arguments-example">Named arguments example<a class="headerlink" href="#named-arguments-example" title="Permanent link">&para;</a></h4>
 <p>The following example demonstrates using the named arguments syntax with
-library keywords, user keywords, and when importing the <a href="../libraries/#telnet">Telnet</a> test library.</p>
+library keywords, user keywords, and when importing the <a href="https://robotframework.org/robotframework/latest/libraries/Telnet.html">Telnet</a> test library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-6-1"> 1</a></span>
 <span class="normal"><a href="#example-6-2"> 2</a></span>
 <span class="normal"><a href="#example-6-3"> 3</a></span>
@@ -10640,7 +10640,7 @@ that free argument names must always be strings.</p>
 <p><a id="free-named-argument-examples"></a></p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>As the first example of using free named arguments, let's take a look at
-<em class="name">Run Process</em> keyword in the <a href="../libraries/#process">Process</a> library. It has a signature
+<em class="name">Run Process</em> keyword in the <a href="https://robotframework.org/robotframework/latest/libraries/Process.html">Process</a> library. It has a signature
 <code>command, *arguments, **configuration</code>, which means that it takes the command
 to execute (<code>command</code>), its arguments as <a href="#variable-number-of-arguments">variable number of arguments</a>
 (<code>*arguments</code>) and finally optional configuration parameters as free named
@@ -10932,7 +10932,7 @@ setting. The <em class="setting">[Tags]</em> setting also allows removing tags s
 <dt>
 	<em class="name">Set Tags</em>, <em class="name">Remove Tags</em>, <em class="name">Fail</em> and <em class="name">Pass Execution</em><a id="a178b73eaad309c50a031f5999434b40"> keywords</a> 
 </dt>
-<dd>These <a href="../libraries/#builtin">BuiltIn</a> keywords can be used to manipulate tags dynamically
+<dd>These <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords can be used to manipulate tags dynamically
 during the test execution.
 <p>
 <div class="mkdocs-ezglossary-refs list">
@@ -11309,7 +11309,7 @@ normal keywords with possible arguments.</p>
 <p>A setup and a teardown are always a single keyword. If they need to take care
 of multiple separate tasks, it is possible to create higher-level <a href="../user-keywords/#user-keyword-arguments">user
 keywords</a> for that purpose. An alternative solution is executing multiple
-keywords using the <a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keywords</em>.</p>
+keywords using the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keywords</em>.</p>
 <p>The test teardown is special in two ways. First of all, it is executed also
 when a test case fails, so it can be used for clean-up activities that must be
 done regardless of the test case status. In addition, all the keywords in the

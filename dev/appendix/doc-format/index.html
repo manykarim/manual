@@ -10495,8 +10495,6 @@ engine. It follows the original implementation closely and is explicitly <em>not
 CommonMark compliant. It supports basic Markdown features out-of-the-box, but
 the following extensions are enabled and provide some more functionality:</p>
 <ul>
-<li><a href="https://python-markdown.github.io/extensions/admonition/">Admonition</a>
-  for adding notes, tips and warnings.</li>
 <li><a href="https://python-markdown.github.io/extensions/code_hilite/">Code Hilite</a>
   for syntax highlighting.</li>
 <li><a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">Fenced Code Blocks</a>
@@ -10507,8 +10505,8 @@ the following extensions are enabled and provide some more functionality:</p>
   for automatically generating table of contents.</li>
 <li><a href="https://python-markdown.github.io/extensions/tables/">Tables</a>
   for table support.</li>
-<li>A <a href="https://github.com/robotframework/robotframework/blob/master/src/robot/utils/markdown.py">custom extension</a>
-  for linkifying URLs.</li>
+<li><a href="https://github.com/robotframework/robotframework/blob/master/src/robot/utils/markdown.py">Custom extensions</a>
+  to support admonitions and auto-linking URLs.</li>
 </ul>
 <p>This appendix covers the most important Markdown features and also explains when
 the syntax varies between implementations. For details about the supported syntax,
@@ -10591,8 +10589,9 @@ links and the surrounding angle brackets are removed:</p>
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Automatic URL detection is not a standard Markdown feature, but various
-Markdown implementations support it for convenience.</p>
+<p>Automatic URL detection without the angle brackets is not a standard
+Markdown feature, but various Markdown implementations support it for
+convenience.</p>
 </div>
 <h3 id="tables_1">Tables<a class="headerlink" href="#tables_1" title="Permanent link">&para;</a></h3>
 <p>Tables are created by separating columns with pipes and using hyphen for
@@ -10879,49 +10878,40 @@ the language name like <code>:::robotframework</code>.</p>
 </span><span id="line-33-7"><a id="example-33-7" name="example-33-7"></a>    hello("Robot")
 </span></code></pre></div></td></tr></table></div>
 <h3 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h3>
-<p>Admonitions make it easy to create notes, tips and warnings that stand out
-from the normal text. The syntax is as follows:</p>
+<p>Admonitions, also known as alerts or callouts, make it easy to create notes,
+tips and warnings that stand out from the normal text. Robot Framework supports
+them using the following syntax:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-34-1">1</a></span>
-<span class="normal"><a href="#example-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-34-1"><a id="example-34-1" name="example-34-1"></a>!!! type "Optional title"
-</span><span id="line-34-2"><a id="example-34-2" name="example-34-2"></a>    Admonition text. Can contain multiple paragraphs and normal formatting.
+<span class="normal"><a href="#example-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-34-1"><a id="example-34-1" name="example-34-1"></a><span class="k">&gt; </span><span class="ge">[!TYPE] Optional title</span>
+</span><span id="line-34-2"><a id="example-34-2" name="example-34-2"></a><span class="k">&gt; </span><span class="ge">Admonition text. Can contain multiple paragraphs and normal *formatting*.</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Robot Framework supports certain admonition types so that they have a different
-styles:</p>
+<p>Admonitions are not a standard Markdown feature, but <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">GitHub</a> and various
+other implementations support them using the above syntax as well. All
+implementations, including GitHub, do not support using a custom title, though.
+The admonition syntax is based on the <a href="https://daringfireball.net/projects/markdown/syntax#blockquote">Markdown blockquote syntax</a>, so also
+tools that do not recognize it ought to handle it reasonably well.</p>
+<p>Admonitions get different styles depending on their type. Robot Framework
+supports the same types that GitHub does:</p>
 <ul>
-<li>note (blueish)</li>
-<li>tip (greenish)</li>
-<li>warning (yellowish)</li>
-<li>danger (redish)</li>
+<li><code>NOTE</code> (blueish)</li>
+<li><code>TIP</code> (greenish)</li>
+<li><code>IMPORTANT</code> (purplish)</li>
+<li><code>WARNING</code> (yellowish)</li>
+<li><code>CAUTION</code> (reddish)</li>
 </ul>
-<p>If a type is not recognized, it is treated the same way as a note. If the
-optional title is omitted, the capitalized type name is used instead.</p>
-<p>Example:</p>
+<p>If a type is not recognized, it is treated the same way as the <code>NOTE</code> type.
+If the optional title is omitted, the capitalized type name is used instead.</p>
+<p>Examples:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-35-1">1</a></span>
 <span class="normal"><a href="#example-35-2">2</a></span>
 <span class="normal"><a href="#example-35-3">3</a></span>
 <span class="normal"><a href="#example-35-4">4</a></span>
-<span class="normal"><a href="#example-35-5">5</a></span>
-<span class="normal"><a href="#example-35-6">6</a></span>
-<span class="normal"><a href="#example-35-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-35-1"><a id="example-35-1" name="example-35-1"></a>Markdown is a great documentation syntax!
-</span><span id="line-35-2"><a id="example-35-2" name="example-35-2"></a>
-</span><span id="line-35-3"><a id="example-35-3" name="example-35-3"></a>!!! note
-</span><span id="line-35-4"><a id="example-35-4" name="example-35-4"></a>    Markdown support is new in <span class="ge">*Robot Framework 7.5*</span>.
-</span><span id="line-35-5"><a id="example-35-5" name="example-35-5"></a>
-</span><span id="line-35-6"><a id="example-35-6" name="example-35-6"></a>!!! warning "Interoperability risk"
-</span><span id="line-35-7"><a id="example-35-7" name="example-35-7"></a>    Differences between Markdown flavors can cause problems.
+<span class="normal"><a href="#example-35-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-35-1"><a id="example-35-1" name="example-35-1"></a><span class="k">&gt; </span><span class="ge">[!NOTE]</span>
+</span><span id="line-35-2"><a id="example-35-2" name="example-35-2"></a><span class="k">&gt; </span><span class="ge">Markdown support is new in *Robot Framework 7.5*.</span>
+</span><span id="line-35-3"><a id="example-35-3" name="example-35-3"></a>
+</span><span id="line-35-4"><a id="example-35-4" name="example-35-4"></a><span class="k">&gt; </span><span class="ge">[!WARNING] Interoperability risk</span>
+</span><span id="line-35-5"><a id="example-35-5" name="example-35-5"></a><span class="k">&gt; </span><span class="ge">Differences between Markdown flavors can cause problems.</span>
 </span></code></pre></div></td></tr></table></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Admonitions are implemented using Python-Markdown's
-<a href="https://python-markdown.github.io/extensions/admonition/">Admonition</a>
-extension.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Admonitions are not a standard Markdown feature. Some other tools support
-them as well, but they typically use different syntax. Use other formatting
-for notes, tips, etc. if interoperability is important.</p>
-</div>
 
 
 

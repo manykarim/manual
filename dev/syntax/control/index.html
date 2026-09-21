@@ -10944,7 +10944,7 @@ It is possible to <a href="../../execution/results/#removing-and-flattening-keyw
 <h3 id="repeating-single-keyword">Repeating single keyword<a class="headerlink" href="#repeating-single-keyword" title="Permanent link">&para;</a></h3>
 <p><code>FOR</code> loops can be excessive in situations where there is only a need to
 repeat a single keyword. In these cases it is often easier to use
-<a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Repeat Keyword</em>. This keyword takes a
+<a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Repeat Keyword</em>. This keyword takes a
 keyword and how many times to repeat it as arguments. The times to
 repeat the keyword can have an optional postfix <code>times</code> or <code>x</code>
 to make the syntax easier to read.</p>
@@ -11241,7 +11241,7 @@ keyword called in the loop body is invalid.</p>
 <p class="admonition-title">Note</p>
 <p><code>BREAK</code> and <code>CONTINUE</code> statements are new in Robot Framework 5.0 similarly
 as <code>WHILE</code>. Earlier versions supported controlling <code>FOR</code> loops using
-<a href="../libraries/#builtin">BuiltIn</a> keywords <em class="name">Exit For Loop</em>, <em class="name">Exit For Loop If</em>,
+<a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords <em class="name">Exit For Loop</em>, <em class="name">Exit For Loop If</em>,
 <em class="name">Continue For Loop</em> and <em class="name">Continue For Loop If</em>. These
 keywords still continue to work, but they will be deprecated and removed
 in the future.</p>
@@ -11486,22 +11486,22 @@ as <a href="#for-in-enumerate-loop">FOR-IN-ENUMERATE loop</a>, <a href="../user-
   for example, from the command line.</p>
 </li>
 <li>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keyword</em> takes a keyword to actually
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keyword</em> takes a keyword to actually
   execute as an argument and it can thus be a variable. The value of
   the variable can, for example, be got dynamically from an earlier
   keyword or given from the command line.</p>
 </li>
 <li>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> keywords <em class="name">Run Keyword If</em> and <em class="name">Run Keyword Unless</em>
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords <em class="name">Run Keyword If</em> and <em class="name">Run Keyword Unless</em>
   execute a named keyword only if a certain expression is true or false, respectively.
   The new <code>IF/ELSE</code> syntax explained above is generally recommended, though.</p>
 </li>
 <li>
-<p>Another <a href="../libraries/#builtin">BuiltIn</a> keyword, <em class="name">Set Variable If</em>, can be used to set
+<p>Another <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword, <em class="name">Set Variable If</em>, can be used to set
   variables dynamically based on a given expression.</p>
 </li>
 <li>
-<p>There are several <a href="../libraries/#builtin">BuiltIn</a> keywords that allow executing a named
+<p>There are several <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords that allow executing a named
   keyword only if a test case or test suite has failed or passed.</p>
 </li>
 </ul>
@@ -11842,7 +11842,7 @@ after a keyword execution somewhat similarly as <a href="../../execution/tests/#
 <p>There are also other methods to execute keywords conditionally:</p>
 <ul>
 <li>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keyword And Expect Error</em> executes a named
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keyword And Expect Error</em> executes a named
   keyword and expects that it fails with a specified error message. It is basically
   the same as using <code>TRY/EXCEPT</code> with a specified message. The syntax to specify
   the error message is also identical except that this keyword uses glob pattern
@@ -11851,14 +11851,14 @@ after a keyword execution somewhat similarly as <a href="../../execution/tests/#
   versions that do not support it.</p>
 </li>
 <li>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keyword And Ignore Error</em> executes a named keyword
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keyword And Ignore Error</em> executes a named keyword
   and returns its status as string <code>PASS</code> or <code>FAIL</code> along with possible return value
   or error message. It is basically the same as using <code>TRY/EXCEPT/ELSE</code> so that
   <code>EXCEPT</code> catches all errors. Using the native syntax is recommended unless
   old Robot Framework versions need to be supported.</p>
 </li>
 <li>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keyword And Return Status</em> executes a named keyword
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keyword And Return Status</em> executes a named keyword
   and returns its status as a Boolean true or false. It is a wrapper for the
   aforementioned <em class="name">Run Keyword And Ignore Error</em>. The native syntax is
   nowadays recommended instead.</p>

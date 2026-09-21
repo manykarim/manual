@@ -10196,7 +10196,7 @@
 used in most places in test data. Most commonly, they are used in
 arguments for keywords in Test Case and Keyword sections, but
 also all settings allow variables in their values. A normal keyword
-name <em>cannot</em> be specified with a variable, but the <a href="../libraries/#builtin">BuiltIn</a> keyword
+name <em>cannot</em> be specified with a variable, but the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword
 <em class="name">Run Keyword</em> can be used to get the same effect.</p>
 <p>Robot Framework has its own variables that can be used as <a href="#scalar-variables">scalars</a>, <a href="#list-variables">lists</a>
 or <a href="#dictionary-variables">dictionaries</a> using syntax <code>${SCALAR}</code>, <code>@{LIST}</code> and <code>&amp;{DICT}</code>,
@@ -10353,7 +10353,7 @@ than other variables containing non-string values:</p>
   and the prefix are omitted, and each byte is mapped to a Unicode code point
   with the same ordinal. In practice this is same as converting bytes to strings
   using the Latin-1 encoding. This format has a big benefit that the resulting
-  string can be converted back to bytes, for example, by using the <a href="../libraries/#builtin">BuiltIn</a>
+  string can be converted back to bytes, for example, by using the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a>
   keyword <em class="name">Convert To Bytes</em> or by automatic <a href="../../extend/libraries/#argument-conversion">argument conversion</a>.</p>
 </li>
 </ul>
@@ -10679,7 +10679,7 @@ value with an equal sign like <code>%{ENV_VAR_NAME=default value}</code>.</p>
 available during it, and it is possible to create new ones with the keyword
 <em class="name">Set Environment Variable</em> or delete existing ones with the
 keyword <em class="name">Delete Environment Variable</em>, both available in the
-<a href="../libraries/#operatingsystem">OperatingSystem</a> library. Because environment variables are global,
+<a href="https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html">OperatingSystem</a> library. Because environment variables are global,
 environment variables set in one test case can be used in other test
 cases executed after it. However, changes to environment variables are
 not effective after the test execution.</p>
@@ -11074,7 +11074,7 @@ value is hidden.</p>
 </span></code></pre></div></td></tr></table></div>
 <p>The reason the value is not logged fully is that it could be really
 big. If you always want to see a certain value fully, it is possible
-to use the <a href="../libraries/#builtin">BuiltIn</a> <em class="name">Log</em> keyword to log it after the assignment.</p>
+to use the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> <em class="name">Log</em> keyword to log it after the assignment.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="option">--maxassignlength</code> option is new in Robot Framework 5.0.</p>
@@ -11086,7 +11086,7 @@ and it must be followed by a variable name and value. Other than the mandatory
 <code>VAR</code>, the overall syntax is mostly the same as when creating variables
 in the <a href="#variable-section">Variable section</a>.</p>
 <p>The new syntax aims to make creating variables simpler and more uniform. It is
-especially indented to replace the <a href="../libraries/#builtin">BuiltIn</a> keywords <em class="name">Set Variable</em>,
+especially indented to replace the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords <em class="name">Set Variable</em>,
 <em class="name">Set Local Variable</em>, <em class="name">Set Test Variable</em>, <em class="name">Set Suite Variable</em>
 and <em class="name">Set Global Variable</em>, but it can be used instead of <em class="name">Catenate</em>,
 <em class="name">Create List</em> and <em class="name">Create Dictionary</em> as well.</p>
@@ -11384,7 +11384,7 @@ another variable.</p>
 <p>The <code>VAR</code> syntax is recommended over these keywords when using
 Robot Framework 7.0 or newer.</p>
 </div>
-<p>The <a href="../libraries/#builtin">BuiltIn</a> library has keywords <em class="name">Set Test Variable</em>,
+<p>The <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> library has keywords <em class="name">Set Test Variable</em>,
 <em class="name">Set Suite Variable</em> and <em class="name">Set Global Variable</em> which can
 be used for setting variables dynamically during the test
 execution. If a variable already exists within the new scope, its
@@ -11413,7 +11413,7 @@ everywhere, it should be used with care.</p>
 <p class="admonition-title">Note</p>
 <p><em class="name">Set Test/Suite/Global Variable</em> keywords set named
 variables directly into <a href="#variable-scopes">test, suite or global variable scope</a>
-and return nothing. On the other hand, another <a href="../libraries/#builtin">BuiltIn</a> keyword
+and return nothing. On the other hand, another <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword
 <em class="name">Set Variable</em> sets local variables using <a href="#return-values-from-keywords">return values</a>.</p>
 </div>
 <h3 id="variable-type-conversion">Variable type conversion<a class="headerlink" href="#variable-type-conversion" title="Permanent link">&para;</a></h3>
@@ -11868,7 +11868,7 @@ should be specified using the <a href="../data/#escaping">escape sequences</a> l
 variables can have different values during the test execution and some
 of them are not even available all the time. Altering the value of
 these variables does not affect the original values, but some values
-can be changed dynamically using keywords from the <a href="../libraries/#builtin">BuiltIn</a> library.</p>
+can be changed dynamically using keywords from the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> library.</p>
 <table>
 <thead>
 <tr>

@@ -10254,7 +10254,7 @@ the <code class="option">--randomize</code> option.</p>
 <p>A test gets the PASS status if it is executed and none of the keywords it contains fails.</p>
 <h4 id="prematurely-passing-tests">Prematurely passing tests<a class="headerlink" href="#prematurely-passing-tests" title="Permanent link">&para;</a></h4>
 <p>Normally all keywords are executed, but it is also possible to use
-<a href="../../syntax/libraries/#builtin">BuiltIn</a> keywords <em class="name">Pass Execution</em> and <em class="name">Pass Execution If</em> to stop
+<a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords <em class="name">Pass Execution</em> and <em class="name">Pass Execution If</em> to stop
 execution with the PASS status and not run the remaining keywords.</p>
 <p>How <em class="name">Pass Execution</em> and <em class="name">Pass Execution If</em> behave
 in different situations is explained below:</p>
@@ -10276,7 +10276,7 @@ in different situations is explained below:</p>
 <p>It is mandatory to give an explanation message
   why execution was interrupted, and it is also possible to
   modify test case tags. For more details, and usage examples, see the
-  <a href="../../syntax/libraries/#builtin">documentation of these keywords</a>.</p>
+  <a href="../../extend/libraries/#using-builtin-library">documentation of these keywords</a>.</p>
 </li>
 </ul>
 <p>Passing execution in the middle of a test, setup or teardown should be
@@ -10355,13 +10355,13 @@ Robot Framework 7.2.</p>
 <p>Tests can get the skip status during execution in various ways:</p>
 <ul>
 <li>
-<p>Using the <a href="../../syntax/libraries/#builtin">BuiltIn</a> keyword <em class="name">Skip</em> anywhere in the test case, including setup or
+<p>Using the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Skip</em> anywhere in the test case, including setup or
   teardown. Using <em class="name">Skip</em> keyword has two effects: the test gets the SKIP status
   and rest of the test is not executed. However, if the test has a teardown, it will be
   run.</p>
 </li>
 <li>
-<p>Using the <a href="../../syntax/libraries/#builtin">BuiltIn</a> keyword <em class="name">Skip If</em> which takes a condition and skips the test
+<p>Using the <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Skip If</em> which takes a condition and skips the test
   if the condition is true.</p>
 </li>
 <li>
@@ -10491,7 +10491,7 @@ final error message.</p>
 <p>The return value from failed keywords, possibly assigned to a
 variable, is always the Python <code>None</code>.</p>
 <h3 id="run-keyword-and-continue-on-failure-keyword"><em class="name">Run Keyword And Continue On Failure</em> keyword<a class="headerlink" href="#run-keyword-and-continue-on-failure-keyword" title="Permanent link">&para;</a></h3>
-<p><a href="../../syntax/libraries/#builtin">BuiltIn</a> keyword <em class="name">Run Keyword And Continue On Failure</em> allows
+<p><a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword <em class="name">Run Keyword And Continue On Failure</em> allows
 converting any failure into a continuable failure. These failures are
 handled by the framework exactly the same way as continuable failures
 originating from library keywords discussed above.</p>
@@ -10710,7 +10710,7 @@ handling failures:</p>
 </span></code></pre></div></td></tr></table></div>
 <p>For more details see the separate <a href="../../syntax/control/#tryexcept-syntax">TRY/EXCEPT syntax</a> section.</p>
 <h3 id="builtin-keywords">BuiltIn keywords<a class="headerlink" href="#builtin-keywords" title="Permanent link">&para;</a></h3>
-<p>There are several <a href="../../syntax/libraries/#builtin">BuiltIn</a> keywords that can be used to execute other keywords
+<p>There are several <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keywords that can be used to execute other keywords
 so that execution can continue after possible failures:</p>
 <ul>
 <li>
@@ -10760,7 +10760,7 @@ from the command line using <code>kill</code> command, and sending signals can
 also be easily automated.</p>
 <h3 id="using-keywords">Using keywords<a class="headerlink" href="#using-keywords" title="Permanent link">&para;</a></h3>
 <p>The execution can be stopped also by the executed keywords. There is a
-separate <em class="name">Fatal Error</em> <a href="../../syntax/libraries/#builtin">BuiltIn</a> keyword for this purpose, and
+separate <em class="name">Fatal Error</em> <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> keyword for this purpose, and
 custom keywords can use <a href="../../extend/libraries/#stopping-test-execution">fatal exceptions</a> when they fail.</p>
 <h3 id="stopping-when-first-test-case-fails">Stopping when first test case fails<a class="headerlink" href="#stopping-when-first-test-case-fails" title="Permanent link">&para;</a></h3>
 <p>If option <code class="option">--exitonfailure (-X)</code> is used, the whole execution stops
