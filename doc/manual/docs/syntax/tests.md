@@ -150,10 +150,10 @@ to have exactly the same number of arguments as specified in the
 documentation. Using too few or too many arguments will result in an
 error.
 
-The test below uses keywords *Create Directory*{.name} and *Copy File*{.name} from the [OperatingSystem](libraries.md#operatingsystem) library. Their arguments are
+The test below uses keywords *Create Directory*{.name} and *Copy File*{.name} from the [OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html) library. Their arguments are
 specified as `path` and `source, destination`, which means
 that they take one and two arguments, respectively. The last keyword,
-*No Operation*{.name} from [BuiltIn](libraries.md#builtin), takes no arguments.
+*No Operation*{.name} from [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html), takes no arguments.
 
 ```robotframework
 *** Test Cases ***
@@ -195,7 +195,7 @@ them. In the documentation they have an asterisk before the argument
 name like `*varargs`.
 
 For example, *Remove Files*{.name} and *Join Paths*{.name} keywords from
-the [OperatingSystem](libraries.md#operatingsystem) library have arguments `*paths` and `base, *parts`,
+the [OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html) library have arguments `*paths` and `base, *parts`,
 respectively. The former can be used with any number of arguments, but
 the latter requires at least one argument.
 
@@ -304,7 +304,7 @@ The only exceptions are Python keywords explicitly using [positional-only argume
 #### Named arguments example
 
 The following example demonstrates using the named arguments syntax with
-library keywords, user keywords, and when importing the [Telnet](libraries.md#telnet) test library.
+library keywords, user keywords, and when importing the [Telnet](https://robotframework.org/robotframework/latest/libraries/Telnet.html) test library.
 
 ```robotframework
 *** Settings ***
@@ -346,7 +346,7 @@ that free argument names must always be strings.
 #### Examples
 
 As the first example of using free named arguments, let's take a look at
-*Run Process*{.name} keyword in the [Process](libraries.md#process) library. It has a signature
+*Run Process*{.name} keyword in the [Process](https://robotframework.org/robotframework/latest/libraries/Process.html) library. It has a signature
 `command, *arguments, **configuration`, which means that it takes the command
 to execute (`command`), its arguments as [variable number of arguments](#variable-number-of-arguments)
 (`*arguments`) and finally optional configuration parameters as free named
@@ -588,7 +588,7 @@ There are multiple ways how to specify tags for test cases explained below:
 : All tests get tags set with this option in addition to tags they got elsewhere.
 
 *Set Tags*{.name}, *Remove Tags*{.name}, *Fail*{.name} and *Pass Execution*{.name} keywords
-: These [BuiltIn](libraries.md#builtin) keywords can be used to manipulate tags dynamically
+: These [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords can be used to manipulate tags dynamically
     during the test execution.
 
 Example:
@@ -785,7 +785,7 @@ normal keywords with possible arguments.
 A setup and a teardown are always a single keyword. If they need to take care
 of multiple separate tasks, it is possible to create higher-level [user
 keywords](user-keywords.md#user-keyword-arguments) for that purpose. An alternative solution is executing multiple
-keywords using the [BuiltIn](libraries.md#builtin) keyword *Run Keywords*{.name}.
+keywords using the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keyword *Run Keywords*{.name}.
 
 The test teardown is special in two ways. First of all, it is executed also
 when a test case fails, so it can be used for clean-up activities that must be

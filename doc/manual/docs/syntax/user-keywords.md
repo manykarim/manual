@@ -990,7 +990,7 @@ Result should be ${expected}
 Similarly as library keywords, also user keywords can return values.
 When using Robot Framework 5.0 or newer, the recommended approach is
 using the native [RETURN](#return) statement. The old *[Return]*{.setting}
-setting was deprecated in Robot Framework 7.0 and also [BuiltIn](libraries.md#builtin) keywords
+setting was deprecated in Robot Framework 7.0 and also [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords
 *Return From Keyword*{.name} and *Return From Keyword If*{.name} are considered
 deprecated.
 
@@ -1100,7 +1100,7 @@ Return Three Values
 
 ### Using special keywords to return
 
-[BuiltIn](libraries.md#builtin) keywords *Return From Keyword*{.name} and *Return From Keyword If*{.name}
+[BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords *Return From Keyword*{.name} and *Return From Keyword If*{.name}
 allow returning from a user keyword conditionally in the middle of the keyword.
 Both of them also accept optional return values that are handled exactly like
 with the `RETURN` statement and the *[Return]*{.setting} setting discussed above.

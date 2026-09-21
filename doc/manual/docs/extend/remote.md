@@ -81,7 +81,7 @@ is shorter than keyword execution time will interrupt the keyword.
 
 !!! note
     If the URI contains no path after the server address, the [XML-RPC
-    module](../syntax/libraries.md#xml) used by the Remote library will use `/RPC2` path by
+    module](#xml-rpc-module) used by the Remote library will use `/RPC2` path by
     default. In practice using `http://127.0.0.1:8270` is thus identical
     to using `http://127.0.0.1:8270/RPC2`. Depending on the remote server
     this may or may not be a problem. No extra path is appended if the
@@ -95,7 +95,7 @@ Before the Remote library can be imported, the remote server providing
 the actual keywords must be started.  If the server is started before
 launching the test execution, it is possible to use the normal
 *Library*{.setting} setting like in the above example. Alternatively other
-keywords, for example from [Process](../syntax/libraries.md#process) or [SSH](https://github.com/robotframework/SSHLibrary) libraries, can start
+keywords, for example from [Process](https://robotframework.org/robotframework/latest/libraries/Process.html) or [SSH](https://github.com/robotframework/SSHLibrary) libraries, can start
 the server up, but then you may need to use [Import Library keyword](../syntax/libraries.md#using-import-library-keyword)
 because the library is not available when the test execution starts.
 

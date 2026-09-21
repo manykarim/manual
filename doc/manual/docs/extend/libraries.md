@@ -1,5 +1,7 @@
 
 <a id="library-api"></a>
+
+<a id="library-interface"></a>
 # Creating test libraries
 
 Robot Framework's actual testing capabilities are provided by test
@@ -907,7 +909,7 @@ Named and kwargs
 
 For a real world example of using a signature exactly like in the above
 example, see *Run Process*{.name} and *Start Keyword*{.name} keywords in the
-[Process](../syntax/libraries.md#process) library.
+[Process](https://robotframework.org/robotframework/latest/libraries/Process.html) library.
 
 ### Keyword-only arguments
 
@@ -1421,7 +1423,7 @@ with different generic types works according to these rules:
 - With sets there can be exactly one type like `set[float]`. Conversion logic
   is the same as with lists.
 
-Using the native `list[int]` syntax requires [Python 3.9](#supported-conversions) or newer. If there
+Using the native `list[int]` syntax requires [Python 3.9](https://typing.python.org/en/latest/spec/aliases.html) or newer. If there
 is a need to support also earlier Python versions, it is possible to either use
 matching types from the [typing](https://docs.python.org/library/typing.html) module like `List[int]` or use the "stringly typed"
 syntax like `'list[int]'`.
@@ -1435,6 +1437,57 @@ syntax like `'list[int]'`.
 !!! note
     Support for "stringly typed" parameterized generics is new in
     Robot Framework 7.0.
+
+#### Type aliases
+
+Type aliases can be used for giving custom names to types and type expressions.
+This makes it possible to use domain specific names like `ID` instead of
+generic names like `int`. It also allows using simple names like `Locator`
+instead of complex type expressions like `WebElement | str | list[WebElement | str]`.
+
+Python has two ways to create [type aliases](#supported-conversions). The old approach is simply assigning
+types or type expressions to variables:
+
+```python
+ID = int
+Locator = WebElement | str | list[WebElement | str]
+
+def find_user(id: ID):
+    ...
+
+def find_element(locator: Locator):
+    ...
+```
+
+The above has a problem that it is not clear are these type alias declarations
+or just normal variable assignments. Another problems is that when type information
+is inspected after the library has been imported, the type alias has already
+been resolved and Robot Framework only sees its value. This is fine during
+execution, but library documentation generated with [Libdoc](libdoc.md#libdoc) also shows
+the underlying types like `int` instead of the type alias name like `ID`.
+
+Both of the above problems can be resolved by using `type` statements introduced
+in Python 3.12:
+
+```python
+type ID = int
+type Locator = WebElement | str | list[WebElement | str]
+
+def find_user(id: ID):
+    ...
+
+def find_element(locator: Locator):
+    ...
+```
+
+Now it is explicit that `ID` and `Locator` are type aliases. Robot Framework
+also sees the type alias names and Libdoc can show them in generated library
+documentation. Argument conversion works the same way with both approaches.
+
+!!! note
+    Support for `type` statements is new in Robot Framework 7.5. With
+    earlier versions these types are not recognized, which means that
+    there is not argument conversion based on them.
 
 #### Secret type
 
@@ -2668,7 +2721,7 @@ them anyway.
 
 It is also easy to use Robot Framework itself for testing libraries
 and that way have actual end-to-end acceptance tests for them. There are
-plenty of useful keywords in the [BuiltIn](../syntax/libraries.md#builtin) library for this
+plenty of useful keywords in the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) library for this
 purpose. One worth mentioning specifically is *Run Keyword And Expect Error*{.name}, which is useful for testing that keywords report errors
 correctly.
 
@@ -2849,15 +2902,12 @@ versions.
 
 ### Available APIs
 
-[API documentation](http://robot-framework.readthedocs.org) is hosted separately
-at the excellent [Read the Docs](http://readthedocs.org) service. If you are unsure how to use
-certain API or is using them forward compatible, please send a question
-to [mailing list](../getting-started/introduction.md#mailing-lists).
+[API documentation](http://robot-framework.readthedocs.org) is hosted separately at [Read the Docs](http://readthedocs.org).
 
 ### Using BuiltIn library
 
 The safest API to use are methods implementing keywords in the
-[BuiltIn](../syntax/libraries.md#builtin) library. Changes to keywords are rare and they are always
+[BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) library. Changes to keywords are rare and they are always
 done so that old usage is first deprecated. One of the most useful
 methods is `replace_variables` which allows accessing currently
 available variables. The following example demonstrates how to get
@@ -2964,7 +3014,7 @@ an access to the same library instance that the framework uses.
 
 ### Getting active library instance from Robot Framework
 
-[BuiltIn](../syntax/libraries.md#builtin) keyword *Get Library Instance*{.name} can be used to get the
+[BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keyword *Get Library Instance*{.name} can be used to get the
 currently active library instance from the framework itself. The
 library instance returned by this keyword is the same as the framework
 itself uses, and thus there is no problem seeing the correct library

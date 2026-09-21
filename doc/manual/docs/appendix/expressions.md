@@ -6,7 +6,7 @@ contexts and how variables in expressions are handled.
 ## Introduction
 
 Constructs such as [IF/ELSE structures](../syntax/control.md#ifelse-structures), [WHILE loops](../syntax/control.md#while-loops) and [inline Python evaluation](../syntax/variables.md#inline-python-evaluation)
-as well as several [BuiltIn](../syntax/libraries.md#builtin) keywords accept an expression that is evaluated in Python:
+as well as several [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords accept an expression that is evaluated in Python:
 
 ```robotframework
 *** Test Cases ***
@@ -45,7 +45,7 @@ modules.
 
 The following examples demonstrate using Python builtins as well as modules
 using the [inline Python evaluation](../syntax/variables.md#inline-python-evaluation) syntax, but same expressions would also
-work with [IF/ELSE structures](../syntax/control.md#ifelse-structures) and [BuiltIn](../syntax/libraries.md#builtin) keywords without the need to use
+work with [IF/ELSE structures](../syntax/control.md#ifelse-structures) and [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords without the need to use
 the `${{}}` decoration around the expression:
 
 ```robotframework
@@ -75,7 +75,7 @@ implemented, at least at the time of this writing, so that just importing
 `selenium` does not import the `selenium.webdriver` submodule.
 Another limitation is that modules cannot be used in the expression part of
 a list comprehension. A workaround to both of these problems
-is using the [BuiltIn](../syntax/libraries.md#builtin) keyword *Evaluate*{.name} that accepts modules to be imported
+is using the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keyword *Evaluate*{.name} that accepts modules to be imported
 and added to the evaluation namespace as an argument:
 
 ```robotframework
@@ -96,7 +96,7 @@ Evaluate keyword with list comprehension
 ```
 
 The *Evaluate*{.name} keyword also supports custom evaluation namespaces if further
-customization is needed. See its documentation in the [BuiltIn](../syntax/libraries.md#builtin) library for more details.
+customization is needed. See its documentation in the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) library for more details.
 
 ## Using variables
 

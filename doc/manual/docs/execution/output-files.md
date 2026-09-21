@@ -311,7 +311,7 @@ log files for normal viewing later with the `INFO` level. By default
 all the messages included during execution will be included also with
 Rebot. Messages ignored during the execution cannot be recovered.
 
-Another possibility to change the log level is using the [BuiltIn](../syntax/libraries.md#builtin)
+Another possibility to change the log level is using the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html)
 keyword *Set Log Level*{.name} in the test data. It takes the same
 arguments as the `--loglevel`{.option} option, and it also returns the
 old level so that it can be restored later, for example, in a [test
@@ -528,7 +528,7 @@ or warnings](../extend/libraries.md#errors-and-warnings) are not removed except 
 : Remove all passed iterations from [WHILE loops](../syntax/control.md#while-loops) except the last one.
 
 `WUKS`
-: Remove all failing keywords inside [BuiltIn](../syntax/libraries.md#builtin) keyword
+: Remove all failing keywords inside [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keyword
     *Wait Until Keyword Succeeds*{.name} except the last one.
 
 `NAME:<pattern>`

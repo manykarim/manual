@@ -671,8 +671,8 @@ you can enable showing internal traces by setting environment variable
 If the log file still does not have enough information, it is a good
 idea to enable the [syslog](results.md#system-log) and see what information it provides. It is
 also possible to add some keywords to the test cases to see what is
-going on. Especially [BuiltIn](../syntax/libraries.md#builtin) keywords *Log*{.name} and *Log Variables*{.name} are useful. If nothing else works, it is always possible to
-search help from [mailing lists](../getting-started/introduction.md#mailing-lists) or elsewhere.
+going on. Especially [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords *Log*{.name} and *Log Variables*{.name} are useful. If nothing else works, it is always possible to
+ask help on [support forums](../getting-started/introduction.md#support-forums).
 
 ### Using the Python debugger (pdb)
 

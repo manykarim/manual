@@ -423,7 +423,7 @@ Scenario 2
 
 ### JSON data format
 
-Robot Framework supports data also in the [JSON](#json) format. This format is designed
+Robot Framework supports data also in the [JSON](https://json.org) format. This format is designed
 more for tool developers than for regular Robot Framework users and it is not
 meant to be edited manually. Its most important use cases are:
 
@@ -544,7 +544,7 @@ When Robot Framework ignores some data, this data is not available in
 any resulting reports and, additionally, most tools used with Robot
 Framework also ignore them. To add information that is visible in
 Robot Framework outputs, place it to the documentation or other metadata of
-test cases or suites, or log it with the [BuiltIn](libraries.md#builtin) keywords *Log*{.name} or
+test cases or suites, or log it with the [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) keywords *Log*{.name} or
 *Comment*{.name}.
 
 ### Escaping
@@ -592,7 +592,7 @@ in the test data.
     `\x02`, are Unicode and must be explicitly converted to
     byte strings if needed. This can be done, for example, using
     *Convert To Bytes*{.name} or *Encode String To Bytes*{.name} keywords
-    in [BuiltIn](libraries.md#builtin) and [String](libraries.md#string) libraries, respectively, or with
+    in [BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) and [String](https://robotframework.org/robotframework/latest/libraries/String.html) libraries, respectively, or with
     something like `value.encode('UTF-8')` in Python code.
 
 !!! note
