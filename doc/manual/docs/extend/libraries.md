@@ -18,8 +18,8 @@ and straightforward.
 Robot Framework itself is written with [Python](../execution/basics.md#python-example) and naturally test
 libraries extending it can be implemented using the same
 language. It is also possible to implement libraries with C
-using [Python C API](http://docs.python.org/c-api/index.html), although it is often easier to interact with
-C code from Python libraries using [ctypes](http://docs.python.org/library/ctypes.html) module.
+using [Python C API](https://docs.python.org/c-api/index.html), although it is often easier to interact with
+C code from Python libraries using [ctypes](https://docs.python.org/library/ctypes.html) module.
 
 Libraries implemented using Python can
 also act as wrappers to functionality implemented using other
@@ -1222,7 +1222,7 @@ Other types cause conversion failures.
 | [str](https://docs.python.org/library/functions.html#func-str) |  | string, unicode | Anything | All arguments are converted to Unicode strings.<br>Most values are converted simply by using `str(value)`. An exception is that bytes are mapped directly to Unicode code points with same ordinals. This means that, for example, `b"hyv\xe4"` becomes `"hyvä"`. Another exception is that [Secret](https://robot-framework.readthedocs.io/en/master/autodoc/robot.utils.html#robot.utils.secret.Secret) objects are explicitly rejected.<br>New in Robot Framework 4.0. Converting bytes specially and rejecting `Secret` objects are new in Robot Framework 7.4. |  |
 | [bytes](https://docs.python.org/library/functions.html#func-bytes) |  |  | [str](https://docs.python.org/library/functions.html#func-str), [bytearray](https://docs.python.org/library/functions.html#func-bytearray) | Strings are converted to bytes so that each Unicode code point below 256 is directly mapped to a matching byte. Higher code points are not allowed.<br>Integers and sequences of integers are converted to matching bytes directly. They must be in range 0-255.<br>Support for integers and sequences of integers is new in Robot Framework 7.4. | Strings:<br>`good`<br>`hyvä` (converted to `hyv\xe4`)<br>`\x00` (converted to the null byte)<br>Integers and sequences of integers:<br>`0` (converted to the null byte)<br>`[82, 70, 33]` (converted to `RF!`) |
 | [bytearray](https://docs.python.org/library/functions.html#func-bytearray) |  |  | [str](https://docs.python.org/library/functions.html#func-str), [bytes](https://docs.python.org/library/functions.html#func-bytes) | Same conversion as with [bytes](https://docs.python.org/library/functions.html#func-bytes), but the result is a [bytearray](https://docs.python.org/library/functions.html#func-bytearray). |  |
-| [datetime](https://docs.python.org/library/datetime.html#datetime.datetime) |  |  | [str](https://docs.python.org/library/functions.html#func-str), [int](https://docs.python.org/library/functions.html#int), [float](https://docs.python.org/library/functions.html#float) | String timestamps are expected to be in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) like format `YYYY-MM-DD hh:mm:ss.mmmmmm`, where any non-digit character can be used as a separator or separators can be omitted altogether. Additionally, only the date part is mandatory, all possibly missing time components are considered to be zeros.<br>Special values `NOW` and `TODAY` (case-insensitive) can be used to get the current local `datetime`. This is new in Robot Framework 7.3.<br>Integers and floats are considered to represent seconds since the [Unix epoch](http://en.wikipedia.org/wiki/Unix_time). | `2022-02-09T16:39:43.632269`<br>`20220209 16:39`<br>`2022-02-09`<br>`now` (current local date and time)<br>`TODAY` (same as above)<br>`${1644417583.632269}` (Epoch time) |
+| [datetime](https://docs.python.org/library/datetime.html#datetime.datetime) |  |  | [str](https://docs.python.org/library/functions.html#func-str), [int](https://docs.python.org/library/functions.html#int), [float](https://docs.python.org/library/functions.html#float) | String timestamps are expected to be in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) like format `YYYY-MM-DD hh:mm:ss.mmmmmm`, where any non-digit character can be used as a separator or separators can be omitted altogether. Additionally, only the date part is mandatory, all possibly missing time components are considered to be zeros.<br>Special values `NOW` and `TODAY` (case-insensitive) can be used to get the current local `datetime`. This is new in Robot Framework 7.3.<br>Integers and floats are considered to represent seconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time). | `2022-02-09T16:39:43.632269`<br>`20220209 16:39`<br>`2022-02-09`<br>`now` (current local date and time)<br>`TODAY` (same as above)<br>`${1644417583.632269}` (Epoch time) |
 | [date](https://docs.python.org/library/datetime.html#datetime.date) |  |  | [str](https://docs.python.org/library/functions.html#func-str) | Same timestamp conversion as with [datetime](https://docs.python.org/library/datetime.html#datetime.datetime), but all time components are expected to be omitted or to be zeros.<br>Special values `NOW` and `TODAY` (case-insensitive) can be used to get the current local `date`. This is new in Robot Framework 7.3. | `2018-09-12`<br>`20180912`<br>`today` (current local date)<br>`NOW` (same as above) |
 | [timedelta](https://docs.python.org/library/datetime.html#datetime.timedelta) |  |  | [str](https://docs.python.org/library/functions.html#func-str), [int](https://docs.python.org/library/functions.html#int), [float](https://docs.python.org/library/functions.html#float) | Strings are expected to represent a time interval in one of the time formats Robot Framework supports: [time as number](../appendix/time-format.md#time-as-number), [time as time string](../appendix/time-format.md#time-as-time-string) or [time as "timer" string](../appendix/time-format.md#time-as-timer-string). Integers and floats are considered to be seconds. | `42` (42 seconds)<br>`1 minute 2 seconds`<br>`01:02` (same as above) |
 | [Path](https://docs.python.org/library/pathlib.html) | [PathLike](https://docs.python.org/library/os.html#os.PathLike) |  | [str](https://docs.python.org/library/functions.html#func-str) | Strings are converted to [pathlib.Path](https://docs.python.org/library/pathlib.html) objects. On Windows `/` is converted to `\`{.codesc} automatically.<br>New in Robot Framework 6.0. | `/tmp/absolute/path`<br>`relative/path/to/file.ext`<br>`name.txt` |
@@ -1711,7 +1711,7 @@ ValueError: Argument 'arg' got value '42' (integer) that cannot be converted to 
 
 If the converter can accept multiple types, it is possible to specify types
 as a [Union](https://docs.python.org/3/library/typing.html#typing.Union). For example, if we wanted to enhance our keyword to accept also
-integers so that they would be considered seconds since the [Unix epoch](http://en.wikipedia.org/wiki/Unix_time),
+integers so that they would be considered seconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time),
 we could change the converter like this:
 
 ```python
@@ -2308,7 +2308,7 @@ longer running keywords can be problematic.
 
 Keywords have a possibility to add an accurate timestamp to the messages
 they log if there is a need. The timestamp must be given as milliseconds
-since the [Unix epoch](http://en.wikipedia.org/wiki/Unix_time) and it must be placed after the [log level](https://robot-framework.readthedocs.io/en/master/autodoc/robot.api.html#module-robot.api.logger)
+since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time) and it must be placed after the [log level](https://robot-framework.readthedocs.io/en/master/autodoc/robot.api.html#module-robot.api.logger)
 separated from it with a colon:
 
 ```text
@@ -2460,7 +2460,7 @@ through the standard output like `print('*INFO* My message')`. In
 addition to a programmatic interface being a lot cleaner to use, this
 API has a benefit that the log messages have accurate [timestamps](#timestamps).
 
-The public logging API [is thoroughly documented](http://docs.python.org/library/logging.html) as part of the API
+The public logging API [is thoroughly documented](https://docs.python.org/library/logging.html) as part of the API
 documentation at https://robot-framework.readthedocs.org. Below is
 a simple usage example:
 
@@ -2476,7 +2476,7 @@ def my_keyword(arg):
 
 An obvious limitation is that test libraries using this logging API have
 a dependency to Robot Framework. If Robot Framework is not running,
-the messages are redirected automatically to Python's standard [logging](http://docs.python.org/library/logging.html)
+the messages are redirected automatically to Python's standard [logging](https://docs.python.org/library/logging.html)
 module.
 
 #### Using Python's standard `logging` module
@@ -2653,7 +2653,7 @@ A test library without documentation about what keywords it
 contains and what those keywords do is rather useless. To ease
 maintenance, it is highly recommended that library documentation is
 included in the source code and generated from it. Basically, that
-means using [docstrings](http://www.python.org/dev/peps/pep-0257) as in the example below.
+means using [docstrings](https://www.python.org/dev/peps/pep-0257) as in the example below.
 
 ```python
 class MyLibrary:
@@ -2902,7 +2902,7 @@ versions.
 
 ### Available APIs
 
-[API documentation](http://robot-framework.readthedocs.org) is hosted separately at [Read the Docs](http://readthedocs.org).
+[API documentation](https://robot-framework.readthedocs.org) is hosted separately at [Read the Docs](https://readthedocs.org).
 
 ### Using BuiltIn library
 

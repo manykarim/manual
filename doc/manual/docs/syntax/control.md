@@ -158,7 +158,7 @@ All `FOR` loops in the previous section iterated over a sequence. That is the mo
 common use case, but sometimes it is convenient to have a loop that is executed
 a certain number of times. For this purpose Robot Framework has a special
 `FOR index IN RANGE limit` loop syntax that is derived from the similar Python
-idiom using the [built-in range() function](http://docs.python.org/library/functions.html#func-range).
+idiom using the [built-in range() function](https://docs.python.org/library/functions.html#func-range).
 
 Similarly as other `FOR` loops, the `FOR-IN-RANGE` loop starts with
 `FOR` that is followed by a loop variable. In this format
@@ -223,7 +223,7 @@ Float parameters
 Sometimes it is useful to loop over a list and also keep track of your location
 inside the list. Robot Framework has a special
 `FOR index ... IN ENUMERATE ...` syntax for this situation.
-This syntax is derived from the [Python built-in enumerate() function](http://docs.python.org/library/functions.html#enumerate).
+This syntax is derived from the [Python built-in enumerate() function](https://docs.python.org/library/functions.html#enumerate).
 
 `FOR-IN-ENUMERATE` loops syntax is just like the regular `FOR` loop syntax,
 except that the separator between variables and values is `IN ENUMERATE`
@@ -311,7 +311,7 @@ FOR-IN-ENUMERATE with one loop variable
 
 Some tests build up several related lists, then loop over them together.
 Robot Framework has a shortcut for this case: `FOR ... IN ZIP ...`, which
-is derived from the [Python built-in zip() function](http://docs.python.org/library/functions.html#zip).
+is derived from the [Python built-in zip() function](https://docs.python.org/library/functions.html#zip).
 
 This may be easiest to show with an example:
 

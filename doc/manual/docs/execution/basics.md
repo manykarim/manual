@@ -156,7 +156,7 @@ normal status rc.
 ### Simple patterns
 
 Many command line options take arguments as *simple patterns*. These
-[glob-like patterns](http://en.wikipedia.org/wiki/Glob_(programming)) are matched according to the following rules:
+[glob-like patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are matched according to the following rules:
 
 - `*` matches any string, even an empty string.
 - `?` matches any single character.
@@ -676,7 +676,7 @@ ask help on [support forums](../getting-started/introduction.md#support-forums).
 
 ### Using the Python debugger (pdb)
 
-It is also possible to use the [pdb](http://docs.python.org/library/pdb.html) module from the Python standard
+It is also possible to use the [pdb](https://docs.python.org/library/pdb.html) module from the Python standard
 library to set a break point and interactively debug a running test.
 The typical way of invoking pdb by inserting:
 

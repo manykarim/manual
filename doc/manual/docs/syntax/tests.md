@@ -212,7 +212,7 @@ Example
 
 The named argument syntax makes using arguments with [default values](#default-values) more
 flexible, and allows explicitly labeling what a certain argument value means.
-Technically named arguments work exactly like [keyword arguments](http://docs.python.org/tutorial/controlflow.html#keyword-arguments) in Python.
+Technically named arguments work exactly like [keyword arguments](https://docs.python.org/tutorial/controlflow.html#keyword-arguments) in Python.
 
 #### Basic syntax
 
@@ -326,7 +326,7 @@ List files
 ### Free named arguments
 
 Robot Framework supports *free named arguments*, often also called *free
-keyword arguments* or *kwargs*, similarly as [Python supports **kwargs](http://docs.python.org/tutorial/controlflow.html#keyword-arguments).
+keyword arguments* or *kwargs*, similarly as [Python supports **kwargs](https://docs.python.org/tutorial/controlflow.html#keyword-arguments).
 What this means is that a keyword can receive all arguments that use
 the [named argument syntax](#named-argument-syntax) (`name=value`) and do not match any arguments
 specified in the signature of the keyword.
@@ -1098,10 +1098,10 @@ Invalid Password
 It is also possible to write test cases as requirements that also non-technical
 project stakeholders must understand. These *executable requirements* are a
 corner stone of a process commonly called [Acceptance Test Driven Development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development)
-(ATDD) or [Specification by Example](http://en.wikipedia.org/wiki/Specification_by_example).
+(ATDD) or [Specification by Example](https://en.wikipedia.org/wiki/Specification_by_example).
 
 One way to write these requirements/tests is *Given-When-Then* style
-popularized by [Behavior Driven Development](http://en.wikipedia.org/wiki/Behavior_Driven_Development) (BDD). When writing test cases in
+popularized by [Behavior Driven Development](https://en.wikipedia.org/wiki/Behavior_Driven_Development) (BDD). When writing test cases in
 this style, the initial state is usually expressed with a keyword starting with
 word *Given*{.name}, the actions are described with keyword starting with
 *When*{.name} and the expectations with a keyword starting with *Then*{.name}.

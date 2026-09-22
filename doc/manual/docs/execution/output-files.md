@@ -698,7 +698,7 @@ activating it using the `--prerebotmodifier`{.option} option.
 This functionality works nearly exactly like [programmatic modification of
 test data](configuration.md#programmatic-modification-of-test-data) that can be enabled with the `--prerunmodifier`{.option} option.
 The obvious difference is that this time modifiers operate with the
-[result model](http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#module-robot.result.model), not the [running model](http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#module-robot.running.model). For example, the following modifier
+[result model](https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#module-robot.result.model), not the [running model](https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#module-robot.running.model). For example, the following modifier
 marks all passed tests that have taken more time than allowed as failed:
 
 ```python

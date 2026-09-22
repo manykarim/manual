@@ -212,7 +212,7 @@ Any test library that is not one of the standard libraries is, by
 definition, *an external library*. The Robot Framework open source community
 has implemented several generic libraries, such as [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary) and
 [SwingLibrary](https://github.com/robotframework/SwingLibrary), which are not packaged with the core framework. A list of
-publicly available libraries can be found from http://robotframework.org.
+publicly available libraries can be found from https://robotframework.org.
 
 Generic and custom libraries can obviously also be implemented by teams using
 Robot Framework. See [Creating test libraries](../extend/libraries.md#creating-test-libraries) section for more information

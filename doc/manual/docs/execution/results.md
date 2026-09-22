@@ -138,9 +138,9 @@ automatically created unless `NONE` is used as a value, the default value is
 <a id="xunit-file"></a>
 ### XUnit compatible result file
 
-XUnit result files contain the test execution summary in [xUnit](http://en.wikipedia.org/wiki/XUnit) compatible
+XUnit result files contain the test execution summary in [xUnit](https://en.wikipedia.org/wiki/XUnit) compatible
 XML format. These files can thus be used as an input for external tools that
-understand xUnit reports. For example, [Jenkins](http://jenkins-ci.org) continuous integration server
+understand xUnit reports. For example, [Jenkins](https://jenkins-ci.org) continuous integration server
 supports generating statistics based on xUnit compatible
 results.
 
@@ -668,7 +668,7 @@ activating it using the `--prerebotmodifier`{.option} option.
 This functionality works nearly exactly like [programmatic modification of
 test data](configuration.md#programmatic-modification-of-test-data) that can be enabled with the `--prerunmodifier`{.option} option.
 The obvious difference is that this time modifiers operate with the
-[result model](http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#module-robot.result.model), not the [running model](http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#module-robot.running.model). For example, the following modifier
+[result model](https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#module-robot.result.model), not the [running model](https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#module-robot.running.model). For example, the following modifier
 marks all passed tests that have taken more time than allowed as failed:
 
 ```python

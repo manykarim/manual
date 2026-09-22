@@ -34,7 +34,7 @@ That typically eases maintenance and also enhances execution speed.
 
 ## Evaluation namespace
 
-Expressions are evaluated using Python's [eval](http://docs.python.org/library/functions.html#eval) function so that normal Python
+Expressions are evaluated using Python's [eval](https://docs.python.org/library/functions.html#eval) function so that normal Python
 constructs like `'${x}' == 'expected'`, `${x} > 0` and
 `'${x}'.upper() not in ('FAIL', 'BAD')` can be used and all
 builtin functions like `len()` and `int()` are available.

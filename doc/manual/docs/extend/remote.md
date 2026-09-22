@@ -17,7 +17,7 @@ There are two main reasons for using the remote library API:
   possibilities for distributed testing.
 
 * Test libraries can be implemented using any language that supports
-  [XML-RPC](http://www.xmlrpc.com/) protocol. There exists ready-made [generic remote servers](https://github.com/robotframework/RemoteInterface#available-remote-servers)
+  [XML-RPC](https://www.xmlrpc.com/) protocol. There exists ready-made [generic remote servers](https://github.com/robotframework/RemoteInterface#available-remote-servers)
   for various languages like Python, Java, Ruby, .NET, and so on.
 
 The remote library interface is provided by the Remote library that is
@@ -69,7 +69,7 @@ is shorter than keyword execution time will interrupt the keyword.
 
 !!! note
     Port `8270` is the default port that remote servers are expected
-    to use and it has been [registered by IANA](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270) for this purpose.
+    to use and it has been [registered by IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270) for this purpose.
     This port number was selected because 82 and 70 are the ASCII codes
     of letters `R` and `F`, respectively.
 
@@ -77,7 +77,7 @@ is shorter than keyword execution time will interrupt the keyword.
     When connecting to the local machine, it is recommended to use
     IP address `127.0.0.1` instead of machine name `localhost`. This
     avoids address resolution that can be extremely slow [at least on
-    Windows](http://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call).
+    Windows](https://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call).
 
 !!! note
     If the URI contains no path after the server address, the [XML-RPC
@@ -143,7 +143,7 @@ according to the following rules. Other remote servers should behave similarly.
   `${root.child.leaf}`.
 
 * Strings containing bytes in the ASCII range that cannot be represented in
-  XML (e.g. the null byte) are sent as [Binary objects](http://docs.python.org/library/xmlrpc.client.html#binary-objects) that internally use
+  XML (e.g. the null byte) are sent as [Binary objects](https://docs.python.org/library/xmlrpc.client.html#binary-objects) that internally use
   XML-RPC base64 data type. Received Binary objects are automatically converted
   to byte strings.
 
@@ -155,7 +155,7 @@ This section explains the protocol that is used between the Remote
 library and remote servers. This information is mainly targeted for
 people who want to create new remote servers.
 
-The remote protocol is implemented on top of [XML-RPC](http://www.xmlrpc.com/), which is a
+The remote protocol is implemented on top of [XML-RPC](https://www.xmlrpc.com/), which is a
 simple remote procedure call protocol using XML over HTTP. Most
 mainstream languages (Python, Java, C, Ruby, Perl, Javascript, PHP,
 ...) have a support for XML-RPC either built-in or as an extension.

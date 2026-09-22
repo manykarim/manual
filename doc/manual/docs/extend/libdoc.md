@@ -388,7 +388,7 @@ src/SupportingTools/ExampleLibrary.py
     when using Libdoc, you can [easily detect is Robot Framework running](libraries.md#detecting-is-robot-framework-running)
 
 !!! tip
-    For more information on Python documentation strings, see [PEP-257](http://www.python.org/dev/peps/pep-0257).
+    For more information on Python documentation strings, see [PEP-257](https://www.python.org/dev/peps/pep-0257).
 
 ### Dynamic libraries
 
@@ -586,7 +586,7 @@ def my_keyword():
 
 Robot Framework uses the Python-[Markdown](https://en.wikipedia.org/wiki/Markdown) module as its underling Markdown
 engine and it needs to be installed separately. If syntax highlighting is
-needed, the [Pygments](http://pygments.org/) module must be installed as well.
+needed, the [Pygments](https://pygments.org/) module must be installed as well.
 
 All other documentation formats supported by Libdoc support [internal linking](#internal-linking)
 using backticks like ``Linking to `My Keyword` works``{.codesc}. This kind
@@ -612,7 +612,7 @@ reStructuredText, [linking to keywords](#linking-to-keywords) requires them to b
 
 One of the nice features that reStructured supports is the ability to mark code
 blocks that can be syntax highlighted.
-Syntax highlight requires additional [Pygments](http://pygments.org/) module and supports all the
+Syntax highlight requires additional [Pygments](https://pygments.org/) module and supports all the
 languages that Pygments supports.
 
 ```python

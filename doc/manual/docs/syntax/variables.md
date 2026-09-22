@@ -1468,7 +1468,7 @@ Override
 ```
 
 !!! note
-    `${SPACE}` represents the ASCII space (`\x20`) and [other spaces](http://jkorpela.fi/chars/spaces.html)
+    `${SPACE}` represents the ASCII space (`\x20`) and [other spaces](https://jkorpela.fi/chars/spaces.html)
     should be specified using the [escape sequences](data.md#escaping) like `\xA0`
     (NO-BREAK SPACE) and `\u3000` (IDEOGRAPHIC SPACE).
 

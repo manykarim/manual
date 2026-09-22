@@ -233,7 +233,7 @@ source control systems.
 When using Robot Framework with reStructuredText files, normal Robot Framework
 data is embedded to so called code blocks. In standard reST code blocks are
 marked using the `code` directive, but Robot Framework supports also
-`code-block` or `sourcecode` directives used by the [Sphinx](http://sphinx-doc.org/) tool.
+`code-block` or `sourcecode` directives used by the [Sphinx](https://sphinx-doc.org/) tool.
 
 ```rst
 reStructuredText example
@@ -437,7 +437,7 @@ meant to be edited manually. Its most important use cases are:
     The JSON data support is new in Robot Framework 6.1 and it can be
     enhanced in future Robot Framework versions. If you have an enhancement
     idea or believe you have encountered a bug, please submit an [issue](https://issues.robotframework.org)
-    or start a discussion thread on the `#devel` channel on our [Slack](http://slack.robotframework.org).
+    or start a discussion thread on the `#devel` channel on our [Slack](https://slack.robotframework.org).
 
 #### Converting suite to JSON
 
@@ -878,7 +878,7 @@ language definitions.
 If you want to add translation for a new language or enhance existing, head
 to [Crowdin](https://robotframework.crowdin.com) that we use for collaboration. For more details, see the
 separate [Localization](https://github.com/MarketSquare/localization) project, and for questions and free discussion join
-the `#localization` channel on our [Slack](http://slack.robotframework.org).
+the `#localization` channel on our [Slack](https://slack.robotframework.org).
 
 ## Style
 

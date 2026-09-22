@@ -419,7 +419,7 @@ themselves. That is typically done by running:
 pip install markdown
 ```
 
-If syntax highlighting is needed, also [Pygments](http://pygments.org/) needs to be installed:
+If syntax highlighting is needed, also [Pygments](https://pygments.org/) needs to be installed:
 
 ```text
 pip install pygments
@@ -703,14 +703,14 @@ This section is not included in TOC.
 This section is included in TOC.
 ```
 
-[Libdoc](../extend/libdoc.md#libdoc) supports the `%TOC%` marker also when [creating table of contents](../extend/libdoc.md#creating-table-of-contents)
-with the Robot Framework custom format. In that format only the top level
-headers are included in the generated table of contents.
+!!! note
+    Generating table of contents is not a standard Markdown feature.
+    The `%TOC%` marker used by Robot Framework is also different to
+    what Python-Markdown's [toc](https://python-markdown.github.io/extensions/toc/) plugin uses by default.
 
 !!! note
-    Generating table of contents is not a standard Markdown feature and
-    even the marker used by Robot Framework is different to what
-    Python-Markdown's [toc](https://python-markdown.github.io/extensions/toc/) plugin uses by default.
+    [Libdoc](../extend/libdoc.md#libdoc) supports the same `%TOC%` marker also when
+    [creating table of contents](../extend/libdoc.md#creating-table-of-contents) with the Robot Framework custom format.
 
 ### Code blocks
 
@@ -735,9 +735,14 @@ hello("Robot")
 ```
 ````
 
+!!! warning
+    Fenced code blocks are only supported at the document root level.
+    They cannot be nested inside lists, admonitions, or other such
+    elements.
+
 #### Syntax highlighting
 
-If a language is specified and [Pygments](http://pygments.org/) syntax highlighter is installed,
+If a language is specified and [Pygments](https://pygments.org/) syntax highlighter is installed,
 the code will be syntax highlighted. Pygments supports also Robot Framework
 out-of-the-box which makes creating examples easy.
 
