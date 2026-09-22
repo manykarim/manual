@@ -10000,7 +10000,7 @@ for parsing these files instead of the standard parser.</p>
 <h3 id="parse-method"><code>parse</code> method<a class="headerlink" href="#parse-method" title="Permanent link">&para;</a></h3>
 <p>The mandatory <code>parse</code> method is responsible for parsing <a href="../../syntax/suites/#suite-files">suite files</a>. It is
 called with each parsed file that has an extension that the parser supports.
-The method must return a <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">TestSuite</a> object.</p>
+The method must return a <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">TestSuite</a> object.</p>
 <p>In simple cases <code>parse</code> can be implemented so that it accepts just a single
 argument that is a <a href="https://docs.python.org/library/pathlib.html">pathlib.Path</a> object pointing to the file to
 parse. If the parser is interested in defaults for <em class="setting">Test Setup</em>,
@@ -10010,7 +10010,7 @@ accept two arguments. In that case the second argument is a <a href="https://rob
 <h3 id="parse_init-method"><code>parse_init</code> method<a class="headerlink" href="#parse_init-method" title="Permanent link">&para;</a></h3>
 <p>The optional <code>parse_init</code> method is responsible for parsing <a href="../../syntax/suites/#suite-initialization-files">suite initialization
 files</a> i.e. files in format <code>__init__.ext</code> where <code>.ext</code> is an extension
-supported by the parser. The method must return a <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">TestSuite</a>
+supported by the parser. The method must return a <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">TestSuite</a>
 object representing the whole directory. Suites created from child suite files
 and directories will be added to its child suites.</p>
 <p>Also <code>parse_init</code> can be implemented so that it accepts one or two arguments,

@@ -9980,7 +9980,7 @@ very close to creating <a href="../libraries/#creating-test-libraries">normal te
 </li>
 <li>
 <p>Test libraries can be implemented using any language that supports
-  <a href="http://www.xmlrpc.com/">XML-RPC</a> protocol. There exists ready-made <a href="https://github.com/robotframework/RemoteInterface#available-remote-servers">generic remote servers</a>
+  <a href="https://www.xmlrpc.com/">XML-RPC</a> protocol. There exists ready-made <a href="https://github.com/robotframework/RemoteInterface#available-remote-servers">generic remote servers</a>
   for various languages like Python, Java, Ruby, .NET, and so on.</p>
 </li>
 </ul>
@@ -10028,7 +10028,7 @@ is shorter than keyword execution time will interrupt the keyword.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Port <code>8270</code> is the default port that remote servers are expected
-to use and it has been <a href="http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270">registered by IANA</a> for this purpose.
+to use and it has been <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=8270">registered by IANA</a> for this purpose.
 This port number was selected because 82 and 70 are the ASCII codes
 of letters <code>R</code> and <code>F</code>, respectively.</p>
 </div>
@@ -10036,7 +10036,7 @@ of letters <code>R</code> and <code>F</code>, respectively.</p>
 <p class="admonition-title">Note</p>
 <p>When connecting to the local machine, it is recommended to use
 IP address <code>127.0.0.1</code> instead of machine name <code>localhost</code>. This
-avoids address resolution that can be extremely slow <a href="http://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call">at least on
+avoids address resolution that can be extremely slow <a href="https://stackoverflow.com/questions/14504450/pythons-xmlrpc-extremely-slow-one-second-per-call">at least on
 Windows</a>.</p>
 </div>
 <div class="admonition note">
@@ -10107,7 +10107,7 @@ according to the following rules. Other remote servers should behave similarly.<
 </li>
 <li>
 <p>Strings containing bytes in the ASCII range that cannot be represented in
-  XML (e.g. the null byte) are sent as <a href="http://docs.python.org/library/xmlrpc.client.html#binary-objects">Binary objects</a> that internally use
+  XML (e.g. the null byte) are sent as <a href="https://docs.python.org/library/xmlrpc.client.html#binary-objects">Binary objects</a> that internally use
   XML-RPC base64 data type. Received Binary objects are automatically converted
   to byte strings.</p>
 </li>
@@ -10119,7 +10119,7 @@ according to the following rules. Other remote servers should behave similarly.<
 <p>This section explains the protocol that is used between the Remote
 library and remote servers. This information is mainly targeted for
 people who want to create new remote servers.</p>
-<p>The remote protocol is implemented on top of <a href="http://www.xmlrpc.com/">XML-RPC</a>, which is a
+<p>The remote protocol is implemented on top of <a href="https://www.xmlrpc.com/">XML-RPC</a>, which is a
 simple remote procedure call protocol using XML over HTTP. Most
 mainstream languages (Python, Java, C, Ruby, Perl, Javascript, PHP,
 ...) have a support for XML-RPC either built-in or as an extension.</p>

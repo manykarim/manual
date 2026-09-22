@@ -10219,7 +10219,7 @@ and in the API docs of the optional <a href="https://robot-framework.readthedocs
 <tr>
 <td>start_suite</td>
 <td>data, result</td>
-<td>Called when a test suite starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">executed test suite</a> and <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.TestSuite">its execution results</a>, respectively.</td>
+<td>Called when a test suite starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestSuite">executed test suite</a> and <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.TestSuite">its execution results</a>, respectively.</td>
 </tr>
 <tr>
 <td>end_suite</td>
@@ -10229,7 +10229,7 @@ and in the API docs of the optional <a href="https://robot-framework.readthedocs
 <tr>
 <td>start_test</td>
 <td>data, result</td>
-<td>Called when a test case starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestCase">executed test case</a> and <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.TestCase">its execution results</a>, respectively.</td>
+<td>Called when a test case starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.TestCase">executed test case</a> and <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.TestCase">its execution results</a>, respectively.</td>
 </tr>
 <tr>
 <td>end_test</td>
@@ -10239,7 +10239,7 @@ and in the API docs of the optional <a href="https://robot-framework.readthedocs
 <tr>
 <td>start_keyword</td>
 <td>data, result</td>
-<td>Called when a keyword starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.Keyword">executed keyword call</a> and <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.Keyword">its execution results</a>, respectively.<br>This method is called, by default, with user keywords, library keywords and when a keyword call is invalid. It is not called if a more specific <code>start_user_keyword</code>, <code>start_library_keyword</code> or <code>start_invalid_keyword</code> method is implemented.</td>
+<td>Called when a keyword starts.<br><code>data</code> and <code>result</code> are model objects representing the <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.running.html#robot.running.model.Keyword">executed keyword call</a> and <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.Keyword">its execution results</a>, respectively.<br>This method is called, by default, with user keywords, library keywords and when a keyword call is invalid. It is not called if a more specific <code>start_user_keyword</code>, <code>start_library_keyword</code> or <code>start_invalid_keyword</code> method is implemented.</td>
 </tr>
 <tr>
 <td>end_keyword</td>
@@ -10309,7 +10309,7 @@ and in the API docs of the optional <a href="https://robot-framework.readthedocs
 <tr>
 <td>log_message</td>
 <td>message</td>
-<td>Called when an executed keyword writes a log message. <code>message</code> is a model object representing the <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.Message">logged message</a>.<br>This method is not called if the message has level below the current <a href="../../execution/results/#log-levels">threshold level</a>.</td>
+<td>Called when an executed keyword writes a log message. <code>message</code> is a model object representing the <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.result.html#robot.result.model.Message">logged message</a>.<br>This method is not called if the message has level below the current <a href="../../execution/results/#log-levels">threshold level</a>.</td>
 </tr>
 <tr>
 <td>message</td>
@@ -10690,7 +10690,7 @@ benefit of using the listener API is that modifications can be done
 dynamically based on execution results or otherwise. This allows, for example,
 interesting possibilities for model based testing.</p>
 <p>Although the listener interface is not built on top of Robot Framework's
-internal <a href="http://robot-framework.readthedocs.org/en/master/autodoc/robot.model.html#module-robot.model.visitor">visitor interface</a> similarly as the pre-run modifier API,
+internal <a href="https://robot-framework.readthedocs.org/en/master/autodoc/robot.model.html#module-robot.model.visitor">visitor interface</a> similarly as the pre-run modifier API,
 listeners can still use the visitors interface themselves. For example,
 the <code>SelectEveryXthTest</code> visitor used in <a href="../../execution/configuration/#pre-run-modifier">pre-run modifier</a> examples could
 be used like this:</p>

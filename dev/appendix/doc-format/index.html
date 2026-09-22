@@ -10518,7 +10518,7 @@ that are not documented here.</p>
 themselves. That is typically done by running:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-13-1"><a id="example-13-1" name="example-13-1"></a>pip install markdown
 </span></code></pre></div></td></tr></table></div>
-<p>If syntax highlighting is needed, also <a href="http://pygments.org/">Pygments</a> needs to be installed:</p>
+<p>If syntax highlighting is needed, also <a href="https://pygments.org/">Pygments</a> needs to be installed:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-14-1"><a id="example-14-1" name="example-14-1"></a>pip install pygments
 </span></code></pre></div></td></tr></table></div>
 <h3 id="inline-styles_1">Inline styles<a class="headerlink" href="#inline-styles_1" title="Permanent link">&para;</a></h3>
@@ -10799,14 +10799,16 @@ level headers are included.</p>
 </span><span id="line-30-16"><a id="example-30-16" name="example-30-16"></a>
 </span><span id="line-30-17"><a id="example-30-17" name="example-30-17"></a>This section is included in TOC.
 </span></code></pre></div></td></tr></table></div>
-<p><a href="../../extend/libdoc/#libdoc">Libdoc</a> supports the <code>%TOC%</code> marker also when <a href="../../extend/libdoc/#creating-table-of-contents">creating table of contents</a>
-with the Robot Framework custom format. In that format only the top level
-headers are included in the generated table of contents.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Generating table of contents is not a standard Markdown feature and
-even the marker used by Robot Framework is different to what
-Python-Markdown's <a href="https://python-markdown.github.io/extensions/toc/">toc</a> plugin uses by default.</p>
+<p>Generating table of contents is not a standard Markdown feature.
+The <code>%TOC%</code> marker used by Robot Framework is also different to
+what Python-Markdown's <a href="https://python-markdown.github.io/extensions/toc/">toc</a> plugin uses by default.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="../../extend/libdoc/#libdoc">Libdoc</a> supports the same <code>%TOC%</code> marker also when
+<a href="../../extend/libdoc/#creating-table-of-contents">creating table of contents</a> with the Robot Framework custom format.</p>
 </div>
 <h3 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h3>
 <h4 id="fenced-code-blocks">Fenced code blocks<a class="headerlink" href="#fenced-code-blocks" title="Permanent link">&para;</a></h4>
@@ -10832,8 +10834,14 @@ for the underlying Markdown engine.</p>
 </span><span id="line-31-7"><a id="example-31-7" name="example-31-7"></a><span class="n">hello</span><span class="p">(</span><span class="s2">"Robot"</span><span class="p">)</span>
 </span><span id="line-31-8"><a id="example-31-8" name="example-31-8"></a><span class="sb">```</span>
 </span></code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Fenced code blocks are only supported at the document root level.
+They cannot be nested inside lists, admonitions, or other such
+elements.</p>
+</div>
 <h4 id="syntax-highlighting">Syntax highlighting<a class="headerlink" href="#syntax-highlighting" title="Permanent link">&para;</a></h4>
-<p>If a language is specified and <a href="http://pygments.org/">Pygments</a> syntax highlighter is installed,
+<p>If a language is specified and <a href="https://pygments.org/">Pygments</a> syntax highlighter is installed,
 the code will be syntax highlighted. Pygments supports also Robot Framework
 out-of-the-box which makes creating examples easy.</p>
 <p>Example:</p>

@@ -11199,7 +11199,7 @@ versions custom regular expressions explained below can be used instead.</p>
 </div>
 <h3 id="using-custom-regular-expressions">Using custom regular expressions<a class="headerlink" href="#using-custom-regular-expressions" title="Permanent link">&para;</a></h3>
 <p>When keywords with embedded arguments are called, the values are matched
-internally using <a href="http://en.wikipedia.org/wiki/Regular_expression">regular expressions</a> (regexps for short). The default
+internally using <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a> (regexps for short). The default
 logic goes so that every argument in the name is replaced with a pattern <code>.*?</code>
 that matches any string and tries to match as little as possible. This logic works
 fairly well normally, but as discussed above, sometimes keywords
@@ -11292,7 +11292,7 @@ characters.</p>
 </div>
 <h4 id="supported-regular-expression-syntax">Supported regular expression syntax<a class="headerlink" href="#supported-regular-expression-syntax" title="Permanent link">&para;</a></h4>
 <p>Being implemented with Python, Robot Framework naturally uses Python's
-<a href="http://docs.python.org/library/re.html">re module</a> that has pretty standard regular expressions syntax.
+<a href="https://docs.python.org/library/re.html">re module</a> that has pretty standard regular expressions syntax.
 This syntax is otherwise fully supported with embedded arguments, but
 regexp extensions in format <code>(?...)</code> cannot be used. If the regular
 expression syntax is invalid, creating the keyword fails with an error

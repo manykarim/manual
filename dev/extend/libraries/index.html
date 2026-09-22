@@ -10507,8 +10507,8 @@ and straightforward.</p>
 <p>Robot Framework itself is written with <a href="../../execution/basics/#python-example">Python</a> and naturally test
 libraries extending it can be implemented using the same
 language. It is also possible to implement libraries with C
-using <a href="http://docs.python.org/c-api/index.html">Python C API</a>, although it is often easier to interact with
-C code from Python libraries using <a href="http://docs.python.org/library/ctypes.html">ctypes</a> module.</p>
+using <a href="https://docs.python.org/c-api/index.html">Python C API</a>, although it is often easier to interact with
+C code from Python libraries using <a href="https://docs.python.org/library/ctypes.html">ctypes</a> module.</p>
 <p>Libraries implemented using Python can
 also act as wrappers to functionality implemented using other
 programming languages. A good example of this approach is the <a href="../../syntax/libraries/#remote-library">Remote
@@ -11912,7 +11912,7 @@ Other types cause conversion failures.</p>
 <td></td>
 <td></td>
 <td><a href="https://docs.python.org/library/functions.html#func-str">str</a>, <a href="https://docs.python.org/library/functions.html#int">int</a>, <a href="https://docs.python.org/library/functions.html#float">float</a></td>
-<td>String timestamps are expected to be in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> like format <code>YYYY-MM-DD hh:mm:ss.mmmmmm</code>, where any non-digit character can be used as a separator or separators can be omitted altogether. Additionally, only the date part is mandatory, all possibly missing time components are considered to be zeros.<br>Special values <code>NOW</code> and <code>TODAY</code> (case-insensitive) can be used to get the current local <code>datetime</code>. This is new in Robot Framework 7.3.<br>Integers and floats are considered to represent seconds since the <a href="http://en.wikipedia.org/wiki/Unix_time">Unix epoch</a>.</td>
+<td>String timestamps are expected to be in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> like format <code>YYYY-MM-DD hh:mm:ss.mmmmmm</code>, where any non-digit character can be used as a separator or separators can be omitted altogether. Additionally, only the date part is mandatory, all possibly missing time components are considered to be zeros.<br>Special values <code>NOW</code> and <code>TODAY</code> (case-insensitive) can be used to get the current local <code>datetime</code>. This is new in Robot Framework 7.3.<br>Integers and floats are considered to represent seconds since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a>.</td>
 <td><code>2022-02-09T16:39:43.632269</code><br><code>20220209 16:39</code><br><code>2022-02-09</code><br><code>now</code> (current local date and time)<br><code>TODAY</code> (same as above)<br><code>${1644417583.632269}</code> (Epoch time)</td>
 </tr>
 <tr>
@@ -12548,7 +12548,7 @@ With the above addition calling the keyword with <code>${42}</code> would fail l
 </span></code></pre></div></td></tr></table></div>
 <p>If the converter can accept multiple types, it is possible to specify types
 as a <a href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>. For example, if we wanted to enhance our keyword to accept also
-integers so that they would be considered seconds since the <a href="http://en.wikipedia.org/wiki/Unix_time">Unix epoch</a>,
+integers so that they would be considered seconds since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a>,
 we could change the converter like this:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-71-1"> 1</a></span>
 <span class="normal"><a href="#example-71-2"> 2</a></span>
@@ -13281,7 +13281,7 @@ the timestamps are not accurate and debugging problems especially with
 longer running keywords can be problematic.</p>
 <p>Keywords have a possibility to add an accurate timestamp to the messages
 they log if there is a need. The timestamp must be given as milliseconds
-since the <a href="http://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> and it must be placed after the <a href="https://robot-framework.readthedocs.io/en/master/autodoc/robot.api.html#module-robot.api.logger">log level</a>
+since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> and it must be placed after the <a href="https://robot-framework.readthedocs.io/en/master/autodoc/robot.api.html#module-robot.api.logger">log level</a>
 separated from it with a colon:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-91-1">1</a></span>
 <span class="normal"><a href="#example-91-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="line-91-1"><a id="example-91-1" name="example-91-1"></a>*INFO:1308435758660* Message with timestamp
@@ -13430,7 +13430,7 @@ this API like <code>logger.info('My message')</code> instead of logging
 through the standard output like <code>print('*INFO* My message')</code>. In
 addition to a programmatic interface being a lot cleaner to use, this
 API has a benefit that the log messages have accurate <a href="#timestamps">timestamps</a>.</p>
-<p>The public logging API <a href="http://docs.python.org/library/logging.html">is thoroughly documented</a> as part of the API
+<p>The public logging API <a href="https://docs.python.org/library/logging.html">is thoroughly documented</a> as part of the API
 documentation at <a href="https://robot-framework.readthedocs.org">https://robot-framework.readthedocs.org</a>. Below is
 a simple usage example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-97-1">1</a></span>
@@ -13449,7 +13449,7 @@ a simple usage example:</p>
 </span></code></pre></div></td></tr></table></div>
 <p>An obvious limitation is that test libraries using this logging API have
 a dependency to Robot Framework. If Robot Framework is not running,
-the messages are redirected automatically to Python's standard <a href="http://docs.python.org/library/logging.html">logging</a>
+the messages are redirected automatically to Python's standard <a href="https://docs.python.org/library/logging.html">logging</a>
 module.</p>
 <h4 id="using-pythons-standard-logging-module">Using Python's standard <code>logging</code> module<a class="headerlink" href="#using-pythons-standard-logging-module" title="Permanent link">&para;</a></h4>
 <p>In addition to the new <a href="#public-logging-api">public logging API</a>, Robot Framework offers a
@@ -13633,7 +13633,7 @@ logged to Robot's log.</p>
 contains and what those keywords do is rather useless. To ease
 maintenance, it is highly recommended that library documentation is
 included in the source code and generated from it. Basically, that
-means using <a href="http://www.python.org/dev/peps/pep-0257">docstrings</a> as in the example below.</p>
+means using <a href="https://www.python.org/dev/peps/pep-0257">docstrings</a> as in the example below.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#example-105-1"> 1</a></span>
 <span class="normal"><a href="#example-105-2"> 2</a></span>
 <span class="normal"><a href="#example-105-3"> 3</a></span>
@@ -13896,7 +13896,7 @@ because all Robot Framework's APIs are not meant to be used by
 externally and they might change radically between different framework
 versions.</p>
 <h3 id="available-apis">Available APIs<a class="headerlink" href="#available-apis" title="Permanent link">&para;</a></h3>
-<p><a href="http://robot-framework.readthedocs.org">API documentation</a> is hosted separately at <a href="http://readthedocs.org">Read the Docs</a>.</p>
+<p><a href="https://robot-framework.readthedocs.org">API documentation</a> is hosted separately at <a href="https://readthedocs.org">Read the Docs</a>.</p>
 <h3 id="using-builtin-library">Using BuiltIn library<a class="headerlink" href="#using-builtin-library" title="Permanent link">&para;</a></h3>
 <p>The safest API to use are methods implementing keywords in the
 <a href="https://robotframework.org/robotframework/latest/libraries/BuiltIn.html">BuiltIn</a> library. Changes to keywords are rare and they are always
